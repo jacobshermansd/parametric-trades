@@ -370,7 +370,7 @@ names(Yates)[7]
 
 # Finally, if you wanted to write the design to a file, you can do this in the normal manner 
 # and it will write what you see in the main data frame.  For example:
-write.csv(myDesign, '../html/_Chapter4_ProblemSets/myDesign.csv', row.names = F)
+write.csv(myDesign, '../docsArchive/_Chapter4_ProblemSets/myDesign.csv', row.names = F)
 ```
 
 Regardless of how you choose to build a design, once you have the design and the responses, you can use the information available to assess the effects.  Consider the following results:
@@ -794,7 +794,7 @@ We can see how advantageous this is for us in the following graphs (Note 1: The 
 # colnames(result) <- c('K', 'Res.III', 'Res.V')
 # result <- result %>% mutate(Full = 2^K)
 
-result <- read.csv('../html/_Chapter4_ProblemSets/resolution_data.csv')
+result <- read.csv('../docsArchive/_Chapter4_ProblemSets/resolution_data.csv')
 
 ggplot(result) + 
   geom_line(aes(x = K, y = Res.III), color = 'green') + 

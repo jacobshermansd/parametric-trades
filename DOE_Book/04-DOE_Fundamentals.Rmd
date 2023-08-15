@@ -368,7 +368,7 @@ We can do this more concretely with an example:
 #  The response was number of targets engaged
 #  There were 6 replciates for each combination
 
-weapon_range <- read.csv('../html/_Chapter3_1_ProblemSets/weapon_range.csv')
+weapon_range <- read.csv('../docsArchive/_Chapter3_1_ProblemSets/weapon_range.csv')
 weapon_range$Range <- as.factor(weapon_range$Range)
 weapon_range$Weapon <- as.factor(weapon_range$Weapon)
 

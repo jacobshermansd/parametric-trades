@@ -8,10 +8,10 @@ package.dependencies <- automagic::get_dependent_packages(here('DOE_Book'))
 if(sum(!(package.dependencies %in% installed.packages())) > 0){
   message(paste('Require the following packages:', paste(package.dependencies[!(package.dependencies %in% installed.packages())], collapse = ','), sep = ' '))
 }else{
-  setwd('./DOE_Book')
+  setwd('/home/rstudio/parametric-trades/DOE_Book')
   message('All necessary packages installed.  Executing book build')
   bookdown::render_book('index.Rmd', 
-                        output_dir = 'C:/Users/jking/Documents/GitHub/doe/html/_book/', 
+                        output_dir = '~/parametric-trades/html/_book/', 
                         new_session=TRUE)
 }
 

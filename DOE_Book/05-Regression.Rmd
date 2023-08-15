@@ -703,7 +703,7 @@ First, read the data and build the linear model.
 
 ```{r}
 # Read the data
-pt <- read.csv('../html/_Chapter6_ProblemSets/PatientSatData.csv', sep = ',', header = T)
+pt <- read.csv('../docsArchive/_Chapter6_ProblemSets/PatientSatData.csv', sep = ',', header = T)
 # let's drop SurgMed as we're not going to use it
 pt <- pt %>% select(-SurgMed)
 # View the data
@@ -909,7 +909,7 @@ We'll revisit the `ames` dataset from the ANOVA chapter. We'll just consider one
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
 
-ames = readr::read_csv('../html/_Chapter3_ProblemSets/ames.csv') %>% select(Mo.Sold, SalePrice)
+ames = readr::read_csv('../docsArchive/_Chapter3_ProblemSets/ames.csv') %>% select(Mo.Sold, SalePrice)
 
 class(ames$Mo.Sold)
 ```

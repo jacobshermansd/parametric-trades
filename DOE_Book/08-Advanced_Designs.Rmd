@@ -362,12 +362,12 @@ Factor codings for Cioppa's 17-point design are as follows:
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(here)
 
-dm17 = readxl::read_xls(here('html', '_Chapter10_ProblemSets',  'NOLHdesigns_v6.xls'), 
+dm17 = readxl::read_xls(here('docsArchive', '_Chapter10_ProblemSets',  'NOLHdesigns_v6.xls'), 
                         sheet='coded OLH for 7 or fewer',
                         range = "B5:H21", 
                         col_names = c('f4',	'f5',	'f7',	'f2',	'f3',	'f6',	'f1'))
 
-dm257 = readxl::read_xls(here('html', '_Chapter10_ProblemSets',  'NOLHdesigns_v6.xls'), 
+dm257 = readxl::read_xls(here('docsArchive', '_Chapter10_ProblemSets',  'NOLHdesigns_v6.xls'), 
                         sheet='coded NOLH for 23-29 factors',
                         range = "B5:AD261", 
                         col_names = paste('f', 1:29, sep=''))
