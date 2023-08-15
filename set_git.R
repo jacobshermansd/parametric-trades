@@ -17,5 +17,4 @@ usethis::create_github_token()
 # provide your personal access token.  
 gitcreds::gitcreds_set()
 
-
-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
+# Enter token below and hit control enter.
