@@ -2,8 +2,8 @@
 
 # Set git configuration
 # https://happygitwithr.com/hello-git.html
-usethis::use_git_config(user.name = 'segillespie', 
-                        user.email = 'stephenegillespie@gmail.com')
+usethis::use_git_config(user.name = 'jacobshermansd', 
+                        user.email = 'jacobshermansd@yahoo.com@gmail.com')
 
 
 # https://happygitwithr.com/https-pat.html#https-pat
@@ -18,4 +18,4 @@ usethis::create_github_token()
 gitcreds::gitcreds_set()
 
 
-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
+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
