@@ -1167,7 +1167,7 @@ Read *R for Data Science* Chapters 3 and 5. Each section of the reading has asso
 
 ### Problem Set 
 
-The problem set for this section is located <a href = '/docsArchive/_Chapter2_ProblemSets/Chapter2_Questions.html'>here</a>.
+The problem set for this section is located HERE HERE <a href = '/docsArchive/_Chapter2_ProblemSets/Chapter2_Questions.html'>here</a>.
 
 For your convenience, the R markdown version is <a href = '/docsArchive/_Chapter2_ProblemSets/Chapter2_Questions.Rmd'>here</a>.
 
