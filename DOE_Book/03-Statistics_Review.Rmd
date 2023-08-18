@@ -609,10 +609,10 @@ Finally, ensure you understand the distribution you are using.  Many (perhaps mo
 
 ### Descriptive Statistics - Problem Set
 
-+ You can view the problem set here <a href = "/_Chapter3_ProblemSets/2-1_Descriptive_Statistics.html"> Descriptive Statistics Problem Set </a>.
-+ For your convenience, <a href = "/_Chapter3_ProblemSets/2-1_Descriptive_Statistics.Rmd">here is the problem set as an R Markdown.</a>
-+ You can download the Ames Iowa data set here <a href = "/_Chapter3_ProblemSets/ames.csv"> Ames, Iowa Data Set </a>.
-+ You can view the problem set solution <a href = "/_Chapter3_ProblemSets/2-1_Descriptive_Statistics_Answers.html"> here </a>.
++ You can view the problem set here <a href = "2-1_Descriptive_Statistics.html"> Descriptive Statistics Problem Set </a>.
++ For your convenience, <a href = "2-1_Descriptive_Statistics.Rmd">here is the problem set as an R Markdown.</a>
++ You can download the Ames Iowa data set here <a href = "ames.csv"> Ames, Iowa Data Set </a>.
++ You can view the problem set solution <a href = "2-1_Descriptive_Statistics_Answers.html"> here </a>.
 
 
 
@@ -1165,9 +1165,9 @@ Statistical inference is an expansive field^[One may say it is a minefield!].  T
 
 ### Statistical Inference - Problem Set
 
-+ You can view the problem set here <a href = "/_Chapter3_ProblemSets/Chapter_2-3_Problem_Set_Questions.html"> Statistical Inference Problem Set </a>.
-+ The problem set as an R Markdown is here for your convenience: <a href = "/_Chapter3_ProblemSets/Chapter_2-3_Problem_Set_Questions.Rmd"> Statistical Inference Problem Set </a>.
-+ You can download the Ames Iowa data set here <a href = "/_Chapter3_ProblemSets/ames.csv"> Ames, Iowa Data Set </a>.
-+ You can download the the sample simulation data <a href = '/_Chapter3_ProblemSets/Chap2_DataSet.csv'> here (Chap2_DataSet.csv)</a>.
-+ You can view the problem set solution here <a href = "/_Chapter3_ProblemSets/Chapter_2-3_Problem_Set_Answers.html"> Here </a>.
++ You can view the problem set here <a href = "Chapter_2-3_Problem_Set_Questions.html"> Statistical Inference Problem Set </a>.
++ The problem set as an R Markdown is here for your convenience: <a href = "Chapter_2-3_Problem_Set_Questions.Rmd"> Statistical Inference Problem Set </a>.
++ You can download the Ames Iowa data set here <a href = "ames.csv"> Ames, Iowa Data Set </a>.
++ You can download the the sample simulation data <a href = 'Chap2_DataSet.csv'> here (Chap2_DataSet.csv)</a>.
++ You can view the problem set solution here <a href = "Chapter_2-3_Problem_Set_Answers.html"> Here </a>.
 

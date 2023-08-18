@@ -11,7 +11,7 @@ if(sum(!(package.dependencies %in% installed.packages())) > 0){
   setwd('/home/rstudio/parametric-trades/DOE_Book')
   message('All necessary packages installed.  Executing book build')
   bookdown::render_book('index.Rmd', 
-                        output_dir = '/home/rstudio/parametric-trades/html/_book/', 
+                        output_dir = '/home/rstudio/parametric-trades/docs/', 
                         new_session=TRUE)
 }
 

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Fundamentals of Design of Experiments | Design of Experiments for Modeling and Simulation</title>
   <meta name="description" content="5 Fundamentals of Design of Experiments | Design of Experiments for Modeling and Simulation" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Fundamentals of Design of Experiments | Design of Experiments for Modeling and Simulation" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -31,7 +30,8 @@
   
 <link rel="prev" href="analysis-of-variance-anova.html"/>
 <link rel="next" href="fractional-factorial-designs.html"/>
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -47,13 +47,15 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.17/datatables.js"></script>
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.28/datatables.js"></script>
+<link href="libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 <link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
@@ -131,6 +133,11 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
 </head>
 
 <body>
@@ -143,7 +150,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="https://doe.dscoe.org/">DoE for M&S</a></li>
+<li><a href="https://jacobshermansd.github.io/parametric-trades">DoE for M&S</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to DOE for M&amp;S</a><ul>
@@ -428,11 +435,11 @@ Published with bookdown</a></li>
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="fundamentals-of-design-of-experiments" class="section level1">
-<h1><span class="header-section-number">5</span> Fundamentals of Design of Experiments</h1>
+<div id="fundamentals-of-design-of-experiments" class="section level1 hasAnchor">
+<h1><span class="header-section-number">5</span> Fundamentals of Design of Experiments<a href="fundamentals-of-design-of-experiments.html#fundamentals-of-design-of-experiments" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <!-- SEG Colinearity, vif,  & fractional, blocking, aliasing confounding, replication-->
-<div id="introduction-2" class="section level2">
-<h2><span class="header-section-number">5.1</span> Introduction</h2>
+<div id="introduction-2" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.1</span> Introduction<a href="fundamentals-of-design-of-experiments.html#introduction-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p>All experiments are designed experiments. The important issue is whether they are well designed or not.</p>
 </blockquote>
@@ -441,19 +448,19 @@ Douglas C. Montgomery <span class="citation">Montgomery (<a href="#ref-montgomer
 </p>
 <p><br></p>
 <p>This chapter introduces the fundamentals of Design of Experiments (DOE). An experiment, as we shall discuss, is simply the configuration of one or more tests that we conduct with the intention to learn something. Tests are discrete events where we supply inputs and measure outputs in some manner. These tests take many forms, including the physical (e.g., mixing some quantities of chemicals and measuring the properties of the resulting solution) and the virtual (e.g., providing some inputs to a computer simulation and recording the outputs). As noted by Montgomery in the quote above, any time we conduct an experiment<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> we, by definition, have designed it. The quality of the experiment is whether it 1) can answer our question(s) and 2) do so in an economical manner. The statistical design of experiments helps us with both.</p>
-<div id="admin-1" class="section level3">
-<h3><span class="header-section-number">5.1.1</span> Admin</h3>
+<div id="admin-1" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.1.1</span> Admin<a href="fundamentals-of-design-of-experiments.html#admin-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><strong>POC:</strong> For any comments or identified errors, please contact Steve Gillespie at <a href="mailto:stephen.e.gillespie.mil@mail.mil" class="email">stephen.e.gillespie.mil@mail.mil</a> or Emma Schlagenhauff at <a href="mailto:emma.schlagenhauff.civ@mail.mil" class="email">emma.schlagenhauff.civ@mail.mil</a>.</li>
-<li>This section was rendered using R version 3.6.0 (2019-04-26) on 24 May 2021.</li>
+<li>This section was rendered using R version 3.6.0 (2019-04-26) on 18 Aug 2023.</li>
 <li>The chapter is organized into sections that each include a description, a tutorial, and a problem set.</li>
 </ul>
 </div>
 </div>
-<div id="doe-overview" class="section level2">
-<h2><span class="header-section-number">5.2</span> DOE Overview</h2>
-<div id="what-is-design-of-experiments" class="section level3">
-<h3><span class="header-section-number">5.2.1</span> What is Design of Experiments?</h3>
+<div id="doe-overview" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.2</span> DOE Overview<a href="fundamentals-of-design-of-experiments.html#doe-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-is-design-of-experiments" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.2.1</span> What is Design of Experiments?<a href="fundamentals-of-design-of-experiments.html#what-is-design-of-experiments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The (statistical) design of experiments is the choice of tests for an experiment such that the resulting data may be analyzed using statistical methods in a valid, objective way. A well designed experiment can:</p>
 <ul>
 <li>Help researchers distinguish between causation and correlation.</li>
@@ -490,8 +497,8 @@ Stuart Hunter video 2 of 2
 -->
 <p>JMP<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a> has two older videos of J. Stuart Hunter<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a> introducing design of experiments: <a href = 'https://www.youtube.com/watch?v=NoVlRAq0Uxs'> Part I </a>, <a href = 'https://www.youtube.com/watch?v=hTviHGsl5ag'> Part II </a>. They are about 30 minutes total, but well worth watching.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a></p>
 </div>
-<div id="why-design-experiments" class="section level3">
-<h3><span class="header-section-number">5.2.2</span> Why Design Experiments?</h3>
+<div id="why-design-experiments" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.2.2</span> Why Design Experiments?<a href="fundamentals-of-design-of-experiments.html#why-design-experiments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When discussing DOE, a natural question arises: why? There are at least three answers to this question:</p>
 <p><strong>Analysis:</strong> Data and information do not equal knowledge. While all experiments will produce data, the question of whether or not that data can be transformed into knowledge is not a given. As one of the most common and powerful techniques for turning data into knowledge is statistics, data that has been acquired and structured such that it can be used by statistical tests and models is of much greater value than data that has not been.</p>
 <p><strong>Breadth:</strong> Good experimental design helps one from inadvertently missing a significant portion of the experimental space and finding local extremes.</p>
@@ -505,8 +512,8 @@ Stuart Hunter video 2 of 2
 <p>Even if your computer simulation could run in a single second, you would still need <span class="math inline">\(\approx 2.9^{12}\)</span> simultaneous processes running to calculate all the possibilities for this system of the course of the universe’s lifespan. This of course assumes you have room for all of that data!</p>
 <p>While this is an obviously extreme example to make a point, situations like this can easily exist, and we need strategies to deal with them appropriately. DOE provides us with a way.</p>
 </div>
-<div id="strategies-for-experimental-design" class="section level3">
-<h3><span class="header-section-number">5.2.3</span> Strategies for Experimental Design</h3>
+<div id="strategies-for-experimental-design" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.2.3</span> Strategies for Experimental Design<a href="fundamentals-of-design-of-experiments.html#strategies-for-experimental-design" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>There are a number of strategies an analyst may take in designing experiments. Some have more merit than others.</p>
 <ul>
 <li><strong>Subject Matter Experts</strong>: One may rely on subject matter experts (SMEs) to choose the appropriate tests for an experiment. While one should always employ non-statistical knowledge in designing an experiment (this is a foremost principle), solely using SME judgment is generally a flawed approach. First, it assumes that one has the most appropriate expert for the study.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a>. Of course, this is never quite true as one is generally conducting experiments to gain new knowledge and an SME has expertise in existing knowledge. Second, it assumes that the selected SME is without bias or other limitations.<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a>.</li>
@@ -515,8 +522,8 @@ Stuart Hunter video 2 of 2
 <li><strong>Statistical DOE</strong> Finally, we can look at statisitcal DOE as a strategy. In this strategy, we begin with the end in mind. That is, we design the experiment such that the results can be subject to appropriate analysis and maximize objectivity.</li>
 </ul>
 </div>
-<div id="history-and-applications-of-experimental-design" class="section level3">
-<h3><span class="header-section-number">5.2.4</span> History and Applications of Experimental Design</h3>
+<div id="history-and-applications-of-experimental-design" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.2.4</span> History and Applications of Experimental Design<a href="fundamentals-of-design-of-experiments.html#history-and-applications-of-experimental-design" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Statistical experimental design traces its roots to <a href = 'https://en.wikipedia.org/wiki/Ronald_Fisher'> Sir Ronald Fisher </a> in the first half of the 20th century. This work focused primarily on applications to agriculture. It has subsequently been expanded on and developed by a many statisticians including George E.P. Box<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a> among <a href = 'https://en.wikipedia.org/wiki/Design_of_experiments#Experimental_designs_after_Fisher'> others </a>.</p>
 <p>Applications of DOE include:<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a></p>
 <ul>
@@ -530,15 +537,15 @@ Stuart Hunter video 2 of 2
 </ul>
 <!-- may want to write more on this -->
 </div>
-<div id="principles" class="section level3">
-<h3><span class="header-section-number">5.2.5</span> Principles</h3>
+<div id="principles" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.2.5</span> Principles<a href="fundamentals-of-design-of-experiments.html#principles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Montgomery <span class="citation">Montgomery (<a href="#ref-montgomery2017">2017</a>)</span> (§ 1.3) offers three principles for experimental design: randomization, replication, and blocking. We will treat each in turn:</p>
 <p><strong>Randomization:</strong> Randomization is generally necessary to avoid the introduction of dependency among the data. This is most often considered within the context of test order. For example, consider an experiment where the test is boiling temperature of various solutions. Boiling temperature is affected by the air pressure, and air pressure can vary even at a static location according to the weather. If one were conducting tests while the weather system changed, the tests would be affected. Randomizing helps us mitigate that variation when we cannot otherwise control for it. In the context of computer simulations we are in a fortunate situation in that we control this type of noise and so things like run order are not generally consequential for simulations.</p>
 <p><strong>Replication:</strong> We typically need to replicate our tests, that is conduct the same test multiple times, so that we can get an estimate of the variability that occurs for a single level of the test such that we can estimate if differences observed are a function of a true distinction between two or more levels or simply a function of experimental error (note this is the same concept as discussed in the ANOVA chapter).</p>
 <p><strong>Blocking:</strong> Finally, we can block to account for controllable, but undesired factors. That is, we can set groups of tests into relatively similar experimental conditions, so that we can focus on the effects of the factors we care about. Similar to the consideration of randomization, blocking is relatively easy for computer simulation. That stated, we may want to block in a computer simulation for factors that may arise in reality. For example, if we are designing a system, we may want to block on the scenario in which we place the system, as we can never fully know what scenario it may be used in.</p>
 </div>
-<div id="guidelines" class="section level3">
-<h3><span class="header-section-number">5.2.6</span> Guidelines</h3>
+<div id="guidelines" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.2.6</span> Guidelines<a href="fundamentals-of-design-of-experiments.html#guidelines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This course was purposefully titled, “The Design <em>and</em> Analysis of Experiments for Simulation” as we consider both the design of the experiment and the subsequent analysis equally important. We will attempt to follow a set of guidelines in designing experiments. These follow Montgomery’s <span class="citation">Montgomery (<a href="#ref-montgomery2017">2017</a>)</span> (§1.4) guidelines, though they are similar to many other problem defining / solving techniques, for example the Army’s TRAC’s Measurement Space methodology closely aligns to the first three steps of the guidelines. We will only cover a brief review of these guidelines, but recommend analysts read the full treatment in <span class="citation">Montgomery (<a href="#ref-montgomery2017">2017</a>)</span>.</p>
 <p>There are seven guidelines for designing an experiment:</p>
 <ol style="list-style-type: decimal">
@@ -556,16 +563,16 @@ Stuart Hunter video 2 of 2
 <p><strong>Steps 6-7:</strong> Finally, one must actually analyze the data, interpret the results, and provide recommendations. This analysis and its associated interpretation and recommendations are covered in later sections of this course. One important note, however, is that experimentation and the development of knowledge is iterative. The results of one experiment generally can and should inform future experiments.</p>
 <p>Finally, recall the purpose of any study is generally to develop knowledge and inform a decision. As such, remember, <strong>do not let the math cloud your judgment.</strong> By that, we mean: ensure you bring your or your team’s non-statistical knowledge of the problem to bear; distinguish between statistical and practical significance; opt for a simplest design and analysis that sufficiently answers the question; recall that you are almost assuredly going to have to 1) explain your results to a non-statistician (or even non-quantitative person) and 2) defend your results as reasonable.</p>
 </div>
-<div id="problem-set-1" class="section level3">
-<h3><span class="header-section-number">5.2.7</span> Problem Set</h3>
+<div id="problem-set-1" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.2.7</span> Problem Set<a href="fundamentals-of-design-of-experiments.html#problem-set-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>There is no formal problem set for this section. That stated, think of a problem on which you have worked on or may work on and consider how the problem can be related to experimental design. Be prepared to discuss this in a group setting.</p>
 <!--------------------------------------------------------------------------------------------------------------------------->
 </div>
 </div>
-<div id="factorial-designs" class="section level2">
-<h2><span class="header-section-number">5.3</span> Factorial Designs</h2>
-<div id="introduction-3" class="section level3">
-<h3><span class="header-section-number">5.3.1</span> Introduction</h3>
+<div id="factorial-designs" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.3</span> Factorial Designs<a href="fundamentals-of-design-of-experiments.html#factorial-designs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introduction-3" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.3.1</span> Introduction<a href="fundamentals-of-design-of-experiments.html#introduction-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Factorial designs are some of the most common experimental designs out there and highly useful. In a sense we have already seen these with our discussions on ANOVA, so if this feels familiar that’s a good thing. The basic idea of a factorial design is as follows:</p>
 <p>A researcher has identified two or more factors that can each take two or more levels (where the definition of factor and level are the same as in ANOVA). These factors and levels can be of any variety, quantitative, ordinal, qualitative, etc. We then take the Cartesian product of the sets of levels to produce all possible “treatment combinations.” A treatment combination is simply the set of levels for each factor for a given test. The cardinality of the set of treatment combinations for a factorial experiment is then simply the product of the cardinality of the set of levels for each factor.<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a></p>
 <p>We can see this more concretely with an example. Consider a researcher who is designing a tank main gun and is considering two factors: the caliber, which may be set to either 105mm or 120m and the type of round used, which may be set to High Explosive (HE) or Armor Piercing (AP). In this case, we have:</p>
@@ -676,8 +683,8 @@ We can estimate the effects of each factor by taking the average result whenever
 * The interaction effect is 52 - 20 + 21 + 11
 -->
 </div>
-<div id="assessing-and-estimating-effects" class="section level3">
-<h3><span class="header-section-number">5.3.2</span> Assessing and Estimating Effects</h3>
+<div id="assessing-and-estimating-effects" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.3.2</span> Assessing and Estimating Effects<a href="fundamentals-of-design-of-experiments.html#assessing-and-estimating-effects" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If much of the discussion has looked familiar, it should, as in our ANOVA section, we covered analyzing the output of factorial designs (even though we didn’t explicitly say that). Recall, for example, our two factor, fixed effects ANOVA effects model:</p>
 <p><span class="math display">\[y_{ijk} = \mu + \tau_i + \beta_j + (\tau\beta)_{ij} + \epsilon_{ijk}\]</span></p>
 <p>Where:</p>
@@ -700,33 +707,33 @@ We can estimate the effects of each factor by taking the average result whenever
 </ul>
 <p>Note that the <span class="math inline">\(\hat{}\)</span> symbol indicates an estimated parameter, the <span class="math inline">\(\bar{}\)</span> indicates the mean of a set and <span class="math inline">\(y_{...}\)</span> indicates the observed value at the indicated levels where the first dot is for Factor A, the second for Factor B, and the third for the replicate. If there is a dot, it indicates across all levels of the factor or replicates. For example, <span class="math inline">\(\bar{y_{...}}\)</span> is the mean of all observations and <span class="math inline">\(\bar{y_{1..}}\)</span> is the mean for all observations where Factor A is on the first level.</p>
 <p>We can do this more concretely with an example:</p>
-<div class="sourceCode" id="cb452"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb452-1" data-line-number="1"><span class="co"># We will use the weapon range data set from a previous two factor ANOVA homework</span></a>
-<a class="sourceLine" id="cb452-2" data-line-number="2"><span class="co"># Recall there were two factors:</span></a>
-<a class="sourceLine" id="cb452-3" data-line-number="3"><span class="co">#  Factor A was Weapon which could be 1, 2, or 3</span></a>
-<a class="sourceLine" id="cb452-4" data-line-number="4"><span class="co">#  Factor B was range which could be 50, 150, or 200m</span></a>
-<a class="sourceLine" id="cb452-5" data-line-number="5"><span class="co">#  The response was number of targets engaged</span></a>
-<a class="sourceLine" id="cb452-6" data-line-number="6"><span class="co">#  There were 6 replciates for each combination</span></a>
-<a class="sourceLine" id="cb452-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb452-8" data-line-number="8">weapon_range &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;../html/_Chapter3_1_ProblemSets/weapon_range.csv&#39;</span>)</a>
-<a class="sourceLine" id="cb452-9" data-line-number="9">weapon_range<span class="op">$</span>Range &lt;-<span class="st"> </span><span class="kw">as.factor</span>(weapon_range<span class="op">$</span>Range)</a>
-<a class="sourceLine" id="cb452-10" data-line-number="10">weapon_range<span class="op">$</span>Weapon &lt;-<span class="st"> </span><span class="kw">as.factor</span>(weapon_range<span class="op">$</span>Weapon)</a>
-<a class="sourceLine" id="cb452-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb452-12" data-line-number="12"><span class="co"># In the previous homework, we had found that weapon, range, and their interaction were significant.</span></a>
-<a class="sourceLine" id="cb452-13" data-line-number="13"><span class="co"># We can now estimate their parameters</span></a>
-<a class="sourceLine" id="cb452-14" data-line-number="14"></a>
-<a class="sourceLine" id="cb452-15" data-line-number="15"><span class="co"># this gives us our y_{...}</span></a>
-<a class="sourceLine" id="cb452-16" data-line-number="16">grand.mean &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets)</a>
-<a class="sourceLine" id="cb452-17" data-line-number="17"></a>
-<a class="sourceLine" id="cb452-18" data-line-number="18"><span class="co"># We can calculate our means by subsetting the data frame to the levels we desire and following</span></a>
-<a class="sourceLine" id="cb452-19" data-line-number="19"><span class="co"># the above equations</span></a>
-<a class="sourceLine" id="cb452-20" data-line-number="20">tau<span class="fl">.1</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Weapon <span class="op">==</span><span class="st"> &#39;1&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
-<a class="sourceLine" id="cb452-21" data-line-number="21">tau<span class="fl">.2</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Weapon <span class="op">==</span><span class="st"> &#39;2&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
-<a class="sourceLine" id="cb452-22" data-line-number="22">tau<span class="fl">.3</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Weapon <span class="op">==</span><span class="st"> &#39;3&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
-<a class="sourceLine" id="cb452-23" data-line-number="23">beta<span class="fl">.50</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Range <span class="op">==</span><span class="st"> &#39;50&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
-<a class="sourceLine" id="cb452-24" data-line-number="24">beta<span class="fl">.150</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Range <span class="op">==</span><span class="st"> &#39;150&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
-<a class="sourceLine" id="cb452-25" data-line-number="25">beta<span class="fl">.200</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Range <span class="op">==</span><span class="st"> &#39;200&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
-<a class="sourceLine" id="cb452-26" data-line-number="26"></a>
-<a class="sourceLine" id="cb452-27" data-line-number="27"><span class="co"># There are 9 interaction levels, these are left as an exercise to the reader to calculate</span></a></code></pre></div>
+<div class="sourceCode" id="cb468"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb468-1" data-line-number="1"><span class="co"># We will use the weapon range data set from a previous two factor ANOVA homework</span></a>
+<a class="sourceLine" id="cb468-2" data-line-number="2"><span class="co"># Recall there were two factors:</span></a>
+<a class="sourceLine" id="cb468-3" data-line-number="3"><span class="co">#  Factor A was Weapon which could be 1, 2, or 3</span></a>
+<a class="sourceLine" id="cb468-4" data-line-number="4"><span class="co">#  Factor B was range which could be 50, 150, or 200m</span></a>
+<a class="sourceLine" id="cb468-5" data-line-number="5"><span class="co">#  The response was number of targets engaged</span></a>
+<a class="sourceLine" id="cb468-6" data-line-number="6"><span class="co">#  There were 6 replciates for each combination</span></a>
+<a class="sourceLine" id="cb468-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb468-8" data-line-number="8">weapon_range &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;../docsArchive/_Chapter3_1_ProblemSets/weapon_range.csv&#39;</span>)</a>
+<a class="sourceLine" id="cb468-9" data-line-number="9">weapon_range<span class="op">$</span>Range &lt;-<span class="st"> </span><span class="kw">as.factor</span>(weapon_range<span class="op">$</span>Range)</a>
+<a class="sourceLine" id="cb468-10" data-line-number="10">weapon_range<span class="op">$</span>Weapon &lt;-<span class="st"> </span><span class="kw">as.factor</span>(weapon_range<span class="op">$</span>Weapon)</a>
+<a class="sourceLine" id="cb468-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb468-12" data-line-number="12"><span class="co"># In the previous homework, we had found that weapon, range, and their interaction were significant.</span></a>
+<a class="sourceLine" id="cb468-13" data-line-number="13"><span class="co"># We can now estimate their parameters</span></a>
+<a class="sourceLine" id="cb468-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb468-15" data-line-number="15"><span class="co"># this gives us our y_{...}</span></a>
+<a class="sourceLine" id="cb468-16" data-line-number="16">grand.mean &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets)</a>
+<a class="sourceLine" id="cb468-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb468-18" data-line-number="18"><span class="co"># We can calculate our means by subsetting the data frame to the levels we desire and following</span></a>
+<a class="sourceLine" id="cb468-19" data-line-number="19"><span class="co"># the above equations</span></a>
+<a class="sourceLine" id="cb468-20" data-line-number="20">tau<span class="fl">.1</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Weapon <span class="op">==</span><span class="st"> &#39;1&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
+<a class="sourceLine" id="cb468-21" data-line-number="21">tau<span class="fl">.2</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Weapon <span class="op">==</span><span class="st"> &#39;2&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
+<a class="sourceLine" id="cb468-22" data-line-number="22">tau<span class="fl">.3</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Weapon <span class="op">==</span><span class="st"> &#39;3&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
+<a class="sourceLine" id="cb468-23" data-line-number="23">beta<span class="fl">.50</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Range <span class="op">==</span><span class="st"> &#39;50&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
+<a class="sourceLine" id="cb468-24" data-line-number="24">beta<span class="fl">.150</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Range <span class="op">==</span><span class="st"> &#39;150&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
+<a class="sourceLine" id="cb468-25" data-line-number="25">beta<span class="fl">.200</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(weapon_range<span class="op">$</span>Targets[weapon_range<span class="op">$</span>Range <span class="op">==</span><span class="st"> &#39;200&#39;</span>]) <span class="op">-</span><span class="st"> </span>grand.mean</a>
+<a class="sourceLine" id="cb468-26" data-line-number="26"></a>
+<a class="sourceLine" id="cb468-27" data-line-number="27"><span class="co"># There are 9 interaction levels, these are left as an exercise to the reader to calculate</span></a></code></pre></div>
 <p>We then see:</p>
 <ul>
 <li><span class="math inline">\(\mu \approx 31.9\)</span></li>
@@ -740,8 +747,8 @@ We can estimate the effects of each factor by taking the average result whenever
 <p>This of course, can extend to any number of factors, both in terms of the ANOVA and the estimation of effects.</p>
 <p>We can also (and perhaps more commonly) model effects using regression, though we will reserve that discussion for our regression modeling chapter. This is generally called modeling a <strong>“response surface.”</strong> This is particularly useful when the levels are quantitative.</p>
 </div>
-<div id="blocking" class="section level3">
-<h3><span class="header-section-number">5.3.3</span> Blocking</h3>
+<div id="blocking" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.3.3</span> Blocking<a href="fundamentals-of-design-of-experiments.html#blocking" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We are now going to introduce the concept of a <strong>block.</strong> Recall that a factor is a variable input to one’s experiment, e.g., the choice of caliber or round in the example of the experiment for a main tank gun. These are factors of interest for us as experimenters. In some cases, there are what we call <strong>nuissance factors</strong>. These are factors that affect the outcome of a test, but are not of interest to us. Nuissance factors can be either <strong>uncontrollable</strong> or <strong>controllable.</strong></p>
 <p><strong>Uncontrollable factors</strong> generally occur in physical experiments and are simply the vagaries of life - e.g. the exact amount of wind present or the exact level of humidity, etc. These are often very hard to control precisely. We attempt to avoid issues associated with this by randomly choosing the order for our experiments. We have encountered this in our ANOVA examples. Recall, for example, the single factor, fixed effects ANOVA problem where we considered the effect of soldier’s load on ruck march times. We randomized their starting order to account for the uncontrollable factors that may occur on a ruck march such as wind, temperature, etc.</p>
 <p><strong>Controllable factors</strong> also occur in physical experiments, but are ones where we can choose the level of the nuissance factor. For example, if we had been testing soldier ruck march times over several days, we could have blocked by the day that a soldier conducted the experiment.</p>
@@ -755,25 +762,25 @@ The last question in a general factorial experiment is, "How many replicates sho
 
 -->
 </div>
-<div id="problem-set-2" class="section level3">
-<h3><span class="header-section-number">5.3.4</span> Problem Set</h3>
+<div id="problem-set-2" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.3.4</span> Problem Set<a href="fundamentals-of-design-of-experiments.html#problem-set-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The problem set for this section is located <a href = '/_Chapter4_ProblemSets/Factorial_Design_PS_Questions.html'> here </a>.</p>
 <p>For your convenience, the problem set as an R markdown is located <a href = '/_Chapter4_ProblemSets/Factorial_Design_PS_Questions.Rmd'> here </a></p>
 <p>The answers for this problem set are <a href = '/_Chapter4_ProblemSets/Factorial_Design_PS_Answer.html'> here </a>.</p>
 </div>
 </div>
-<div id="k-factorial-design" class="section level2">
-<h2><span class="header-section-number">5.4</span> <span class="math inline">\(2^K\)</span> Factorial Design</h2>
-<div id="introduction-4" class="section level3">
-<h3><span class="header-section-number">5.4.1</span> Introduction</h3>
+<div id="k-factorial-design" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.4</span> <span class="math inline">\(2^K\)</span> Factorial Design<a href="fundamentals-of-design-of-experiments.html#k-factorial-design" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introduction-4" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.4.1</span> Introduction<a href="fundamentals-of-design-of-experiments.html#introduction-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Very often, we find ourselves working with a particular class of factorial designs we call <span class="math inline">\(2^K\)</span> Factorial designs. These are designs where we have <span class="math inline">\(K\)</span> factors, and each factor has two levels, typically called the low and the high level. As there are only two levels for each of the <span class="math inline">\(K\)</span> factors, there are <span class="math inline">\(2\times 2 \times 2 \times ... \times 2 = 2^K\)</span> treatment combinations in this design.</p>
 <p><strong>Factors and Levels:</strong> In a <span class="math inline">\(2^K\)</span> design, we generally assume that the levels of each factor are fixed. Moreoever, we generally code the values as either <span class="math inline">\(\langle 0, 1 \rangle\)</span> or <span class="math inline">\(\langle -1, +1 \rangle\)</span>. This allows us to consider both purely quantitative measures (e.g., weapon caliber), qualitative measures (e.g., camoglauge color), or even groups of changes (e.g. scenario or entire units).</p>
 <p><strong>Assumptions:</strong> We both assume and design the experiment such that the tests are independent and randomized (up to any blocking we choose) and that we meet the usual normality assumptions (as we have required for ANOVA). We further assume that the response to a factor is approximately linear (if it exists), as when we do our analysis, we can only interpolate in a linear manner between two points.</p>
 <p><strong>Applications:</strong> Often <span class="math inline">\(2^K\)</span> designs are used in <strong>screening experiments</strong>. A screening experiment is an experiment in which one is attempting to simply understand which factors or combination of factors have an effect on the response in any fashion. Often times, experimenters do not know this <em>a priori</em> and simply being able to identify an effect without over-concern on the precision of its estimate allows one to select the most significant factors and then use a more fine-grained approach (i.e., a different design) to understanding the experimental space.<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a></p>
 <p><strong>Limitations:</strong> Beyond any limitations associated with the assumptions, the major limitation to a <span class="math inline">\(2^K\)</span> design is that it is resource intensive and the requisite numbers of tests scales exponentially by <span class="math inline">\(K\)</span>. This means the number of factors you can consider scales logarithmically as a function of your maximum number of tests, i.e., if your maximum number of tests is <span class="math inline">\(N\)</span>, your maximum number of factors is of order <span class="math inline">\(log_2(N)\)</span>.</p>
 </div>
-<div id="coding-variables-and-effects-signs" class="section level3">
-<h3><span class="header-section-number">5.4.2</span> Coding Variables and Effects Signs</h3>
+<div id="coding-variables-and-effects-signs" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.4.2</span> Coding Variables and Effects Signs<a href="fundamentals-of-design-of-experiments.html#coding-variables-and-effects-signs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>As discussed in the section on general factorial designs, we often find it convenient to code variables to help us 1) understand something about the design itself, 2) represent categorical levels, and 3) “normalize” the values associated with the effects so that we can understand relative effects size. For the time being, we will represent our <span class="math inline">\(2^K\)</span> designs using <strong>orthogonal coding</strong> which is representing the low level as <code>-1</code> and the high level as <code>1</code>. First, consider how we can represent our <span class="math inline">\(2^K\)</span> design with this coding:</p>
 <p>Consider a <span class="math inline">\(2^2\)</span> design. First, we build a table where the factors are listed as the columns. We then list the treatment combinations as the rows. The level for each factor is then shown as a +/- as we can see here:</p>
 <center>
@@ -950,21 +957,21 @@ The last question in a general factorial experiment is, "How many replicates sho
 </table>
 </center>
 <p>A note on <strong>orthogonality</strong>: an astute observer may notice something about the columns in these matrices. That is, the columns are <a href = 'https://en.wikipedia.org/wiki/Orthogonality'> orthogonal </a>. <a href = 'https://mathworld.wolfram.com/Orthogonal.html'> Orthoginality </a> is a general mathematical and physical concept that, in elementary geometry, orthoginality can be equated to perpendicularity. More generally, if we have two vectors of the same length, we say they are orthogonial if their dot product is 0. For example, in the above table, we see column ‘A’ as: $ A = -1, 1, -1, 1, -1, 1, -1, 1 $ and column ‘B’ as <span class="math inline">\(B = \langle -1, -1, 1, 1, -1, -1, 1, 1 \rangle\)</span>. Their dot product can be calculated either manually or in <em>R</em>:</p>
-<div class="sourceCode" id="cb453"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb453-1" data-line-number="1"><span class="co"># Define our two vectors</span></a>
-<a class="sourceLine" id="cb453-2" data-line-number="2">A &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb453-3" data-line-number="3">B &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb453-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb453-5" data-line-number="5"><span class="co"># You can get the dot product in R in any number of ways.  Here are two:</span></a>
-<a class="sourceLine" id="cb453-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb453-7" data-line-number="7"><span class="co"># You can sum the product of each vector multiplied element by element.</span></a>
-<a class="sourceLine" id="cb453-8" data-line-number="8"><span class="kw">sum</span>(A<span class="op">*</span>B)</a></code></pre></div>
+<div class="sourceCode" id="cb469"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb469-1" data-line-number="1"><span class="co"># Define our two vectors</span></a>
+<a class="sourceLine" id="cb469-2" data-line-number="2">A &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb469-3" data-line-number="3">B &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb469-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb469-5" data-line-number="5"><span class="co"># You can get the dot product in R in any number of ways.  Here are two:</span></a>
+<a class="sourceLine" id="cb469-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb469-7" data-line-number="7"><span class="co"># You can sum the product of each vector multiplied element by element.</span></a>
+<a class="sourceLine" id="cb469-8" data-line-number="8"><span class="kw">sum</span>(A<span class="op">*</span>B)</a></code></pre></div>
 <pre><code>## [1] 0</code></pre>
-<div class="sourceCode" id="cb455"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb455-1" data-line-number="1"><span class="co"># You can use the matrix multiplication in base R of `%*%`.</span></a>
-<a class="sourceLine" id="cb455-2" data-line-number="2">A<span class="op">%*%</span>B</a></code></pre></div>
+<div class="sourceCode" id="cb471"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb471-1" data-line-number="1"><span class="co"># You can use the matrix multiplication in base R of `%*%`.</span></a>
+<a class="sourceLine" id="cb471-2" data-line-number="2">A<span class="op">%*%</span>B</a></code></pre></div>
 <pre><code>##      [,1]
 ## [1,]    0</code></pre>
-<div class="sourceCode" id="cb457"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb457-1" data-line-number="1"><span class="co"># There are various packages that have a built in dot product function.</span></a>
-<a class="sourceLine" id="cb457-2" data-line-number="2"><span class="co"># Of course, you can always define your own!</span></a></code></pre></div>
+<div class="sourceCode" id="cb473"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb473-1" data-line-number="1"><span class="co"># There are various packages that have a built in dot product function.</span></a>
+<a class="sourceLine" id="cb473-2" data-line-number="2"><span class="co"># Of course, you can always define your own!</span></a></code></pre></div>
 <p><a href = 'https://support.minitab.com/en-us/minitab/18/help-and-how-to/modeling-statistics/doe/supporting-topics/basics/orthogonal-designs/'> Orthoginality is important in experimental design </a><a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a> as it tells us something about the independence of the effects we are measuring. That is, if two factors or interaction of factors are orthogonal, we can estimate their effects independently. If they are not, we cannot estimate their effects as such. In a <span class="math inline">\(2^K\)</span> design, all of our factors and their interactions are orthogonal, so, if we have sufficient tests, we can estimate the effects independently.</p>
 <p>Finally, note that these tables have several interesting properties:</p>
 <ol style="list-style-type: decimal">
@@ -977,14 +984,14 @@ The last question in a general factorial experiment is, "How many replicates sho
 <li>We will sometimes include an identity column, <span class="math inline">\(I = \langle 1, 1, ... 1 \rangle\)</span> (i.e., all positives) that is not a factor, but allows for consistent multiplication.</li>
 </ol>
 </div>
-<div id="estimating-effects-and-contrasts" class="section level3">
-<h3><span class="header-section-number">5.4.3</span> Estimating Effects and Contrasts</h3>
+<div id="estimating-effects-and-contrasts" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.4.3</span> Estimating Effects and Contrasts<a href="fundamentals-of-design-of-experiments.html#estimating-effects-and-contrasts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The point of an experimental design, of course, is to identify the effects of a factor <!--or?--> some interaction. We introduced a means to estimate effects in the general factorial design for two factors at any number of levels, we can generalize that here for <span class="math inline">\(K\)</span> factors at two levels. We will do this through the idea of contrasts. Let us consider an example:</p>
 <p>Recall our tank main gun example from the previous section. We had Factor A as the round type, either HE or AP and Factor B as the caliber, either 105mm or 120mm. This is a <span class="math inline">\(2^2\)</span> design. Let HE and 105mm be the low levels and AP and 120mm be the high levels. We can visualize it as follows:</p>
 <p><img src="04-DOE_Fundamentals_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>Further assume we have been able conduct the experiment and run each test 3 times (i.e., <span class="math inline">\(n = 3\)</span> replicates) and we had the following results:</p>
-<div id="htmlwidget-1838622b50a8295b704d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1838622b50a8295b704d">{"x":{"filter":"none","data":[["(1)","(1)","(1)","a","a","a","ab","ab","ab","b","b","b"],["run.1","run.2","run.3","run.1","run.2","run.3","run.1","run.2","run.3","run.1","run.2","run.3"],["-1: HE","-1: HE","-1: HE","1: AP","1: AP","1: AP","1: AP","1: AP","1: AP","-1: HE","-1: HE","-1: HE"],["-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm"],[20,18,21,40,37,42,52,53,48,30,31,28]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>tc<\/th>\n      <th>Replicate<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>Response<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":4}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-611ac9f7c3404495b8d9" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-611ac9f7c3404495b8d9">{"x":{"filter":"none","vertical":false,"data":[["(1)","(1)","(1)","a","a","a","ab","ab","ab","b","b","b"],["run.1","run.2","run.3","run.1","run.2","run.3","run.1","run.2","run.3","run.1","run.2","run.3"],["-1: HE","-1: HE","-1: HE","1: AP","1: AP","1: AP","1: AP","1: AP","1: AP","-1: HE","-1: HE","-1: HE"],["-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm"],[20,18,21,40,37,42,52,53,48,30,31,28]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>tc<\/th>\n      <th>Replicate<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>Response<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":4}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p>We can visualize these results geometrically:</p>
 <p><img src="04-DOE_Fundamentals_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>We will take the convention here that (for a balanced design, i.e., we have the same number of replicates per treatment combination), the value of a treatment combination is the sum of the response of the treatment combination as assessed in each replicate. That is, for example, (1) = 59 because we assessed the response of (1) as 20, 18, and 21. We then say that the effect of a factor is the difference between the average response when the factor is at its high level and the average response when the factor is at its low level. This becomes very apparent in our notation, as we can say, for example the effect of is: <span class="math inline">\(A = \frac{ab + a}{2n} - \frac{b + (1)}{2n} = \frac{1}{2n}[ab + a - b - (1)]\)</span> where <span class="math inline">\(n\)</span> is the number of replicates and the values of <span class="math inline">\((1), a, b, and ab\)</span> are as indicated above.</p>
@@ -999,36 +1006,36 @@ The last question in a general factorial experiment is, "How many replicates sho
 </ul></li>
 </ol>
 <p>Given this set up, it’s relatively easy to calculate contrasts using a data frame, for example:</p>
-<div class="sourceCode" id="cb458"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb458-1" data-line-number="1"><span class="co"># Define our data frame</span></a>
-<a class="sourceLine" id="cb458-2" data-line-number="2">myDF  &lt;-<span class="st"> </span>myDF &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">A =</span> (<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">1</span>)), <span class="dt">B =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>), <span class="dt">tc =</span> <span class="kw">c</span>(<span class="st">&#39;(1)&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;ab&#39;</span>), <span class="dt">run.1 =</span> <span class="kw">c</span>(<span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">52</span>), <span class="dt">run.2 =</span> <span class="kw">c</span>(<span class="dv">18</span>, <span class="dv">31</span>, <span class="dv">37</span>, <span class="dv">53</span>), <span class="dt">run.3 =</span> <span class="kw">c</span>(<span class="dv">21</span>, <span class="dv">28</span>, <span class="dv">42</span>, <span class="dv">48</span>))</a>
-<a class="sourceLine" id="cb458-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb458-4" data-line-number="4"><span class="co"># Modify the data to add the AB column and sum the runs; drop unnecessary additional info and order the data</span></a>
-<a class="sourceLine" id="cb458-5" data-line-number="5">myDF &lt;-<span class="st"> </span>myDF <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">Run.Total =</span> run<span class="fl">.1</span> <span class="op">+</span><span class="st"> </span>run<span class="fl">.2</span> <span class="op">+</span><span class="st"> </span>run<span class="fl">.3</span>, <span class="dt">AB =</span> A<span class="op">*</span>B) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(tc, A, B, AB, Run.Total)</a>
-<a class="sourceLine" id="cb458-6" data-line-number="6">myDF</a></code></pre></div>
+<div class="sourceCode" id="cb474"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb474-1" data-line-number="1"><span class="co"># Define our data frame</span></a>
+<a class="sourceLine" id="cb474-2" data-line-number="2">myDF  &lt;-<span class="st"> </span>myDF &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">A =</span> (<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">1</span>)), <span class="dt">B =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>), <span class="dt">tc =</span> <span class="kw">c</span>(<span class="st">&#39;(1)&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;ab&#39;</span>), <span class="dt">run.1 =</span> <span class="kw">c</span>(<span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">52</span>), <span class="dt">run.2 =</span> <span class="kw">c</span>(<span class="dv">18</span>, <span class="dv">31</span>, <span class="dv">37</span>, <span class="dv">53</span>), <span class="dt">run.3 =</span> <span class="kw">c</span>(<span class="dv">21</span>, <span class="dv">28</span>, <span class="dv">42</span>, <span class="dv">48</span>))</a>
+<a class="sourceLine" id="cb474-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb474-4" data-line-number="4"><span class="co"># Modify the data to add the AB column and sum the runs; drop unnecessary additional info and order the data</span></a>
+<a class="sourceLine" id="cb474-5" data-line-number="5">myDF &lt;-<span class="st"> </span>myDF <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">Run.Total =</span> run<span class="fl">.1</span> <span class="op">+</span><span class="st"> </span>run<span class="fl">.2</span> <span class="op">+</span><span class="st"> </span>run<span class="fl">.3</span>, <span class="dt">AB =</span> A<span class="op">*</span>B) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(tc, A, B, AB, Run.Total)</a>
+<a class="sourceLine" id="cb474-6" data-line-number="6">myDF</a></code></pre></div>
 <pre><code>##    tc  A  B AB Run.Total
 ## 1 (1) -1 -1  1        59
 ## 2   b -1  1 -1        89
 ## 3   a  1 -1 -1       119
 ## 4  ab  1  1  1       153</code></pre>
-<div class="sourceCode" id="cb460"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb460-1" data-line-number="1"><span class="co"># We can then calculate the contrasts:</span></a>
-<a class="sourceLine" id="cb460-2" data-line-number="2">Contrast.A =<span class="st"> </span><span class="kw">sum</span>(myDF<span class="op">$</span>A <span class="op">*</span><span class="st"> </span>myDF<span class="op">$</span>Run.Total)</a>
-<a class="sourceLine" id="cb460-3" data-line-number="3">Contrast.B =<span class="st"> </span><span class="kw">sum</span>(myDF<span class="op">$</span>B <span class="op">*</span><span class="st"> </span>myDF<span class="op">$</span>Run.Total)</a>
-<a class="sourceLine" id="cb460-4" data-line-number="4">Contrast.AB =<span class="st"> </span><span class="kw">sum</span>(myDF<span class="op">$</span>AB <span class="op">*</span><span class="st"> </span>myDF<span class="op">$</span>Run.Total)</a>
-<a class="sourceLine" id="cb460-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb460-6" data-line-number="6">Contrast.A</a></code></pre></div>
+<div class="sourceCode" id="cb476"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb476-1" data-line-number="1"><span class="co"># We can then calculate the contrasts:</span></a>
+<a class="sourceLine" id="cb476-2" data-line-number="2">Contrast.A =<span class="st"> </span><span class="kw">sum</span>(myDF<span class="op">$</span>A <span class="op">*</span><span class="st"> </span>myDF<span class="op">$</span>Run.Total)</a>
+<a class="sourceLine" id="cb476-3" data-line-number="3">Contrast.B =<span class="st"> </span><span class="kw">sum</span>(myDF<span class="op">$</span>B <span class="op">*</span><span class="st"> </span>myDF<span class="op">$</span>Run.Total)</a>
+<a class="sourceLine" id="cb476-4" data-line-number="4">Contrast.AB =<span class="st"> </span><span class="kw">sum</span>(myDF<span class="op">$</span>AB <span class="op">*</span><span class="st"> </span>myDF<span class="op">$</span>Run.Total)</a>
+<a class="sourceLine" id="cb476-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb476-6" data-line-number="6">Contrast.A</a></code></pre></div>
 <pre><code>## [1] 124</code></pre>
-<div class="sourceCode" id="cb462"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb462-1" data-line-number="1">Contrast.B</a></code></pre></div>
+<div class="sourceCode" id="cb478"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb478-1" data-line-number="1">Contrast.B</a></code></pre></div>
 <pre><code>## [1] 64</code></pre>
-<div class="sourceCode" id="cb464"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb464-1" data-line-number="1">Contrast.AB</a></code></pre></div>
+<div class="sourceCode" id="cb480"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb480-1" data-line-number="1">Contrast.AB</a></code></pre></div>
 <pre><code>## [1] 4</code></pre>
-<div class="sourceCode" id="cb466"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb466-1" data-line-number="1"><span class="co"># Further, we can then show the effects:</span></a>
-<a class="sourceLine" id="cb466-2" data-line-number="2">Contrast.A <span class="op">/</span><span class="st"> </span>(<span class="dv">2</span><span class="op">*</span><span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb482"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb482-1" data-line-number="1"><span class="co"># Further, we can then show the effects:</span></a>
+<a class="sourceLine" id="cb482-2" data-line-number="2">Contrast.A <span class="op">/</span><span class="st"> </span>(<span class="dv">2</span><span class="op">*</span><span class="dv">3</span>)</a></code></pre></div>
 <pre><code>## [1] 20.66667</code></pre>
-<div class="sourceCode" id="cb468"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb468-1" data-line-number="1">Contrast.B <span class="op">/</span><span class="st"> </span>(<span class="dv">2</span><span class="op">*</span><span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb484"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb484-1" data-line-number="1">Contrast.B <span class="op">/</span><span class="st"> </span>(<span class="dv">2</span><span class="op">*</span><span class="dv">3</span>)</a></code></pre></div>
 <pre><code>## [1] 10.66667</code></pre>
-<div class="sourceCode" id="cb470"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb470-1" data-line-number="1">Contrast.AB <span class="op">/</span><span class="st"> </span>(<span class="dv">2</span><span class="op">*</span><span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb486"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb486-1" data-line-number="1">Contrast.AB <span class="op">/</span><span class="st"> </span>(<span class="dv">2</span><span class="op">*</span><span class="dv">3</span>)</a></code></pre></div>
 <pre><code>## [1] 0.6666667</code></pre>
-<div class="sourceCode" id="cb472"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb472-1" data-line-number="1"><span class="co"># This of course matches what we showed above</span></a></code></pre></div>
+<div class="sourceCode" id="cb488"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb488-1" data-line-number="1"><span class="co"># This of course matches what we showed above</span></a></code></pre></div>
 <p>There is further a nice relationship between these contrasts and the Sum of Squares that you see on an ANOVA table. That is, the sum of squares for a factor F is: <span class="math inline">\(SS_F = \frac{Contrast_F^2}{2^K \cdot n}\)</span>. We can see this explicitly with our above example</p>
 <pre><code>##             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
 ## A            1 1281.3  1281.3 284.741 1.54e-07 ***
@@ -1046,8 +1053,8 @@ The last question in a general factorial experiment is, "How many replicates sho
 <p>These numbers of course match the numbers we see in our ANOVA table. In our ANOVA discussion, we did not dive deeply into the discussion of sum of squares, but in general its useful to note that, all things being equal, if one has a larger sum of squares, one will have a relatively larger F Value which implies a lower p-value which implies the factor is more significant. This is a long way of saying a larger contrast implies greater statistical significance.</p>
 <p>While both contrast and the sum of squares gives one an idea on the magnitude of the effect, contrast also provides an idea of the direction of the effect that sum of squares does not (as it is always positive). If a contrast is positive, the effect of moving from the low level to the high level is positive; conversely, if it is negative, the effect of moving from the low level to the high level is negative.</p>
 </div>
-<div id="unreplicated-2k-designs" class="section level3">
-<h3><span class="header-section-number">5.4.4</span> Unreplicated <span class="math inline">\(2^K\)</span> Designs</h3>
+<div id="unreplicated-2k-designs" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.4.4</span> Unreplicated <span class="math inline">\(2^K\)</span> Designs<a href="fundamentals-of-design-of-experiments.html#unreplicated-2k-designs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Often we find that we only have the ability to conduct a single replicate of a <span class="math inline">\(2^K\)</span> design (especially as <span class="math inline">\(K\)</span> grows). As has been noted before, there are two major challenges to an unreplicated design. First, it does not provide us enough degrees of freedom to assess the residual standard error and thus insufficient degrees of freedom to conduct an ANOVA against every factor and every interaction. Second, there is a possibility that we may erroneously assess a factor as significant or not due to the noise inherent in each test. We can address these problems in several ways.</p>
 <p><strong>Choice of levels</strong>: Montgomery <span class="citation">Montgomery (<a href="#ref-montgomery2017">2017</a>)</span> recommends an “aggressive” spacing in levels. That is, we are less likely to make errors due to response variation if the levels are far apart. This is best seen graphically (recreated from <span class="citation">Montgomery (<a href="#ref-montgomery2017">2017</a>)</span>):</p>
 <center>
@@ -1181,55 +1188,55 @@ The last question in a general factorial experiment is, "How many replicates sho
 <p>You now have an additional replicate to do more thorough analysis.</p>
 <p><strong>Normal Probability Plots</strong>: In unreplicated designs, it is possible that we may see significant effects from higher order interactions. One way to identify these is through the use of normal probability plots. We have seen these when analyzing residuals in an ANOVA; you can read more about them <a href = 'https://www.itl.nist.gov/div898/handbook/eda/section3/normprpl.htm'> here (NIST Engineering Statistics Handbook) </a>. The key difference here is that we are plotting the effects we have observed from an experiment, not residuals. The assumption we are making with this analysis is that if effects are non-signfiicant, they are generally small, average to zero, and any variation is due to random, normal variation. Therefore, any effects that fall outside of what would be expected with this distribution are significant. That is, any points on the plot that fall off of the straight line. We can see this using <em>R</em>:</p>
 <p>Consider a <span class="math inline">\(2^4\)</span> experiment that had the following effects (data taken from <span class="citation">Montgomery (<a href="#ref-montgomery2017">2017</a>)</span>, Example 6.2):</p>
-<div class="sourceCode" id="cb474"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb474-1" data-line-number="1">myDF &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Factor =</span> <span class="kw">c</span>(<span class="st">&#39;A&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="st">&#39;C&#39;</span>, <span class="st">&#39;D&#39;</span>, <span class="st">&#39;AB&#39;</span>, <span class="st">&#39;AC&#39;</span>, <span class="st">&#39;AD&#39;</span>, <span class="st">&#39;BC&#39;</span>, <span class="st">&#39;BD&#39;</span>, <span class="st">&#39;CD&#39;</span>, <span class="st">&#39;ABC&#39;</span>, <span class="st">&#39;ABD&#39;</span>, <span class="st">&#39;ACD&#39;</span>, <span class="st">&#39;BCD&#39;</span>, <span class="st">&#39;ABCD&#39;</span>),</a>
-<a class="sourceLine" id="cb474-2" data-line-number="2">                   <span class="dt">Effect =</span> <span class="kw">c</span>(<span class="fl">21.625</span>, <span class="fl">3.125</span>, <span class="fl">9.875</span>, <span class="fl">14.625</span>, <span class="fl">0.125</span>, <span class="fl">-18.125</span>, <span class="fl">16.625</span>, <span class="fl">2.375</span>, <span class="fl">-.375</span>, <span class="fl">1.125</span>, <span class="fl">1.875</span>, <span class="fl">4.125</span>, <span class="fl">-1.625</span>, <span class="fl">-2.625</span>, <span class="fl">1.375</span>))</a>
-<a class="sourceLine" id="cb474-3" data-line-number="3">DT<span class="op">::</span><span class="kw">datatable</span>(myDF, <span class="dt">rownames =</span> F, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">pageLength =</span> <span class="dv">16</span>))</a></code></pre></div>
-<div id="htmlwidget-884dc32e25f1bad9101e" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-884dc32e25f1bad9101e">{"x":{"filter":"none","data":[["A","B","C","D","AB","AC","AD","BC","BD","CD","ABC","ABD","ACD","BCD","ABCD"],[21.625,3.125,9.875,14.625,0.125,-18.125,16.625,2.375,-0.375,1.125,1.875,4.125,-1.625,-2.625,1.375]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Factor<\/th>\n      <th>Effect<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":16,"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,16,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb490"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb490-1" data-line-number="1">myDF &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Factor =</span> <span class="kw">c</span>(<span class="st">&#39;A&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="st">&#39;C&#39;</span>, <span class="st">&#39;D&#39;</span>, <span class="st">&#39;AB&#39;</span>, <span class="st">&#39;AC&#39;</span>, <span class="st">&#39;AD&#39;</span>, <span class="st">&#39;BC&#39;</span>, <span class="st">&#39;BD&#39;</span>, <span class="st">&#39;CD&#39;</span>, <span class="st">&#39;ABC&#39;</span>, <span class="st">&#39;ABD&#39;</span>, <span class="st">&#39;ACD&#39;</span>, <span class="st">&#39;BCD&#39;</span>, <span class="st">&#39;ABCD&#39;</span>),</a>
+<a class="sourceLine" id="cb490-2" data-line-number="2">                   <span class="dt">Effect =</span> <span class="kw">c</span>(<span class="fl">21.625</span>, <span class="fl">3.125</span>, <span class="fl">9.875</span>, <span class="fl">14.625</span>, <span class="fl">0.125</span>, <span class="fl">-18.125</span>, <span class="fl">16.625</span>, <span class="fl">2.375</span>, <span class="fl">-.375</span>, <span class="fl">1.125</span>, <span class="fl">1.875</span>, <span class="fl">4.125</span>, <span class="fl">-1.625</span>, <span class="fl">-2.625</span>, <span class="fl">1.375</span>))</a>
+<a class="sourceLine" id="cb490-3" data-line-number="3">DT<span class="op">::</span><span class="kw">datatable</span>(myDF, <span class="dt">rownames =</span> F, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">pageLength =</span> <span class="dv">16</span>))</a></code></pre></div>
+<div id="htmlwidget-1b6fd14e5d23396a4788" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1b6fd14e5d23396a4788">{"x":{"filter":"none","vertical":false,"data":[["A","B","C","D","AB","AC","AD","BC","BD","CD","ABC","ABD","ACD","BCD","ABCD"],[21.625,3.125,9.875,14.625,0.125,-18.125,16.625,2.375,-0.375,1.125,1.875,4.125,-1.625,-2.625,1.375]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Factor<\/th>\n      <th>Effect<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":16,"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,16,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 <p>We can look at this and certainly say some of the effects are significant, for example, <span class="math inline">\(A\)</span> has the largest effect and is signficantly larger than most (in absolute value). Conversely, <span class="math inline">\(AB\)</span> has an effect that is almost 0 and is almost certainly not significant. The question is where is the cut off for significant. For example, one would certainly include <span class="math inline">\(AD\)</span> and <span class="math inline">\(D\)</span> as significant, but then, what about <span class="math inline">\(C\)</span>, or do we continue to <span class="math inline">\(ABD\)</span>? It is easier to visualize this data with a normal probability plot. One way we can do this is with <code>qqnorm</code>:</p>
-<div class="sourceCode" id="cb475"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb475-1" data-line-number="1"><span class="co"># Use the functions qqnorm and qqline to produce a normal probability plot</span></a>
-<a class="sourceLine" id="cb475-2" data-line-number="2"><span class="co"># Note, various texts will use differing forms of this plot, but the results</span></a>
-<a class="sourceLine" id="cb475-3" data-line-number="3"><span class="co"># are functionally the same</span></a>
-<a class="sourceLine" id="cb475-4" data-line-number="4"><span class="kw">qqnorm</span>(myDF<span class="op">$</span>Effect)</a>
-<a class="sourceLine" id="cb475-5" data-line-number="5"><span class="kw">qqline</span>(myDF<span class="op">$</span>Effect)</a></code></pre></div>
+<div class="sourceCode" id="cb491"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb491-1" data-line-number="1"><span class="co"># Use the functions qqnorm and qqline to produce a normal probability plot</span></a>
+<a class="sourceLine" id="cb491-2" data-line-number="2"><span class="co"># Note, various texts will use differing forms of this plot, but the results</span></a>
+<a class="sourceLine" id="cb491-3" data-line-number="3"><span class="co"># are functionally the same</span></a>
+<a class="sourceLine" id="cb491-4" data-line-number="4"><span class="kw">qqnorm</span>(myDF<span class="op">$</span>Effect)</a>
+<a class="sourceLine" id="cb491-5" data-line-number="5"><span class="kw">qqline</span>(myDF<span class="op">$</span>Effect)</a></code></pre></div>
 <p><img src="04-DOE_Fundamentals_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
-<div class="sourceCode" id="cb476"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb476-1" data-line-number="1"><span class="co"># This shows us there are several points that are significant</span></a>
-<a class="sourceLine" id="cb476-2" data-line-number="2"><span class="co"># Unfortunately, this does not actually label the points for us</span></a>
-<a class="sourceLine" id="cb476-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb476-4" data-line-number="4"><span class="co"># We can add labels (in probably many ways, this is just one):</span></a>
-<a class="sourceLine" id="cb476-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb476-6" data-line-number="6"><span class="co"># First, calculate the qqnorm x and y coordinates and save as &quot;points&quot;</span></a>
-<a class="sourceLine" id="cb476-7" data-line-number="7"><span class="co"># The argument plot.it = F, prevents the qqnorm from plotting an additional plot</span></a>
-<a class="sourceLine" id="cb476-8" data-line-number="8">points &lt;-<span class="st"> </span><span class="kw">qqnorm</span>(myDF<span class="op">$</span>Effect, <span class="dt">plot.it =</span> F)</a>
-<a class="sourceLine" id="cb476-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb476-10" data-line-number="10"><span class="co"># Next plot the same plot as before</span></a>
-<a class="sourceLine" id="cb476-11" data-line-number="11"><span class="kw">qqnorm</span>(myDF<span class="op">$</span>Effect, <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">20</span>, <span class="dv">25</span>)) <span class="co"># modify the y limit to see all labels</span></a>
-<a class="sourceLine" id="cb476-12" data-line-number="12"><span class="kw">qqline</span>(myDF<span class="op">$</span>Effect)</a>
-<a class="sourceLine" id="cb476-13" data-line-number="13"><span class="co"># add text where the labels are plotted at the corresponding points</span></a>
-<a class="sourceLine" id="cb476-14" data-line-number="14"><span class="co"># of the qqnorm.  Note, qqnorm preserves the order of the orginal data</span></a>
-<a class="sourceLine" id="cb476-15" data-line-number="15"><span class="co"># to avoid some overlap, add a small delta to the y coordinate</span></a>
-<a class="sourceLine" id="cb476-16" data-line-number="16"><span class="kw">text</span>(points<span class="op">$</span>x, points<span class="op">$</span>y <span class="op">+</span><span class="st"> </span><span class="dv">2</span>, <span class="dt">labels =</span> myDF<span class="op">$</span>Factor)</a></code></pre></div>
+<div class="sourceCode" id="cb492"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb492-1" data-line-number="1"><span class="co"># This shows us there are several points that are significant</span></a>
+<a class="sourceLine" id="cb492-2" data-line-number="2"><span class="co"># Unfortunately, this does not actually label the points for us</span></a>
+<a class="sourceLine" id="cb492-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb492-4" data-line-number="4"><span class="co"># We can add labels (in probably many ways, this is just one):</span></a>
+<a class="sourceLine" id="cb492-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb492-6" data-line-number="6"><span class="co"># First, calculate the qqnorm x and y coordinates and save as &quot;points&quot;</span></a>
+<a class="sourceLine" id="cb492-7" data-line-number="7"><span class="co"># The argument plot.it = F, prevents the qqnorm from plotting an additional plot</span></a>
+<a class="sourceLine" id="cb492-8" data-line-number="8">points &lt;-<span class="st"> </span><span class="kw">qqnorm</span>(myDF<span class="op">$</span>Effect, <span class="dt">plot.it =</span> F)</a>
+<a class="sourceLine" id="cb492-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb492-10" data-line-number="10"><span class="co"># Next plot the same plot as before</span></a>
+<a class="sourceLine" id="cb492-11" data-line-number="11"><span class="kw">qqnorm</span>(myDF<span class="op">$</span>Effect, <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">20</span>, <span class="dv">25</span>)) <span class="co"># modify the y limit to see all labels</span></a>
+<a class="sourceLine" id="cb492-12" data-line-number="12"><span class="kw">qqline</span>(myDF<span class="op">$</span>Effect)</a>
+<a class="sourceLine" id="cb492-13" data-line-number="13"><span class="co"># add text where the labels are plotted at the corresponding points</span></a>
+<a class="sourceLine" id="cb492-14" data-line-number="14"><span class="co"># of the qqnorm.  Note, qqnorm preserves the order of the orginal data</span></a>
+<a class="sourceLine" id="cb492-15" data-line-number="15"><span class="co"># to avoid some overlap, add a small delta to the y coordinate</span></a>
+<a class="sourceLine" id="cb492-16" data-line-number="16"><span class="kw">text</span>(points<span class="op">$</span>x, points<span class="op">$</span>y <span class="op">+</span><span class="st"> </span><span class="dv">2</span>, <span class="dt">labels =</span> myDF<span class="op">$</span>Factor)</a></code></pre></div>
 <p><img src="04-DOE_Fundamentals_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
-<div class="sourceCode" id="cb477"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb477-1" data-line-number="1"><span class="co"># This lets us clearly see that A, AD, D, C, and AC are significant factors </span></a>
-<a class="sourceLine" id="cb477-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb477-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb477-4" data-line-number="4"><span class="co"># Sometimes people prefer to flip the axes so that the effect is seen on the x axis</span></a>
-<a class="sourceLine" id="cb477-5" data-line-number="5"><span class="co"># you can simply use the datax = T argument for qqnorm and qqline</span></a>
-<a class="sourceLine" id="cb477-6" data-line-number="6"><span class="co"># Note that you can also change labels, and so forth using various arguments</span></a>
-<a class="sourceLine" id="cb477-7" data-line-number="7"><span class="co"># but this is functionally the same sort of plotting as above</span></a>
-<a class="sourceLine" id="cb477-8" data-line-number="8">points &lt;-<span class="st"> </span><span class="kw">qqnorm</span>(myDF<span class="op">$</span>Effect, <span class="dt">datax =</span> T, <span class="dt">plot.it =</span> F)</a>
-<a class="sourceLine" id="cb477-9" data-line-number="9"><span class="kw">qqnorm</span>(myDF<span class="op">$</span>Effect, <span class="dt">datax =</span> T, <span class="dt">ylab =</span> <span class="st">&#39;Effect&#39;</span>) <span class="co"># Note the labeling on this does not presume the flipped axis</span></a>
-<a class="sourceLine" id="cb477-10" data-line-number="10"><span class="kw">qqline</span>(myDF<span class="op">$</span>Effect, <span class="dt">datax =</span> T)</a>
-<a class="sourceLine" id="cb477-11" data-line-number="11"><span class="kw">text</span>(points<span class="op">$</span>x, points<span class="op">$</span>y <span class="op">+</span><span class="st"> </span><span class="fl">.15</span>, <span class="dt">labels =</span> myDF<span class="op">$</span>Factor)</a></code></pre></div>
+<div class="sourceCode" id="cb493"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb493-1" data-line-number="1"><span class="co"># This lets us clearly see that A, AD, D, C, and AC are significant factors </span></a>
+<a class="sourceLine" id="cb493-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb493-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb493-4" data-line-number="4"><span class="co"># Sometimes people prefer to flip the axes so that the effect is seen on the x axis</span></a>
+<a class="sourceLine" id="cb493-5" data-line-number="5"><span class="co"># you can simply use the datax = T argument for qqnorm and qqline</span></a>
+<a class="sourceLine" id="cb493-6" data-line-number="6"><span class="co"># Note that you can also change labels, and so forth using various arguments</span></a>
+<a class="sourceLine" id="cb493-7" data-line-number="7"><span class="co"># but this is functionally the same sort of plotting as above</span></a>
+<a class="sourceLine" id="cb493-8" data-line-number="8">points &lt;-<span class="st"> </span><span class="kw">qqnorm</span>(myDF<span class="op">$</span>Effect, <span class="dt">datax =</span> T, <span class="dt">plot.it =</span> F)</a>
+<a class="sourceLine" id="cb493-9" data-line-number="9"><span class="kw">qqnorm</span>(myDF<span class="op">$</span>Effect, <span class="dt">datax =</span> T, <span class="dt">ylab =</span> <span class="st">&#39;Effect&#39;</span>) <span class="co"># Note the labeling on this does not presume the flipped axis</span></a>
+<a class="sourceLine" id="cb493-10" data-line-number="10"><span class="kw">qqline</span>(myDF<span class="op">$</span>Effect, <span class="dt">datax =</span> T)</a>
+<a class="sourceLine" id="cb493-11" data-line-number="11"><span class="kw">text</span>(points<span class="op">$</span>x, points<span class="op">$</span>y <span class="op">+</span><span class="st"> </span><span class="fl">.15</span>, <span class="dt">labels =</span> myDF<span class="op">$</span>Factor)</a></code></pre></div>
 <p><img src="04-DOE_Fundamentals_files/figure-html/unnamed-chunk-13-3.png" width="672" /></p>
-<div class="sourceCode" id="cb478"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb478-1" data-line-number="1"><span class="co"># If one prefers to have more control over the graph, one can do this in ggplot either by making a dataframe out of the </span></a>
-<a class="sourceLine" id="cb478-2" data-line-number="2"><span class="co"># given data or using stat_qq</span></a>
-<a class="sourceLine" id="cb478-3" data-line-number="3"><span class="co"># This stack exachange discussion is highly useful:</span></a>
-<a class="sourceLine" id="cb478-4" data-line-number="4"><span class="co"># https://stackoverflow.com/questions/14958814/how-can-i-label-the-points-of-a-quantile-quantile-plot-composed-with-ggplot2</span></a></code></pre></div>
+<div class="sourceCode" id="cb494"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb494-1" data-line-number="1"><span class="co"># If one prefers to have more control over the graph, one can do this in ggplot either by making a dataframe out of the </span></a>
+<a class="sourceLine" id="cb494-2" data-line-number="2"><span class="co"># given data or using stat_qq</span></a>
+<a class="sourceLine" id="cb494-3" data-line-number="3"><span class="co"># This stack exachange discussion is highly useful:</span></a>
+<a class="sourceLine" id="cb494-4" data-line-number="4"><span class="co"># https://stackoverflow.com/questions/14958814/how-can-i-label-the-points-of-a-quantile-quantile-plot-composed-with-ggplot2</span></a></code></pre></div>
 <p>One can also do a half-normal probability plot in a similar manner. One can read about it <a href = 'https://www.itl.nist.gov/div898/handbook/pri/section5/pri598.htm'> here </a>. The main difference is that we are plotting the absolute values of effects.</p>
 </div>
-<div id="problem-set-3" class="section level3">
-<h3><span class="header-section-number">5.4.5</span> Problem Set</h3>
+<div id="problem-set-3" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.4.5</span> Problem Set<a href="fundamentals-of-design-of-experiments.html#problem-set-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The problem set for this section is located <a href = '/_Chapter4_ProblemSets/2K_Factorial_Design_PS_Question.html'> here </a>.</p>
 <p>For your convenience, the problem set as an R markdown is located <a href = '/_Chapter4_ProblemSets/2K_Factorial_Design_PS_Question.Rmd'> here </a></p>
 <p>The answers for this problem set are <a href = '/_Chapter4_ProblemSets/2K_Factorial_Design_PS_Answer.html'> here </a>.</p>
@@ -1277,7 +1284,6 @@ The last question in a general factorial experiment is, "How many replicates sho
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1296,6 +1302,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -1316,6 +1323,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "chapter"
 }
@@ -1329,7 +1340,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

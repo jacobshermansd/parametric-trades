@@ -36,8 +36,8 @@ Recall your original run matrix and the table of effects and interaction effects
 
 
 ```{=html}
-<div id="htmlwidget-3b62ce829b29f447bcac" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3b62ce829b29f447bcac">{"x":{"filter":"none","data":[["(1)","a","b","ab","c","ac","bc","abc"],[1,1,1,1,1,1,1,1],[-1,1,-1,1,-1,1,-1,1],[-1,-1,1,1,-1,-1,1,1],[1,-1,-1,1,1,-1,-1,1],[-1,-1,-1,-1,1,1,1,1],[1,-1,1,-1,-1,1,-1,1],[1,1,-1,-1,-1,-1,1,1],[-1,1,1,-1,1,-1,-1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1f4a9cc4dc09554bf84e" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1f4a9cc4dc09554bf84e">{"x":{"filter":"none","vertical":false,"data":[["(1)","a","b","ab","c","ac","bc","abc"],[1,1,1,1,1,1,1,1],[-1,1,-1,1,-1,1,-1,1],[-1,-1,1,1,-1,-1,1,1],[1,-1,-1,1,1,-1,-1,1],[-1,-1,-1,-1,1,1,1,1],[1,-1,1,-1,-1,1,-1,1],[1,1,-1,-1,-1,-1,1,1],[-1,1,1,-1,1,-1,-1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ```
 
 Note that: 
@@ -49,8 +49,8 @@ Unfortunately, as we can only run four tests, we must choose only four of the tr
 
 
 ```{=html}
-<div id="htmlwidget-a04915b208fda8b49456" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a04915b208fda8b49456">{"x":{"filter":"none","data":[["(1)","a","b","ab"],[1,1,1,1],[-1,1,-1,1],[-1,-1,1,1],[1,-1,-1,1],[-1,-1,-1,-1],[1,-1,1,-1],[1,1,-1,-1],[-1,1,1,-1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-368722aa9f16b6d29361" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-368722aa9f16b6d29361">{"x":{"filter":"none","vertical":false,"data":[["(1)","a","b","ab"],[1,1,1,1],[-1,1,-1,1],[-1,-1,1,1],[1,-1,-1,1],[-1,-1,-1,-1],[1,-1,1,-1],[1,1,-1,-1],[-1,1,1,-1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ```
 
 This is not a good choice.  As we can see by inspection, we never assess C at its high level, so we cannot learn anything about what happens as we vary C.
@@ -59,8 +59,8 @@ Alternatively, we might choose the tests randomly, for example, we might get:
 
 
 ```{=html}
-<div id="htmlwidget-3d1accc1eae49a1f0ce4" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3d1accc1eae49a1f0ce4">{"x":{"filter":"none","data":[["(1)","abc","c","ab"],[1,1,1,1],[-1,1,-1,1],[-1,1,-1,1],[1,1,1,1],[-1,1,1,-1],[1,1,-1,-1],[1,1,-1,-1],[-1,1,1,-1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e6b4aa3076f84aa5c5ec" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e6b4aa3076f84aa5c5ec">{"x":{"filter":"none","vertical":false,"data":[["(1)","abc","c","ab"],[1,1,1,1],[-1,1,-1,1],[-1,1,-1,1],[1,1,1,1],[-1,1,1,-1],[1,1,-1,-1],[1,1,-1,-1],[-1,1,1,-1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ```
 
 It is perhaps a little less clear, but we might note that we never vary the AB interaction as we see all "+1" in that column.  This is because we can see that A and B are always set to the same level for each treatment combination.  The implication of this is that we won't know if an observed effect is caused by a or caused by B.
@@ -73,8 +73,8 @@ Consider the option where we choose only those treatment combinations where ABC 
 
 
 ```{=html}
-<div id="htmlwidget-74c3be7af21a9dcbdaf9" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-74c3be7af21a9dcbdaf9">{"x":{"filter":"none","data":[["a","b","c","abc"],[1,1,1,1],[1,-1,-1,1],[-1,1,-1,1],[-1,-1,1,1],[-1,-1,1,1],[-1,1,-1,1],[1,-1,-1,1],[1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-603c421d5323124ed3f4" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-603c421d5323124ed3f4">{"x":{"filter":"none","vertical":false,"data":[["a","b","c","abc"],[1,1,1,1],[1,-1,-1,1],[-1,1,-1,1],[-1,-1,1,1],[-1,-1,1,1],[-1,1,-1,1],[1,-1,-1,1],[1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ```
 
 Now, as we look at this, we can note a few things:
@@ -91,8 +91,8 @@ We can make this explicit with some color:
     
 
 ```{=html}
-<div id="htmlwidget-900458c7e12af1e28279" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-900458c7e12af1e28279">{"x":{"filter":"none","data":[["a","b","c","abc"],[1,1,1,1],[1,-1,-1,1],[-1,1,-1,1],[-1,-1,1,1],[-1,-1,1,1],[-1,1,-1,1],[1,-1,-1,1],[1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'red'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background-color':'red'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'background-color':'blue'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'blue'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':'green'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'background-color':'green'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':'yellow'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background-color':'yellow'});\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-weight':'bold'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-weight':'bold'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-weight':'bold'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-weight':'bold'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'font-weight':'bold'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'font-weight':'bold'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'font-weight':'bold'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'font-weight':'bold'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-187e841c3edf6be09fc7" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-187e841c3edf6be09fc7">{"x":{"filter":"none","vertical":false,"data":[["a","b","c","abc"],[1,1,1,1],[1,-1,-1,1],[-1,1,-1,1],[-1,-1,1,1],[-1,-1,1,1],[-1,1,-1,1],[1,-1,-1,1],[1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'red'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background-color':'red'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'background-color':'blue'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'blue'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':'green'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'background-color':'green'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':'yellow'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background-color':'yellow'});\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-weight':'bold'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-weight':'bold'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-weight':'bold'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-weight':'bold'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'font-weight':'bold'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'font-weight':'bold'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'font-weight':'bold'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'font-weight':'bold'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 ```
 
 What we have done now, is not avoided the problems shown above, but mitigated them.  Specifically, we have done a few things:
@@ -119,8 +119,8 @@ This shows us that $A$ and $BC$ are aliased in this design.  The reader can use 
 
 
 ```{=html}
-<div id="htmlwidget-5f33a0630fba0b37e6ca" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5f33a0630fba0b37e6ca">{"x":{"filter":"none","data":[["(1)","ab","ac","bc"],[1,1,1,1],[-1,1,1,-1],[-1,1,-1,1],[1,1,-1,-1],[-1,-1,1,1],[1,-1,1,-1],[1,-1,-1,1],[-1,-1,-1,-1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'red'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background-color':'red'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'background-color':'blue'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'blue'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':'green'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'background-color':'green'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':'yellow'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background-color':'yellow'});\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-weight':'bold'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-weight':'bold'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-weight':'bold'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-weight':'bold'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'font-weight':'bold'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'font-weight':'bold'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'font-weight':'bold'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'font-weight':'bold'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-ad66b7643f860c7844a4" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ad66b7643f860c7844a4">{"x":{"filter":"none","vertical":false,"data":[["(1)","ab","ac","bc"],[1,1,1,1],[-1,1,1,-1],[-1,1,-1,1],[1,1,-1,-1],[-1,-1,1,1],[1,-1,1,-1],[1,-1,-1,1],[-1,-1,-1,-1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'red'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background-color':'red'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'background-color':'blue'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'blue'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':'green'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'background-color':'green'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':'yellow'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background-color':'yellow'});\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-weight':'bold'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-weight':'bold'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-weight':'bold'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-weight':'bold'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'font-weight':'bold'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'font-weight':'bold'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'font-weight':'bold'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'font-weight':'bold'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 ```
 
 Here we see that our alias structure is not exactly the same, rather our aliases are inverses of each other.  For example, $A = -BC$.  We can calculate these in the same manner as before, e.g.:
@@ -133,8 +133,8 @@ When we are estimating the effects in this case, we are going to see that our es
 
 
 ```{=html}
-<div id="htmlwidget-68b122f7f9d8fd619109" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-68b122f7f9d8fd619109">{"x":{"filter":"none","data":[["a","ab","ac","abc"],[1,1,1,1],[1,1,1,1],[-1,1,-1,1],[-1,1,-1,1],[-1,-1,1,1],[-1,-1,1,1],[1,-1,-1,1],[1,-1,-1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background-color':'red'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background-color':'red'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'background-color':'blue'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'background-color':'blue'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':'green'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'green'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':'yellow'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'yellow'});\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-weight':'bold'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-weight':'bold'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-weight':'bold'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-weight':'bold'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'font-weight':'bold'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'font-weight':'bold'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'font-weight':'bold'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'font-weight':'bold'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-b503fe018ef32e07da32" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b503fe018ef32e07da32">{"x":{"filter":"none","vertical":false,"data":[["a","ab","ac","abc"],[1,1,1,1],[1,1,1,1],[-1,1,-1,1],[-1,1,-1,1],[-1,-1,1,1],[-1,-1,1,1],[1,-1,-1,1],[1,-1,-1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background-color':'red'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background-color':'red'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'background-color':'blue'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'background-color':'blue'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':'green'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'green'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':'yellow'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'yellow'});\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-weight':'bold'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-weight':'bold'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-weight':'bold'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-weight':'bold'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'font-weight':'bold'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'font-weight':'bold'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'font-weight':'bold'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'font-weight':'bold'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 ```
 
 To make this choice is unconventional and requires some reasonable knowledge of the system at hand, but it *can* be a good choice under the right circumstances.
@@ -147,8 +147,8 @@ For example, if we have $I = ABC$, we have the following design:
 
 
 ```{=html}
-<div id="htmlwidget-9169a50b0b9b91c8949d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9169a50b0b9b91c8949d">{"x":{"filter":"none","data":[["a","b","c","abc"],[1,1,1,1],[1,-1,-1,1],[-1,1,-1,1],[-1,-1,1,1],[-1,-1,1,1],[-1,1,-1,1],[1,-1,-1,1],[1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'red'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background-color':'red'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'background-color':'blue'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'blue'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':'green'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'background-color':'green'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':'yellow'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background-color':'yellow'});\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-weight':'bold'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-weight':'bold'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-weight':'bold'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-weight':'bold'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'font-weight':'bold'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'font-weight':'bold'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'font-weight':'bold'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'font-weight':'bold'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-e75aa47293476d14d5d3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e75aa47293476d14d5d3">{"x":{"filter":"none","vertical":false,"data":[["a","b","c","abc"],[1,1,1,1],[1,-1,-1,1],[-1,1,-1,1],[-1,-1,1,1],[-1,-1,1,1],[-1,1,-1,1],[1,-1,-1,1],[1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>AB<\/th>\n      <th>C<\/th>\n      <th>AC<\/th>\n      <th>BC<\/th>\n      <th>ABC<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'red'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background-color':'red'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'background-color':'blue'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'blue'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':'green'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'background-color':'green'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':'yellow'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background-color':'yellow'});\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-weight':'bold'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-weight':'bold'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-weight':'bold'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-weight':'bold'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'font-weight':'bold'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'font-weight':'bold'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'font-weight':'bold'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'font-weight':'bold'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 ```
 
 We then see: 
@@ -179,8 +179,8 @@ We can also view these in a 3D manner as such:^[Note this uses the `plotly` pack
 
 
 ```{=html}
-<div id="htmlwidget-e80055bcfabac41e39fa" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e80055bcfabac41e39fa">{"x":{"visdat":{"e5a341598f2":["function () ","plotlyVisDat"]},"cur_data":"e5a341598f2","attrs":{"e5a341598f2":{"x":{},"y":{},"z":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"text":{},"type":"scatter3d","mode":"text","inherit":true},"e5a341598f2.1":{"x":{},"y":{},"z":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"markers","color":{},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"A"},"yaxis":{"title":"B"},"zaxis":{"title":"C"}},"xaxis":{"type":"category","categoryorder":"array","categoryarray":["-1","1"]},"yaxis":{"type":"category","categoryorder":"array","categoryarray":["-1","1"]},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"x":["-1","1","-1","1","-1","1","-1","1"],"y":["-1","-1","1","1","-1","-1","1","1"],"z":["-1","-1","-1","-1","1","1","1","1"],"text":["(1)","a","b","ab","c","ac","bc","abc"],"type":"scatter3d","mode":"text","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"x":["-1","1","1","-1"],"y":["-1","1","-1","1"],"z":["-1","-1","1","1"],"type":"scatter3d","mode":"markers","name":"Alternate","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"line":{"color":"rgba(102,194,165,1)"},"frame":null},{"x":["1","-1","-1","1"],"y":["-1","1","-1","1"],"z":["-1","-1","1","1"],"type":"scatter3d","mode":"markers","name":"Principle","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"line":{"color":"rgba(141,160,203,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-30afba3e479560788054" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-30afba3e479560788054">{"x":{"visdat":{"1b3e5797e6bb":["function () ","plotlyVisDat"]},"cur_data":"1b3e5797e6bb","attrs":{"1b3e5797e6bb":{"x":{},"y":{},"z":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"text":{},"type":"scatter3d","mode":"text","inherit":true},"1b3e5797e6bb.1":{"x":{},"y":{},"z":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"markers","color":{},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"A"},"yaxis":{"title":"B"},"zaxis":{"title":"C"}},"xaxis":{"type":"category","categoryorder":"array","categoryarray":["-1","1"]},"yaxis":{"type":"category","categoryorder":"array","categoryarray":["-1","1"]},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"x":["-1","1","-1","1","-1","1","-1","1"],"y":["-1","-1","1","1","-1","-1","1","1"],"z":["-1","-1","-1","-1","1","1","1","1"],"text":["(1)","a","b","ab","c","ac","bc","abc"],"type":"scatter3d","mode":"text","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"x":["-1","1","1","-1"],"y":["-1","1","-1","1"],"z":["-1","-1","1","1"],"type":"scatter3d","mode":"markers","name":"Alternate","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"line":{"color":"rgba(102,194,165,1)"},"frame":null},{"x":["1","-1","-1","1"],"y":["-1","1","-1","1"],"z":["-1","-1","1","1"],"type":"scatter3d","mode":"markers","name":"Principle","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"line":{"color":"rgba(141,160,203,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ```
 
 Again, we see the nice symmetry in the choice of treatment combinations for each fraction.
@@ -252,8 +252,8 @@ datatable(myExample, rownames = F, options = list(pageLength = 16))
 ```
 
 ```{=html}
-<div id="htmlwidget-8a8a0071d0446dd92723" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8a8a0071d0446dd92723">{"x":{"filter":"none","data":[["(1)","a","b","ab","c","ac","bc","abc","d","ad","bd","abd","cd","acd","bcd","abcd"],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[-1,1,-1,1,-1,1,-1,1,-1,1,-1,1,-1,1,-1,1],[-1,-1,1,1,-1,-1,1,1,-1,-1,1,1,-1,-1,1,1],[-1,-1,-1,-1,1,1,1,1,-1,-1,-1,-1,1,1,1,1],[-1,-1,-1,-1,-1,-1,-1,-1,1,1,1,1,1,1,1,1],[1,-1,-1,1,1,-1,-1,1,1,-1,-1,1,1,-1,-1,1],[1,-1,1,-1,-1,1,-1,1,1,-1,1,-1,-1,1,-1,1],[1,-1,1,-1,1,-1,1,-1,-1,1,-1,1,-1,1,-1,1],[1,1,-1,-1,-1,-1,1,1,1,1,-1,-1,-1,-1,1,1],[1,1,-1,-1,1,1,-1,-1,-1,-1,1,1,-1,-1,1,1],[1,1,1,1,-1,-1,-1,-1,-1,-1,-1,-1,1,1,1,1],[-1,1,1,-1,1,-1,-1,1,-1,1,1,-1,1,-1,-1,1],[-1,1,1,-1,-1,1,1,-1,1,-1,-1,1,1,-1,-1,1],[-1,1,-1,1,1,-1,1,-1,1,-1,1,-1,-1,1,-1,1],[-1,-1,1,1,1,1,-1,-1,1,1,-1,-1,-1,-1,1,1],[1,-1,-1,1,-1,1,1,-1,-1,1,1,-1,1,-1,-1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>C<\/th>\n      <th>D<\/th>\n      <th>AB<\/th>\n      <th>AC<\/th>\n      <th>AD<\/th>\n      <th>BC<\/th>\n      <th>BD<\/th>\n      <th>CD<\/th>\n      <th>ABC<\/th>\n      <th>ABD<\/th>\n      <th>ACD<\/th>\n      <th>BCD<\/th>\n      <th>ABCD<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":16,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,16,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-17ce59c182c91c4ea12a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-17ce59c182c91c4ea12a">{"x":{"filter":"none","vertical":false,"data":[["(1)","a","b","ab","c","ac","bc","abc","d","ad","bd","abd","cd","acd","bcd","abcd"],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[-1,1,-1,1,-1,1,-1,1,-1,1,-1,1,-1,1,-1,1],[-1,-1,1,1,-1,-1,1,1,-1,-1,1,1,-1,-1,1,1],[-1,-1,-1,-1,1,1,1,1,-1,-1,-1,-1,1,1,1,1],[-1,-1,-1,-1,-1,-1,-1,-1,1,1,1,1,1,1,1,1],[1,-1,-1,1,1,-1,-1,1,1,-1,-1,1,1,-1,-1,1],[1,-1,1,-1,-1,1,-1,1,1,-1,1,-1,-1,1,-1,1],[1,-1,1,-1,1,-1,1,-1,-1,1,-1,1,-1,1,-1,1],[1,1,-1,-1,-1,-1,1,1,1,1,-1,-1,-1,-1,1,1],[1,1,-1,-1,1,1,-1,-1,-1,-1,1,1,-1,-1,1,1],[1,1,1,1,-1,-1,-1,-1,-1,-1,-1,-1,1,1,1,1],[-1,1,1,-1,1,-1,-1,1,-1,1,1,-1,1,-1,-1,1],[-1,1,1,-1,-1,1,1,-1,1,-1,-1,1,1,-1,-1,1],[-1,1,-1,1,1,-1,1,-1,1,-1,1,-1,-1,1,-1,1],[-1,-1,1,1,1,1,-1,-1,1,1,-1,-1,-1,-1,1,1],[1,-1,-1,1,-1,1,1,-1,-1,1,1,-1,1,-1,-1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>C<\/th>\n      <th>D<\/th>\n      <th>AB<\/th>\n      <th>AC<\/th>\n      <th>AD<\/th>\n      <th>BC<\/th>\n      <th>BD<\/th>\n      <th>CD<\/th>\n      <th>ABC<\/th>\n      <th>ABD<\/th>\n      <th>ACD<\/th>\n      <th>BCD<\/th>\n      <th>ABCD<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":16,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,16,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 ```
 
 ```r
@@ -262,8 +262,8 @@ datatable(myExample %>% filter(ABCD == 1), rownames = F, options = list(pageLeng
 ```
 
 ```{=html}
-<div id="htmlwidget-12af6cc0b852f711a6d1" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-12af6cc0b852f711a6d1">{"x":{"filter":"none","data":[["(1)","ab","ac","bc","ad","bd","cd","abcd"],[1,1,1,1,1,1,1,1],[-1,1,1,-1,1,-1,-1,1],[-1,1,-1,1,-1,1,-1,1],[-1,-1,1,1,-1,-1,1,1],[-1,-1,-1,-1,1,1,1,1],[1,1,-1,-1,-1,-1,1,1],[1,-1,1,-1,-1,1,-1,1],[1,-1,-1,1,1,-1,-1,1],[1,-1,-1,1,1,-1,-1,1],[1,-1,1,-1,-1,1,-1,1],[1,1,-1,-1,-1,-1,1,1],[-1,-1,-1,-1,1,1,1,1],[-1,-1,1,1,-1,-1,1,1],[-1,1,-1,1,-1,1,-1,1],[-1,1,1,-1,1,-1,-1,1],[1,1,1,1,1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>C<\/th>\n      <th>D<\/th>\n      <th>AB<\/th>\n      <th>AC<\/th>\n      <th>AD<\/th>\n      <th>BC<\/th>\n      <th>BD<\/th>\n      <th>CD<\/th>\n      <th>ABC<\/th>\n      <th>ABD<\/th>\n      <th>ACD<\/th>\n      <th>BCD<\/th>\n      <th>ABCD<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-5891417d1b8af7a1a52f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5891417d1b8af7a1a52f">{"x":{"filter":"none","vertical":false,"data":[["(1)","ab","ac","bc","ad","bd","cd","abcd"],[1,1,1,1,1,1,1,1],[-1,1,1,-1,1,-1,-1,1],[-1,1,-1,1,-1,1,-1,1],[-1,-1,1,1,-1,-1,1,1],[-1,-1,-1,-1,1,1,1,1],[1,1,-1,-1,-1,-1,1,1],[1,-1,1,-1,-1,1,-1,1],[1,-1,-1,1,1,-1,-1,1],[1,-1,-1,1,1,-1,-1,1],[1,-1,1,-1,-1,1,-1,1],[1,1,-1,-1,-1,-1,1,1],[-1,-1,-1,-1,1,1,1,1],[-1,-1,1,1,-1,-1,1,1],[-1,1,-1,1,-1,1,-1,1],[-1,1,1,-1,1,-1,-1,1],[1,1,1,1,1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>C<\/th>\n      <th>D<\/th>\n      <th>AB<\/th>\n      <th>AC<\/th>\n      <th>AD<\/th>\n      <th>BC<\/th>\n      <th>BD<\/th>\n      <th>CD<\/th>\n      <th>ABC<\/th>\n      <th>ABD<\/th>\n      <th>ACD<\/th>\n      <th>BCD<\/th>\n      <th>ABCD<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 ```
 
 We can calculate our alias structure using effect multiplication:
@@ -294,8 +294,8 @@ datatable(myExample %>% filter(ABCD == 1), rownames = F, options = list(pageLeng
 ```
 
 ```{=html}
-<div id="htmlwidget-3760c7e8cfc3447f5ece" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3760c7e8cfc3447f5ece">{"x":{"filter":"none","data":[["(1)","ab","ac","bc","ad","bd","cd","abcd"],[1,1,1,1,1,1,1,1],[-1,1,1,-1,1,-1,-1,1],[-1,1,-1,1,-1,1,-1,1],[-1,-1,1,1,-1,-1,1,1],[-1,-1,-1,-1,1,1,1,1],[1,1,-1,-1,-1,-1,1,1],[1,-1,1,-1,-1,1,-1,1],[1,-1,-1,1,1,-1,-1,1],[1,-1,-1,1,1,-1,-1,1],[1,-1,1,-1,-1,1,-1,1],[1,1,-1,-1,-1,-1,1,1],[-1,-1,-1,-1,1,1,1,1],[-1,-1,1,1,-1,-1,1,1],[-1,1,-1,1,-1,1,-1,1],[-1,1,1,-1,1,-1,-1,1],[1,1,1,1,1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>C<\/th>\n      <th>D<\/th>\n      <th>AB<\/th>\n      <th>AC<\/th>\n      <th>AD<\/th>\n      <th>BC<\/th>\n      <th>BD<\/th>\n      <th>CD<\/th>\n      <th>ABC<\/th>\n      <th>ABD<\/th>\n      <th>ACD<\/th>\n      <th>BCD<\/th>\n      <th>ABCD<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100],"rowCallback":"function(row, data) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':'red'});\nvar value=data[16]; $(this.api().cell(row, 16).node()).css({'background-color':'red'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'orange'});\nvar value=data[15]; $(this.api().cell(row, 15).node()).css({'background-color':'orange'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'background-color':'yellow'});\nvar value=data[14]; $(this.api().cell(row, 14).node()).css({'background-color':'yellow'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'background-color':'green'});\nvar value=data[13]; $(this.api().cell(row, 13).node()).css({'background-color':'green'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':'blue'});\nvar value=data[12]; $(this.api().cell(row, 12).node()).css({'background-color':'blue'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'purple'});\nvar value=data[11]; $(this.api().cell(row, 11).node()).css({'background-color':'purple'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background-color':'grey'});\nvar value=data[10]; $(this.api().cell(row, 10).node()).css({'background-color':'grey'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background-color':'white'});\nvar value=data[9]; $(this.api().cell(row, 9).node()).css({'background-color':'white'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-625d9383b6e6325c8c92" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-625d9383b6e6325c8c92">{"x":{"filter":"none","vertical":false,"data":[["(1)","ab","ac","bc","ad","bd","cd","abcd"],[1,1,1,1,1,1,1,1],[-1,1,1,-1,1,-1,-1,1],[-1,1,-1,1,-1,1,-1,1],[-1,-1,1,1,-1,-1,1,1],[-1,-1,-1,-1,1,1,1,1],[1,1,-1,-1,-1,-1,1,1],[1,-1,1,-1,-1,1,-1,1],[1,-1,-1,1,1,-1,-1,1],[1,-1,-1,1,1,-1,-1,1],[1,-1,1,-1,-1,1,-1,1],[1,1,-1,-1,-1,-1,1,1],[-1,-1,-1,-1,1,1,1,1],[-1,-1,1,1,-1,-1,1,1],[-1,1,-1,1,-1,1,-1,1],[-1,1,1,-1,1,-1,-1,1],[1,1,1,1,1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>TC<\/th>\n      <th>I<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>C<\/th>\n      <th>D<\/th>\n      <th>AB<\/th>\n      <th>AC<\/th>\n      <th>AD<\/th>\n      <th>BC<\/th>\n      <th>BD<\/th>\n      <th>CD<\/th>\n      <th>ABC<\/th>\n      <th>ABD<\/th>\n      <th>ACD<\/th>\n      <th>BCD<\/th>\n      <th>ABCD<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':'red'});\nvar value=data[16]; $(this.api().cell(row, 16).node()).css({'background-color':'red'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'orange'});\nvar value=data[15]; $(this.api().cell(row, 15).node()).css({'background-color':'orange'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'background-color':'yellow'});\nvar value=data[14]; $(this.api().cell(row, 14).node()).css({'background-color':'yellow'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'background-color':'green'});\nvar value=data[13]; $(this.api().cell(row, 13).node()).css({'background-color':'green'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':'blue'});\nvar value=data[12]; $(this.api().cell(row, 12).node()).css({'background-color':'blue'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'purple'});\nvar value=data[11]; $(this.api().cell(row, 11).node()).css({'background-color':'purple'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background-color':'grey'});\nvar value=data[10]; $(this.api().cell(row, 10).node()).css({'background-color':'grey'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background-color':'white'});\nvar value=data[9]; $(this.api().cell(row, 9).node()).css({'background-color':'white'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 ```
 
 This of course becomes overwhelming as $K$ increases, both from a visualization perspective and from a practical recording the data perspective.  There a variety of computer programs and packages that can do much of this for us.  One is the `FrF2` package in *R*.  We will demonstrate it here:
@@ -324,14 +324,14 @@ myDesign
 
 ```
 ##    A  B  C  D
-## 1  1 -1  1 -1
-## 2  1  1 -1 -1
-## 3  1  1  1  1
-## 4 -1 -1 -1 -1
-## 5 -1 -1  1  1
-## 6 -1  1 -1  1
-## 7  1 -1 -1  1
-## 8 -1  1  1 -1
+## 1 -1  1  1 -1
+## 2 -1 -1  1  1
+## 3 -1 -1 -1 -1
+## 4  1  1  1  1
+## 5  1 -1  1 -1
+## 6  1  1 -1 -1
+## 7 -1  1 -1  1
+## 8  1 -1 -1  1
 ## class=design, type= FrF2
 ```
 
@@ -348,34 +348,34 @@ str(myDesign)
 
 ```
 ## Classes 'design' and 'data.frame':	8 obs. of  4 variables:
-##  $ A: Factor w/ 2 levels "-1","1": 2 2 2 1 1 1 2 1
+##  $ A: Factor w/ 2 levels "-1","1": 1 1 1 2 2 2 1 2
 ##   ..- attr(*, "contrasts")= num [1:2, 1] -1 1
 ##   .. ..- attr(*, "dimnames")=List of 2
 ##   .. .. ..$ : chr  "-1" "1"
 ##   .. .. ..$ : NULL
-##  $ B: Factor w/ 2 levels "-1","1": 1 2 2 1 1 2 1 2
+##  $ B: Factor w/ 2 levels "-1","1": 2 1 1 2 1 2 2 1
 ##   ..- attr(*, "contrasts")= num [1:2, 1] -1 1
 ##   .. ..- attr(*, "dimnames")=List of 2
 ##   .. .. ..$ : chr  "-1" "1"
 ##   .. .. ..$ : NULL
-##  $ C: Factor w/ 2 levels "-1","1": 2 1 2 1 2 1 1 2
+##  $ C: Factor w/ 2 levels "-1","1": 2 2 1 2 2 1 1 1
 ##   ..- attr(*, "contrasts")= num [1:2, 1] -1 1
 ##   .. ..- attr(*, "dimnames")=List of 2
 ##   .. .. ..$ : chr  "-1" "1"
 ##   .. .. ..$ : NULL
-##  $ D: Factor w/ 2 levels "-1","1": 1 1 2 1 2 2 2 1
+##  $ D: Factor w/ 2 levels "-1","1": 1 2 1 2 1 1 2 2
 ##   ..- attr(*, "contrasts")= num [1:2, 1] -1 1
 ##   .. ..- attr(*, "dimnames")=List of 2
 ##   .. .. ..$ : chr  "-1" "1"
 ##   .. .. ..$ : NULL
-##  - attr(*, "desnum")= num [1:8, 1:4] 1 1 1 -1 -1 -1 1 -1 -1 1 ...
+##  - attr(*, "desnum")= num [1:8, 1:4] -1 -1 -1 1 1 1 -1 1 1 -1 ...
 ##   ..- attr(*, "dimnames")=List of 2
 ##   .. ..$ : chr  "1" "2" "3" "4" ...
 ##   .. ..$ : chr  "A" "B" "C" "D"
 ##  - attr(*, "run.order")='data.frame':	8 obs. of  3 variables:
-##   ..$ run.no.in.std.order: Factor w/ 8 levels "1","2","3","4",..: 6 4 8 1 5 3 2 7
+##   ..$ run.no.in.std.order: Factor w/ 8 levels "1","2","3","4",..: 7 5 1 8 6 4 3 2
 ##   ..$ run.no             : int  1 2 3 4 5 6 7 8
-##   ..$ run.no.std.rp      : Factor w/ 8 levels "1","2","3","4",..: 6 4 8 1 5 3 2 7
+##   ..$ run.no.std.rp      : Factor w/ 8 levels "1","2","3","4",..: 7 5 1 8 6 4 3 2
 ##  - attr(*, "design.info")=List of 13
 ##   ..$ type        : chr "FrF2"
 ##   ..$ nruns       : num 8
@@ -403,7 +403,7 @@ str(myDesign)
 ##   .. ..$ main  : chr  "A=BCD" "B=ACD" "C=ABD" "D=ABC"
 ##   .. ..$ fi2   : chr  "AB=CD" "AC=BD" "AD=BC"
 ##   .. ..$ fi3   : chr 
-##   ..$ FrF2.version: chr "2.2-2"
+##   ..$ FrF2.version: chr "2.3-2"
 ##   ..$ replications: num 1
 ##   ..$ repeat.only : logi FALSE
 ##   ..$ randomize   : logi TRUE
@@ -469,7 +469,7 @@ attr(myDesign, 'design.info')
 ## 
 ## 
 ## $FrF2.version
-## [1] "2.2-2"
+## [1] "2.3-2"
 ## 
 ## $replications
 ## [1] 1
@@ -562,7 +562,7 @@ names(Yates)[7]
 
 # Finally, if you wanted to write the design to a file, you can do this in the normal manner 
 # and it will write what you see in the main data frame.  For example:
-write.csv(myDesign, '../html/_Chapter4_ProblemSets/myDesign.csv', row.names = F)
+write.csv(myDesign, '../docsArchive/_Chapter4_ProblemSets/myDesign.csv', row.names = F)
 ```
 
 Regardless of how you choose to build a design, once you have the design and the responses, you can use the information available to assess the effects.  Consider the following results:
@@ -916,7 +916,7 @@ attr(myDesign.FrF2, "design.info")
 ## 
 ## 
 ## $FrF2.version
-## [1] "2.2-2"
+## [1] "2.3-2"
 ## 
 ## $replications
 ## [1] 1
@@ -1062,8 +1062,8 @@ DT::datatable(
 ```
 
 ```{=html}
-<div id="htmlwidget-854508dd12f98fe24e6a" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-854508dd12f98fe24e6a">{"x":{"filter":"none","data":[["A","B","C","D","E","F","AB","AC","AD","AE","AF","BD","BF","ABD","ACD"],["BCE","ACE","ABE","BCF","ABC","BCD","CE","BE","EF","BC","DE","CF","CD","CDE","BDE"],["DEF","CDF","BDF","AEF","ADF","ADE","ACDF","ABDF","BCDE","DF","BCEF","ACDE","ACEF","ACF","ABF"],["ABCDF","ABDEF","ACDEF","ABCDE","BCDEF","ABCEF","BDEF","CDEF","ABCF","ABCDEF","ABCD","ABEF","ABDE","BEF","CEF"],[13.875,35.625,-0.875,1.375,0.375,0.375,11.875,-1.625,-5.375,-1.875,0.625,-0.125,-0.125,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Effect.1<\/th>\n      <th>Effect.2<\/th>\n      <th>Effect.3<\/th>\n      <th>Effect.4<\/th>\n      <th>Effect<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":16,"columnDefs":[{"className":"dt-right","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,16,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-579ad172b8e30f423e88" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-579ad172b8e30f423e88">{"x":{"filter":"none","vertical":false,"data":[["A","B","C","D","E","F","AB","AC","AD","AE","AF","BD","BF","ABD","ACD"],["BCE","ACE","ABE","BCF","ABC","BCD","CE","BE","EF","BC","DE","CF","CD","CDE","BDE"],["DEF","CDF","BDF","AEF","ADF","ADE","ACDF","ABDF","BCDE","DF","BCEF","ACDE","ACEF","ACF","ABF"],["ABCDF","ABDEF","ACDEF","ABCDE","BCDEF","ABCEF","BDEF","CDEF","ABCF","ABCDEF","ABCD","ABEF","ABDE","BEF","CEF"],[13.875,35.625,-0.875,1.375,0.375,0.375,11.875,-1.625,-5.375,-1.875,0.625,-0.125,-0.125,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Effect.1<\/th>\n      <th>Effect.2<\/th>\n      <th>Effect.3<\/th>\n      <th>Effect.4<\/th>\n      <th>Effect<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":16,"columnDefs":[{"className":"dt-right","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,16,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 ```
 
 ```r
@@ -1287,7 +1287,7 @@ attr(my.10.minus.4.design, "design.info")
 ## 
 ## 
 ## $FrF2.version
-## [1] "2.2-2"
+## [1] "2.3-2"
 ## 
 ## $replications
 ## [1] 1
@@ -1550,7 +1550,7 @@ attr(my.Res5.10Factor.Design, "design.info")
 ## 
 ## 
 ## $FrF2.version
-## [1] "2.2-2"
+## [1] "2.3-2"
 ## 
 ## $replications
 ## [1] 1

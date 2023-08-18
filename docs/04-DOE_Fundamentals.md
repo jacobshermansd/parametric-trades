@@ -18,7 +18,7 @@ This chapter introduces the fundamentals of Design of Experiments (DOE).  An exp
 ### Admin
 
 - **POC:** For any comments or identified errors, please contact Steve Gillespie at stephen.e.gillespie.mil@mail.mil or Emma Schlagenhauff at emma.schlagenhauff.civ@mail.mil.
-- This section was rendered using R version 3.6.0 (2019-04-26) on 24 May 2021.
+- This section was rendered using R version 3.6.0 (2019-04-26) on 18 Aug 2023.
 - The chapter is organized into sections that each include a description, a tutorial, and a problem set.
 
 ## DOE Overview
@@ -306,7 +306,7 @@ We can do this more concretely with an example:
 #  The response was number of targets engaged
 #  There were 6 replciates for each combination
 
-weapon_range <- read.csv('../html/_Chapter3_1_ProblemSets/weapon_range.csv')
+weapon_range <- read.csv('../docsArchive/_Chapter3_1_ProblemSets/weapon_range.csv')
 weapon_range$Range <- as.factor(weapon_range$Range)
 weapon_range$Weapon <- as.factor(weapon_range$Weapon)
 
@@ -492,8 +492,8 @@ Further assume we have been able conduct the experiment and run each test 3 time
 
 
 ```{=html}
-<div id="htmlwidget-1838622b50a8295b704d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1838622b50a8295b704d">{"x":{"filter":"none","data":[["(1)","(1)","(1)","a","a","a","ab","ab","ab","b","b","b"],["run.1","run.2","run.3","run.1","run.2","run.3","run.1","run.2","run.3","run.1","run.2","run.3"],["-1: HE","-1: HE","-1: HE","1: AP","1: AP","1: AP","1: AP","1: AP","1: AP","-1: HE","-1: HE","-1: HE"],["-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm"],[20,18,21,40,37,42,52,53,48,30,31,28]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>tc<\/th>\n      <th>Replicate<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>Response<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":4}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-611ac9f7c3404495b8d9" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-611ac9f7c3404495b8d9">{"x":{"filter":"none","vertical":false,"data":[["(1)","(1)","(1)","a","a","a","ab","ab","ab","b","b","b"],["run.1","run.2","run.3","run.1","run.2","run.3","run.1","run.2","run.3","run.1","run.2","run.3"],["-1: HE","-1: HE","-1: HE","1: AP","1: AP","1: AP","1: AP","1: AP","1: AP","-1: HE","-1: HE","-1: HE"],["-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","-1: 105mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm","1: 120mm"],[20,18,21,40,37,42,52,53,48,30,31,28]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>tc<\/th>\n      <th>Replicate<\/th>\n      <th>A<\/th>\n      <th>B<\/th>\n      <th>Response<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":4}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ```
 
 We can visualize these results geometrically:
@@ -672,8 +672,8 @@ DT::datatable(myDF, rownames = F, options = list(pageLength = 16))
 ```
 
 ```{=html}
-<div id="htmlwidget-884dc32e25f1bad9101e" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-884dc32e25f1bad9101e">{"x":{"filter":"none","data":[["A","B","C","D","AB","AC","AD","BC","BD","CD","ABC","ABD","ACD","BCD","ABCD"],[21.625,3.125,9.875,14.625,0.125,-18.125,16.625,2.375,-0.375,1.125,1.875,4.125,-1.625,-2.625,1.375]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Factor<\/th>\n      <th>Effect<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":16,"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,16,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1b6fd14e5d23396a4788" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1b6fd14e5d23396a4788">{"x":{"filter":"none","vertical":false,"data":[["A","B","C","D","AB","AC","AD","BC","BD","CD","ABC","ABD","ACD","BCD","ABCD"],[21.625,3.125,9.875,14.625,0.125,-18.125,16.625,2.375,-0.375,1.125,1.875,4.125,-1.625,-2.625,1.375]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Factor<\/th>\n      <th>Effect<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":16,"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,16,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 ```
 
 We can look at this and certainly say some of the effects are significant, for example, $A$ has the largest effect and is signficantly larger than most (in absolute value).  Conversely, $AB$ has an effect that is almost 0 and is almost certainly not significant.  The question is where is the cut off for significant.  For example, one would certainly include $AD$ and $D$ as significant, but then, what about $C$, or do we continue to $ABD$?  It is easier to visualize this data with a normal probability plot.  One way we can do this is with `qqnorm`:

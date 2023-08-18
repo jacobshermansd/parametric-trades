@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>12 Optional Advanced DOE Topics | Design of Experiments for Modeling and Simulation</title>
   <meta name="description" content="12 Optional Advanced DOE Topics | Design of Experiments for Modeling and Simulation" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="12 Optional Advanced DOE Topics | Design of Experiments for Modeling and Simulation" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -31,7 +30,8 @@
   
 <link rel="prev" href="non-parametric-regression.html"/>
 
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -47,13 +47,15 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.17/datatables.js"></script>
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.28/datatables.js"></script>
+<link href="libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 <link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
@@ -131,6 +133,11 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
 </head>
 
 <body>
@@ -143,7 +150,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="https://doe.dscoe.org/">DoE for M&S</a></li>
+<li><a href="https://jacobshermansd.github.io/parametric-trades">DoE for M&S</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to DOE for M&amp;S</a><ul>
@@ -428,45 +435,45 @@ Published with bookdown</a></li>
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="optional-advanced-doe-topics" class="section level1">
-<h1><span class="header-section-number">12</span> Optional Advanced DOE Topics</h1>
-<div class="sourceCode" id="cb880"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb880-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a></code></pre></div>
-<div id="robust-design" class="section level2">
-<h2><span class="header-section-number">12.1</span> Robust Design</h2>
+<div id="optional-advanced-doe-topics" class="section level1 hasAnchor">
+<h1><span class="header-section-number">12</span> Optional Advanced DOE Topics<a href="optional-advanced-doe-topics.html#optional-advanced-doe-topics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb896"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb896-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a></code></pre></div>
+<div id="robust-design" class="section level2 hasAnchor">
+<h2><span class="header-section-number">12.1</span> Robust Design<a href="optional-advanced-doe-topics.html#robust-design" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="sequential-designs" class="section level2">
-<h2><span class="header-section-number">12.2</span> Sequential Designs</h2>
+<div id="sequential-designs" class="section level2 hasAnchor">
+<h2><span class="header-section-number">12.2</span> Sequential Designs<a href="optional-advanced-doe-topics.html#sequential-designs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="ridge-regression" class="section level2">
-<h2><span class="header-section-number">12.3</span> Ridge Regression</h2>
+<div id="ridge-regression" class="section level2 hasAnchor">
+<h2><span class="header-section-number">12.3</span> Ridge Regression<a href="optional-advanced-doe-topics.html#ridge-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="neural-network-regression" class="section level2">
-<h2><span class="header-section-number">12.4</span> Neural Network Regression</h2>
+<div id="neural-network-regression" class="section level2 hasAnchor">
+<h2><span class="header-section-number">12.4</span> Neural Network Regression<a href="optional-advanced-doe-topics.html#neural-network-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Like support vector machines and tree-based models, neural networks can be applied to both regression and classification tasks. Neural networks originated in the field of neurophysiology as an attempt to model human brain activity <span class="citation">(Warren S. McCulloch <a href="#ref-mcculloch1943">1943</a>)</span> at the neuron level, but it wasn’t until the 1980s and 1990s <span class="citation">(see David E. Rumelhart <a href="#ref-rumel1986">1986</a>; Bishop <a href="#ref-bishop1995">1995</a>)</span> that they began to be developed into their current form. Neural network models are fit using a training algorithm that slowly reduces prediction error using a process called gradient descent.</p>
-<div id="simple-neural-network-model" class="section level3">
-<h3><span class="header-section-number">12.4.1</span> Simple Neural Network Model</h3>
+<div id="simple-neural-network-model" class="section level3 hasAnchor">
+<h3><span class="header-section-number">12.4.1</span> Simple Neural Network Model<a href="optional-advanced-doe-topics.html#simple-neural-network-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Before we get into that, let’s look at visualization of a neural network regression model in it’s simplest form: one to solve for <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> given the equation <span class="math inline">\(y = \beta_0 x_0 + \beta_1 x_1 + \epsilon\)</span> where we know <span class="math inline">\(x_0 = 1\)</span>. Below, the two blue circles are referred to as the <strong>input layer</strong> and consist of two <strong>nodes</strong>: an input node that will be used to solve for <span class="math inline">\(\beta_1\)</span>, and a bias node to solve for <span class="math inline">\(\beta_0\)</span>, the y-intercept. Each node of the input layer is connected to the output layer, which consists of just one node because we’ll be predicting a single continuous variable, <span class="math inline">\(\hat{y}\)</span>. If this was a classification problem, and we were trying to classify the three types of irises found in the <code>iris</code> data set, then the output layer would have three nodes, each producing a probability. There is a model parameter, referred to as a <strong>weight</strong>, associated with each connected node as indicated by the <span class="math inline">\(\omega_0\)</span> and <span class="math inline">\(\omega_1\)</span> terms. The output node produces a prediction, <span class="math inline">\(\hat{y}\)</span>, using an <strong>activation function</strong>. In the case of linear regression, we use a linear activation function of the form <span class="math inline">\(f(\sum\limits_{h}{\omega_h} x_h)\)</span>. That’s it - that’s the model!</p>
 <p><img src="_Admin/simple_nn.png" width="500" /></p>
 </div>
-<div id="gradient-descent" class="section level3">
-<h3><span class="header-section-number">12.4.2</span> Gradient Descent</h3>
+<div id="gradient-descent" class="section level3 hasAnchor">
+<h3><span class="header-section-number">12.4.2</span> Gradient Descent<a href="optional-advanced-doe-topics.html#gradient-descent" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The algorithm used to train the model is called gradient descent, and to demonstrate how it works, we need to set the stage first. Let’s assume that we’re trying to find the <span class="math inline">\(\beta\)</span>s that have the following relationship with the predictor:</p>
 <p><span class="math display">\[y = 1 + 0.5x + \epsilon\]</span>
 We’ll create a data set with 10 observations and fit a linear model for comparison later.</p>
-<div class="sourceCode" id="cb881"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb881-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">42</span>)</a>
-<a class="sourceLine" id="cb881-2" data-line-number="2">nn_reg =<span class="st"> </span><span class="kw">tibble</span>(</a>
-<a class="sourceLine" id="cb881-3" data-line-number="3">  <span class="dt">x =</span> <span class="kw">runif</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">5</span>),</a>
-<a class="sourceLine" id="cb881-4" data-line-number="4">  <span class="dt">y =</span> <span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="fl">0.5</span><span class="op">*</span>x <span class="op">+</span><span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dt">sd=</span><span class="fl">0.5</span>)</a>
-<a class="sourceLine" id="cb881-5" data-line-number="5">)</a>
-<a class="sourceLine" id="cb881-6" data-line-number="6"><span class="kw">ggplot</span>(nn_reg, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb881-7" data-line-number="7"><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb881-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">formula=</span><span class="st">&#39;y~x&#39;</span>, <span class="dt">method=</span><span class="st">&#39;lm&#39;</span>, <span class="dt">se=</span><span class="ot">FALSE</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb881-9" data-line-number="9"><span class="st">  </span><span class="kw">coord_fixed</span>(<span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">5</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">5</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb881-10" data-line-number="10"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Linear Model Fit&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb881-11" data-line-number="11"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb897"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb897-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">42</span>)</a>
+<a class="sourceLine" id="cb897-2" data-line-number="2">nn_reg =<span class="st"> </span><span class="kw">tibble</span>(</a>
+<a class="sourceLine" id="cb897-3" data-line-number="3">  <span class="dt">x =</span> <span class="kw">runif</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">5</span>),</a>
+<a class="sourceLine" id="cb897-4" data-line-number="4">  <span class="dt">y =</span> <span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="fl">0.5</span><span class="op">*</span>x <span class="op">+</span><span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dt">sd=</span><span class="fl">0.5</span>)</a>
+<a class="sourceLine" id="cb897-5" data-line-number="5">)</a>
+<a class="sourceLine" id="cb897-6" data-line-number="6"><span class="kw">ggplot</span>(nn_reg, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb897-7" data-line-number="7"><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb897-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">formula=</span><span class="st">&#39;y~x&#39;</span>, <span class="dt">method=</span><span class="st">&#39;lm&#39;</span>, <span class="dt">se=</span><span class="ot">FALSE</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb897-9" data-line-number="9"><span class="st">  </span><span class="kw">coord_fixed</span>(<span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">5</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">5</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb897-10" data-line-number="10"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Linear Model Fit&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb897-11" data-line-number="11"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
 <p><img src="10-Optional_Advanced_Topics_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<div class="sourceCode" id="cb882"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb882-1" data-line-number="1">nn.lm =<span class="st"> </span><span class="kw">lm</span>(y <span class="op">~</span><span class="st"> </span>x, <span class="dt">data=</span>nn_reg)</a>
-<a class="sourceLine" id="cb882-2" data-line-number="2"><span class="kw">summary</span>(nn.lm)</a></code></pre></div>
+<div class="sourceCode" id="cb898"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb898-1" data-line-number="1">nn.lm =<span class="st"> </span><span class="kw">lm</span>(y <span class="op">~</span><span class="st"> </span>x, <span class="dt">data=</span>nn_reg)</a>
+<a class="sourceLine" id="cb898-2" data-line-number="2"><span class="kw">summary</span>(nn.lm)</a></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = y ~ x, data = nn_reg)
@@ -486,10 +493,10 @@ We’ll create a data set with 10 observations and fit a linear model for compar
 ## Multiple R-squared:  0.8064, Adjusted R-squared:  0.7822 
 ## F-statistic: 33.32 on 1 and 8 DF,  p-value: 0.000418</code></pre>
 <p>Before the model is trained, its weights are initialized with random numbers. I’ll just pick two random numbers between -1 and 1.</p>
-<div class="sourceCode" id="cb884"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb884-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">42</span>)</a>
-<a class="sourceLine" id="cb884-2" data-line-number="2">(<span class="dt">w0 =</span> <span class="kw">runif</span>(<span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb900"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb900-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">42</span>)</a>
+<a class="sourceLine" id="cb900-2" data-line-number="2">(<span class="dt">w0 =</span> <span class="kw">runif</span>(<span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>))</a></code></pre></div>
 <pre><code>## [1] 0.8296121</code></pre>
-<div class="sourceCode" id="cb886"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb886-1" data-line-number="1">(<span class="dt">w1 =</span> <span class="kw">runif</span>(<span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb902"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb902-1" data-line-number="1">(<span class="dt">w1 =</span> <span class="kw">runif</span>(<span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>))</a></code></pre></div>
 <pre><code>## [1] 0.8741508</code></pre>
 <p>Since these model parameters are just random numbers, the predictions will not be very accurate. That’s ok, though, and it’s the starting point for all untrained neural network models. We’ll go through the following iterative process to slowly train the model to make more and more accurate predictions.</p>
 <p><strong>The Training Process</strong></p>
@@ -503,54 +510,54 @@ We’ll create a data set with 10 observations and fit a linear model for compar
 <p>The next several code chunks demonstrate this process one step at a time.</p>
 <p><strong>Step 1. Make predictions.</strong></p>
 <p>We can make predictions manually using the randomly initialized weight and bias.</p>
-<div class="sourceCode" id="cb888"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb888-1" data-line-number="1">get_estimate =<span class="st"> </span><span class="cf">function</span>(omega0, omega1){nn_reg<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>omega1 <span class="op">+</span><span class="st"> </span>omega0}</a>
-<a class="sourceLine" id="cb888-2" data-line-number="2">(<span class="dt">y_hat =</span> <span class="kw">get_estimate</span>(w0, w1))</a></code></pre></div>
+<div class="sourceCode" id="cb904"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb904-1" data-line-number="1">get_estimate =<span class="st"> </span><span class="cf">function</span>(omega0, omega1){nn_reg<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>omega1 <span class="op">+</span><span class="st"> </span>omega0}</a>
+<a class="sourceLine" id="cb904-2" data-line-number="2">(<span class="dt">y_hat =</span> <span class="kw">get_estimate</span>(w0, w1))</a></code></pre></div>
 <pre><code>##  [1] 4.828004 4.925338 2.080258 4.459294 3.634524 3.098453 4.049059 1.418207
 ##  [9] 3.701164 3.911277</code></pre>
 <p><strong>Step 2. Calculate the loss.</strong></p>
 <p>There are a number of ways we could do this, but for this example, we’ll calculate the loss by determining the mean squared error of the predictions and the target values. Mean squared error is defined as:</p>
 <p><span class="math display">\[MSE = \frac{1}{n} \sum\limits_{i=1}^{n}{(y_i - \hat{y}_i)^2}\]</span></p>
-<div class="sourceCode" id="cb890"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb890-1" data-line-number="1">mse =<span class="st"> </span><span class="cf">function</span>(predicted){<span class="dv">1</span><span class="op">/</span><span class="kw">length</span>(predicted)<span class="op">*</span><span class="st"> </span><span class="kw">sum</span>((nn_reg<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>predicted)<span class="op">^</span><span class="dv">2</span>)}</a>
-<a class="sourceLine" id="cb890-2" data-line-number="2"><span class="co"># the loss</span></a>
-<a class="sourceLine" id="cb890-3" data-line-number="3">(<span class="dt">loss =</span> <span class="kw">mse</span>(y_hat))</a></code></pre></div>
+<div class="sourceCode" id="cb906"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb906-1" data-line-number="1">mse =<span class="st"> </span><span class="cf">function</span>(predicted){<span class="dv">1</span><span class="op">/</span><span class="kw">length</span>(predicted)<span class="op">*</span><span class="st"> </span><span class="kw">sum</span>((nn_reg<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>predicted)<span class="op">^</span><span class="dv">2</span>)}</a>
+<a class="sourceLine" id="cb906-2" data-line-number="2"><span class="co"># the loss</span></a>
+<a class="sourceLine" id="cb906-3" data-line-number="3">(<span class="dt">loss =</span> <span class="kw">mse</span>(y_hat))</a></code></pre></div>
 <pre><code>## [1] 0.8201885</code></pre>
 <p><strong>Step 3. Compute the partial derivatives of the loss.</strong></p>
 <p>At this point, we have two random values for <span class="math inline">\(\omega_0\)</span> and <span class="math inline">\(\omega_1\)</span> and an associated loss (error). Now we need to find new values for the <span class="math inline">\(\omega\)</span>s that will decrease the loss. How do we do that? For each <span class="math inline">\(\omega\)</span>, we need to determine whether we should increase or decrease it’s value and by how much. We determine whether to increase or decrease its value by calculating the gradient of the loss function at the current <span class="math inline">\(\omega\)</span> values. To demonstrate graphically, the loss as a function of <span class="math inline">\(\omega_0\)</span> and <span class="math inline">\(\omega_1\)</span> are plotted below.</p>
-<div class="sourceCode" id="cb892"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb892-1" data-line-number="1"><span class="co"># sequence of w0 values</span></a>
-<a class="sourceLine" id="cb892-2" data-line-number="2">Bvec =<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from=</span>(w0<span class="dv">-1</span>), <span class="dt">to=</span>(w0<span class="op">+</span><span class="dv">1</span>), <span class="dt">length.out =</span> <span class="dv">21</span>)</a>
-<a class="sourceLine" id="cb892-3" data-line-number="3"><span class="co"># calculate loss while holding w1 constant</span></a>
-<a class="sourceLine" id="cb892-4" data-line-number="4">Bloss =<span class="st"> </span>Bvec <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(<span class="cf">function</span>(x) <span class="kw">get_estimate</span>(x, w1)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map_dbl</span>(<span class="cf">function</span>(x) <span class="kw">mse</span>(x))</a>
-<a class="sourceLine" id="cb892-5" data-line-number="5"><span class="co"># get a curve through the points and get the gradient</span></a>
-<a class="sourceLine" id="cb892-6" data-line-number="6">Bspl =<span class="st"> </span><span class="kw">smooth.spline</span>(Bloss <span class="op">~</span><span class="st"> </span>Bvec)</a>
-<a class="sourceLine" id="cb892-7" data-line-number="7"><span class="co"># get the gradient at w0</span></a>
-<a class="sourceLine" id="cb892-8" data-line-number="8">Bgrad =<span class="st"> </span><span class="kw">predict</span>(Bspl, <span class="dt">x=</span>w0, <span class="dt">deriv=</span><span class="dv">1</span>)<span class="op">$</span>y</a>
-<a class="sourceLine" id="cb892-9" data-line-number="9"><span class="co"># same thing for w1</span></a>
-<a class="sourceLine" id="cb892-10" data-line-number="10">Wvec =<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from=</span>(w1<span class="dv">-1</span>), <span class="dt">to=</span>(w1<span class="op">+</span><span class="dv">1</span>), <span class="dt">length.out =</span> <span class="dv">21</span>)</a>
-<a class="sourceLine" id="cb892-11" data-line-number="11">Wloss =<span class="st"> </span>Wvec <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(<span class="cf">function</span>(x) <span class="kw">get_estimate</span>(w0,x)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map_dbl</span>(<span class="cf">function</span>(x) <span class="kw">mse</span>(x))</a>
-<a class="sourceLine" id="cb892-12" data-line-number="12">Wspl =<span class="st"> </span><span class="kw">smooth.spline</span>(Wloss <span class="op">~</span><span class="st"> </span>Wvec)</a>
-<a class="sourceLine" id="cb892-13" data-line-number="13">Wgrad =<span class="st"> </span><span class="kw">predict</span>(Wspl, <span class="dt">x=</span>w1, <span class="dt">deriv=</span><span class="dv">1</span>)<span class="op">$</span>y</a>
-<a class="sourceLine" id="cb892-14" data-line-number="14">w0plot =<span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb892-15" data-line-number="15"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Bvec, <span class="dt">y=</span>Bloss), <span class="dt">color=</span><span class="st">&#39;red&#39;</span>, <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb892-16" data-line-number="16"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="kw">c</span>(w0<span class="fl">-0.5</span>, w0<span class="fl">+0.5</span>), <span class="dt">y=</span><span class="kw">c</span>(Bloss[<span class="dv">11</span>]<span class="op">-</span>Bgrad<span class="op">/</span><span class="dv">2</span>, Bloss[<span class="dv">11</span>]<span class="op">+</span>Bgrad<span class="op">/</span><span class="dv">2</span>)), <span class="dt">color=</span><span class="st">&#39;blue&#39;</span>, <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb892-17" data-line-number="17"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Bvec[<span class="dv">11</span>], <span class="dt">y =</span> Bloss[<span class="dv">11</span>]), <span class="dt">size=</span><span class="dv">5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb892-18" data-line-number="18"><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="fl">0.5</span>, <span class="dt">y=</span><span class="dv">2</span>, <span class="dt">label=</span><span class="kw">paste</span>(<span class="st">&quot;Slope =&quot;</span>, <span class="kw">round</span>(Bgrad, <span class="dv">2</span>))) <span class="op">+</span></a>
-<a class="sourceLine" id="cb892-19" data-line-number="19"><span class="st">  </span><span class="kw">coord_fixed</span>(<span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">3.5</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb892-20" data-line-number="20"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;w0&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Loss&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb892-21" data-line-number="21"><span class="st">  </span><span class="kw">theme_bw</span>()</a>
-<a class="sourceLine" id="cb892-22" data-line-number="22">w1plot =<span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb892-23" data-line-number="23"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Wvec, <span class="dt">y=</span>Wloss), <span class="dt">color=</span><span class="st">&#39;red&#39;</span>, <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb892-24" data-line-number="24"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="kw">c</span>(w1<span class="fl">-0.5</span>, w1<span class="fl">+0.5</span>), <span class="dt">y=</span><span class="kw">c</span>(Wloss[<span class="dv">11</span>]<span class="op">-</span>Wgrad<span class="op">/</span><span class="dv">2</span>, Wloss[<span class="dv">11</span>]<span class="op">+</span>Wgrad<span class="op">/</span><span class="dv">2</span>)), <span class="dt">color=</span><span class="st">&#39;blue&#39;</span>, <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb892-25" data-line-number="25"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Wvec[<span class="dv">11</span>], <span class="dt">y=</span>Wloss[<span class="dv">11</span>]), <span class="dt">size=</span><span class="dv">5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb892-26" data-line-number="26"><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="fl">1.4</span>, <span class="dt">y=</span><span class="fl">0.5</span>, <span class="dt">label=</span><span class="kw">paste</span>(<span class="st">&quot;Slope =&quot;</span>, <span class="kw">round</span>(Wgrad, <span class="dv">2</span>))) <span class="op">+</span></a>
-<a class="sourceLine" id="cb892-27" data-line-number="27"><span class="st">  </span><span class="kw">coord_fixed</span>(<span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">3.5</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb892-28" data-line-number="28"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;w1&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Loss&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb892-29" data-line-number="29"><span class="st">  </span><span class="kw">theme_bw</span>()</a>
-<a class="sourceLine" id="cb892-30" data-line-number="30">gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(w0plot, w1plot, <span class="dt">nrow=</span><span class="dv">1</span>, <span class="dt">ncol=</span><span class="dv">2</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb908"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb908-1" data-line-number="1"><span class="co"># sequence of w0 values</span></a>
+<a class="sourceLine" id="cb908-2" data-line-number="2">Bvec =<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from=</span>(w0<span class="dv">-1</span>), <span class="dt">to=</span>(w0<span class="op">+</span><span class="dv">1</span>), <span class="dt">length.out =</span> <span class="dv">21</span>)</a>
+<a class="sourceLine" id="cb908-3" data-line-number="3"><span class="co"># calculate loss while holding w1 constant</span></a>
+<a class="sourceLine" id="cb908-4" data-line-number="4">Bloss =<span class="st"> </span>Bvec <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(<span class="cf">function</span>(x) <span class="kw">get_estimate</span>(x, w1)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map_dbl</span>(<span class="cf">function</span>(x) <span class="kw">mse</span>(x))</a>
+<a class="sourceLine" id="cb908-5" data-line-number="5"><span class="co"># get a curve through the points and get the gradient</span></a>
+<a class="sourceLine" id="cb908-6" data-line-number="6">Bspl =<span class="st"> </span><span class="kw">smooth.spline</span>(Bloss <span class="op">~</span><span class="st"> </span>Bvec)</a>
+<a class="sourceLine" id="cb908-7" data-line-number="7"><span class="co"># get the gradient at w0</span></a>
+<a class="sourceLine" id="cb908-8" data-line-number="8">Bgrad =<span class="st"> </span><span class="kw">predict</span>(Bspl, <span class="dt">x=</span>w0, <span class="dt">deriv=</span><span class="dv">1</span>)<span class="op">$</span>y</a>
+<a class="sourceLine" id="cb908-9" data-line-number="9"><span class="co"># same thing for w1</span></a>
+<a class="sourceLine" id="cb908-10" data-line-number="10">Wvec =<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from=</span>(w1<span class="dv">-1</span>), <span class="dt">to=</span>(w1<span class="op">+</span><span class="dv">1</span>), <span class="dt">length.out =</span> <span class="dv">21</span>)</a>
+<a class="sourceLine" id="cb908-11" data-line-number="11">Wloss =<span class="st"> </span>Wvec <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(<span class="cf">function</span>(x) <span class="kw">get_estimate</span>(w0,x)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map_dbl</span>(<span class="cf">function</span>(x) <span class="kw">mse</span>(x))</a>
+<a class="sourceLine" id="cb908-12" data-line-number="12">Wspl =<span class="st"> </span><span class="kw">smooth.spline</span>(Wloss <span class="op">~</span><span class="st"> </span>Wvec)</a>
+<a class="sourceLine" id="cb908-13" data-line-number="13">Wgrad =<span class="st"> </span><span class="kw">predict</span>(Wspl, <span class="dt">x=</span>w1, <span class="dt">deriv=</span><span class="dv">1</span>)<span class="op">$</span>y</a>
+<a class="sourceLine" id="cb908-14" data-line-number="14">w0plot =<span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb908-15" data-line-number="15"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Bvec, <span class="dt">y=</span>Bloss), <span class="dt">color=</span><span class="st">&#39;red&#39;</span>, <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb908-16" data-line-number="16"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="kw">c</span>(w0<span class="fl">-0.5</span>, w0<span class="fl">+0.5</span>), <span class="dt">y=</span><span class="kw">c</span>(Bloss[<span class="dv">11</span>]<span class="op">-</span>Bgrad<span class="op">/</span><span class="dv">2</span>, Bloss[<span class="dv">11</span>]<span class="op">+</span>Bgrad<span class="op">/</span><span class="dv">2</span>)), <span class="dt">color=</span><span class="st">&#39;blue&#39;</span>, <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb908-17" data-line-number="17"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Bvec[<span class="dv">11</span>], <span class="dt">y =</span> Bloss[<span class="dv">11</span>]), <span class="dt">size=</span><span class="dv">5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb908-18" data-line-number="18"><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="fl">0.5</span>, <span class="dt">y=</span><span class="dv">2</span>, <span class="dt">label=</span><span class="kw">paste</span>(<span class="st">&quot;Slope =&quot;</span>, <span class="kw">round</span>(Bgrad, <span class="dv">2</span>))) <span class="op">+</span></a>
+<a class="sourceLine" id="cb908-19" data-line-number="19"><span class="st">  </span><span class="kw">coord_fixed</span>(<span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">3.5</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb908-20" data-line-number="20"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;w0&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Loss&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb908-21" data-line-number="21"><span class="st">  </span><span class="kw">theme_bw</span>()</a>
+<a class="sourceLine" id="cb908-22" data-line-number="22">w1plot =<span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb908-23" data-line-number="23"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Wvec, <span class="dt">y=</span>Wloss), <span class="dt">color=</span><span class="st">&#39;red&#39;</span>, <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb908-24" data-line-number="24"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="kw">c</span>(w1<span class="fl">-0.5</span>, w1<span class="fl">+0.5</span>), <span class="dt">y=</span><span class="kw">c</span>(Wloss[<span class="dv">11</span>]<span class="op">-</span>Wgrad<span class="op">/</span><span class="dv">2</span>, Wloss[<span class="dv">11</span>]<span class="op">+</span>Wgrad<span class="op">/</span><span class="dv">2</span>)), <span class="dt">color=</span><span class="st">&#39;blue&#39;</span>, <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb908-25" data-line-number="25"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Wvec[<span class="dv">11</span>], <span class="dt">y=</span>Wloss[<span class="dv">11</span>]), <span class="dt">size=</span><span class="dv">5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb908-26" data-line-number="26"><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="fl">1.4</span>, <span class="dt">y=</span><span class="fl">0.5</span>, <span class="dt">label=</span><span class="kw">paste</span>(<span class="st">&quot;Slope =&quot;</span>, <span class="kw">round</span>(Wgrad, <span class="dv">2</span>))) <span class="op">+</span></a>
+<a class="sourceLine" id="cb908-27" data-line-number="27"><span class="st">  </span><span class="kw">coord_fixed</span>(<span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">3.5</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb908-28" data-line-number="28"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;w1&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Loss&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb908-29" data-line-number="29"><span class="st">  </span><span class="kw">theme_bw</span>()</a>
+<a class="sourceLine" id="cb908-30" data-line-number="30">gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(w0plot, w1plot, <span class="dt">nrow=</span><span class="dv">1</span>, <span class="dt">ncol=</span><span class="dv">2</span>)</a></code></pre></div>
 <p><img src="10-Optional_Advanced_Topics_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>In practice, the partial derivatives are calculated as follows:</p>
-<div class="sourceCode" id="cb893"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb893-1" data-line-number="1">(<span class="dt">Bpartial =</span> <span class="kw">sum</span>(<span class="op">-</span>(nn_reg<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>y_hat)))</a></code></pre></div>
+<div class="sourceCode" id="cb909"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb909-1" data-line-number="1">(<span class="dt">Bpartial =</span> <span class="kw">sum</span>(<span class="op">-</span>(nn_reg<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>y_hat)))</a></code></pre></div>
 <pre><code>## [1] 7.670526</code></pre>
-<div class="sourceCode" id="cb895"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb895-1" data-line-number="1">(<span class="dt">Wpartial =</span> <span class="kw">sum</span>(<span class="op">-</span>(nn_reg<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>y_hat) <span class="op">*</span><span class="st"> </span>nn_reg<span class="op">$</span>x))</a></code></pre></div>
+<div class="sourceCode" id="cb911"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb911-1" data-line-number="1">(<span class="dt">Wpartial =</span> <span class="kw">sum</span>(<span class="op">-</span>(nn_reg<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>y_hat) <span class="op">*</span><span class="st"> </span>nn_reg<span class="op">$</span>x))</a></code></pre></div>
 <pre><code>## [1] 26.07812</code></pre>
 <p><strong>Step 4. Update the model parameters.</strong></p>
 <p>From the above plots, we can see that to decrease the loss, we need to decrease both <span class="math inline">\(\omega\)</span>s. In fact, the following rules always apply:</p>
@@ -561,137 +568,137 @@ We’ll create a data set with 10 observations and fit a linear model for compar
 <p>We know we need to decrease the parameter values, so now we need to determine <em>how much</em> to decrease them. Right now, all we have to go on are the magnitude of the gradients. If we decreased the parameters by their respective gradients, the new parameter values would be far to the left on both plots above - we would overshoot the bottom of the curve in both cases. Instead of using the full gradient value, it appears that the parameters should be updated as follows:</p>
 <p><span class="math display">\[\omega_{new} = (\omega_{old}) - (\omega_{gradient})(\alpha)\]</span></p>
 <p>Where <span class="math inline">\(\alpha\)</span> is a multiplier in the range [0, 1], and is referred to as the <strong>learning rate</strong>. For our example, <span class="math inline">\(\alpha=0.01\)</span> will suffice, but keep in mind that <span class="math inline">\(\alpha\)</span> is a hyperparameter that often must be tuned. The code below selects <span class="math inline">\(\alpha\)</span>, updates the parameter values, and recalculates the loss. Notice that the loss has decreased as expected.</p>
-<div class="sourceCode" id="cb897"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb897-1" data-line-number="1">alpha =<span class="st"> </span><span class="fl">0.001</span></a>
-<a class="sourceLine" id="cb897-2" data-line-number="2">w0 =<span class="st"> </span>w0 <span class="op">-</span><span class="st"> </span>Bpartial <span class="op">*</span><span class="st"> </span>alpha</a>
-<a class="sourceLine" id="cb897-3" data-line-number="3">w1 =<span class="st"> </span>w1 <span class="op">-</span><span class="st"> </span>Wpartial <span class="op">*</span><span class="st"> </span>alpha</a>
-<a class="sourceLine" id="cb897-4" data-line-number="4"><span class="kw">mse</span>(<span class="kw">get_estimate</span>(w0, w1))</a></code></pre></div>
+<div class="sourceCode" id="cb913"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb913-1" data-line-number="1">alpha =<span class="st"> </span><span class="fl">0.001</span></a>
+<a class="sourceLine" id="cb913-2" data-line-number="2">w0 =<span class="st"> </span>w0 <span class="op">-</span><span class="st"> </span>Bpartial <span class="op">*</span><span class="st"> </span>alpha</a>
+<a class="sourceLine" id="cb913-3" data-line-number="3">w1 =<span class="st"> </span>w1 <span class="op">-</span><span class="st"> </span>Wpartial <span class="op">*</span><span class="st"> </span>alpha</a>
+<a class="sourceLine" id="cb913-4" data-line-number="4"><span class="kw">mse</span>(<span class="kw">get_estimate</span>(w0, w1))</a></code></pre></div>
 <pre><code>## [1] 0.6816571</code></pre>
 <p>Next we’ll put all this in a loop, iterate through a number of times, and see what we get for parameter estimates. I’ll start from the beginning and capture the parameters and loss as training progresses through 5000 iterations. Below, the parameter estimates are plotted for each iteration and compared to the linear model coefficients.</p>
-<div class="sourceCode" id="cb899"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb899-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">42</span>)</a>
-<a class="sourceLine" id="cb899-2" data-line-number="2">w0 =<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb899-3" data-line-number="3">w1 =<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb899-4" data-line-number="4">alpha =<span class="st"> </span><span class="fl">0.001</span></a>
-<a class="sourceLine" id="cb899-5" data-line-number="5">w0s =<span class="st"> </span>w0</a>
-<a class="sourceLine" id="cb899-6" data-line-number="6">w1s =<span class="st"> </span>w1</a>
-<a class="sourceLine" id="cb899-7" data-line-number="7"><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">500</span>){</a>
-<a class="sourceLine" id="cb899-8" data-line-number="8">  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(nn_reg)){</a>
-<a class="sourceLine" id="cb899-9" data-line-number="9">    y_hat =<span class="st"> </span><span class="kw">get_estimate</span>(w0, w1)</a>
-<a class="sourceLine" id="cb899-10" data-line-number="10">    Bgrad =<span class="st"> </span><span class="kw">sum</span>(<span class="op">-</span>(nn_reg<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>y_hat))</a>
-<a class="sourceLine" id="cb899-11" data-line-number="11">    Wgrad =<span class="st"> </span><span class="kw">sum</span>(<span class="op">-</span>(nn_reg<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>y_hat) <span class="op">*</span><span class="st"> </span>nn_reg<span class="op">$</span>x)</a>
-<a class="sourceLine" id="cb899-12" data-line-number="12">    w0 =<span class="st"> </span>w0 <span class="op">-</span><span class="st"> </span>Bgrad <span class="op">*</span><span class="st"> </span><span class="fl">0.001</span></a>
-<a class="sourceLine" id="cb899-13" data-line-number="13">    w1 =<span class="st"> </span>w1 <span class="op">-</span><span class="st"> </span>Wgrad <span class="op">*</span><span class="st"> </span><span class="fl">0.001</span></a>
-<a class="sourceLine" id="cb899-14" data-line-number="14">    w0s =<span class="st"> </span><span class="kw">c</span>(w0s, w0)</a>
-<a class="sourceLine" id="cb899-15" data-line-number="15">    w1s =<span class="st"> </span><span class="kw">c</span>(w1s, w1)</a>
-<a class="sourceLine" id="cb899-16" data-line-number="16">  }</a>
-<a class="sourceLine" id="cb899-17" data-line-number="17">}</a>
-<a class="sourceLine" id="cb899-18" data-line-number="18"></a>
-<a class="sourceLine" id="cb899-19" data-line-number="19">wHistory =<span class="st"> </span><span class="kw">tibble</span>(</a>
-<a class="sourceLine" id="cb899-20" data-line-number="20">  <span class="dt">iter =</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(w0s),</a>
-<a class="sourceLine" id="cb899-21" data-line-number="21">  <span class="dt">b =</span> w0s,</a>
-<a class="sourceLine" id="cb899-22" data-line-number="22">  <span class="dt">w =</span> w1s</a>
-<a class="sourceLine" id="cb899-23" data-line-number="23">)</a>
-<a class="sourceLine" id="cb899-24" data-line-number="24"></a>
-<a class="sourceLine" id="cb899-25" data-line-number="25"><span class="kw">library</span>(gganimate)</a></code></pre></div>
+<div class="sourceCode" id="cb915"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb915-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">42</span>)</a>
+<a class="sourceLine" id="cb915-2" data-line-number="2">w0 =<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb915-3" data-line-number="3">w1 =<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1</span>, <span class="dv">-1</span>, <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb915-4" data-line-number="4">alpha =<span class="st"> </span><span class="fl">0.001</span></a>
+<a class="sourceLine" id="cb915-5" data-line-number="5">w0s =<span class="st"> </span>w0</a>
+<a class="sourceLine" id="cb915-6" data-line-number="6">w1s =<span class="st"> </span>w1</a>
+<a class="sourceLine" id="cb915-7" data-line-number="7"><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">500</span>){</a>
+<a class="sourceLine" id="cb915-8" data-line-number="8">  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(nn_reg)){</a>
+<a class="sourceLine" id="cb915-9" data-line-number="9">    y_hat =<span class="st"> </span><span class="kw">get_estimate</span>(w0, w1)</a>
+<a class="sourceLine" id="cb915-10" data-line-number="10">    Bgrad =<span class="st"> </span><span class="kw">sum</span>(<span class="op">-</span>(nn_reg<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>y_hat))</a>
+<a class="sourceLine" id="cb915-11" data-line-number="11">    Wgrad =<span class="st"> </span><span class="kw">sum</span>(<span class="op">-</span>(nn_reg<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>y_hat) <span class="op">*</span><span class="st"> </span>nn_reg<span class="op">$</span>x)</a>
+<a class="sourceLine" id="cb915-12" data-line-number="12">    w0 =<span class="st"> </span>w0 <span class="op">-</span><span class="st"> </span>Bgrad <span class="op">*</span><span class="st"> </span><span class="fl">0.001</span></a>
+<a class="sourceLine" id="cb915-13" data-line-number="13">    w1 =<span class="st"> </span>w1 <span class="op">-</span><span class="st"> </span>Wgrad <span class="op">*</span><span class="st"> </span><span class="fl">0.001</span></a>
+<a class="sourceLine" id="cb915-14" data-line-number="14">    w0s =<span class="st"> </span><span class="kw">c</span>(w0s, w0)</a>
+<a class="sourceLine" id="cb915-15" data-line-number="15">    w1s =<span class="st"> </span><span class="kw">c</span>(w1s, w1)</a>
+<a class="sourceLine" id="cb915-16" data-line-number="16">  }</a>
+<a class="sourceLine" id="cb915-17" data-line-number="17">}</a>
+<a class="sourceLine" id="cb915-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb915-19" data-line-number="19">wHistory =<span class="st"> </span><span class="kw">tibble</span>(</a>
+<a class="sourceLine" id="cb915-20" data-line-number="20">  <span class="dt">iter =</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(w0s),</a>
+<a class="sourceLine" id="cb915-21" data-line-number="21">  <span class="dt">b =</span> w0s,</a>
+<a class="sourceLine" id="cb915-22" data-line-number="22">  <span class="dt">w =</span> w1s</a>
+<a class="sourceLine" id="cb915-23" data-line-number="23">)</a>
+<a class="sourceLine" id="cb915-24" data-line-number="24"></a>
+<a class="sourceLine" id="cb915-25" data-line-number="25"><span class="kw">library</span>(gganimate)</a></code></pre></div>
 <pre><code>## No renderer backend detected. gganimate will default to writing frames to separate files
 ## Consider installing:
 ## - the `gifski` package for gif output
 ## - the `av` package for video output
 ## and restarting the R session</code></pre>
-<div class="sourceCode" id="cb901"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb901-1" data-line-number="1"><span class="kw">ggplot</span>(wHistory) <span class="op">+</span></a>
-<a class="sourceLine" id="cb901-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>iter, <span class="dt">y=</span>w0s, <span class="dt">color=</span><span class="st">&#39;w_0 Estimate&#39;</span>, <span class="dt">group=</span><span class="kw">seq_along</span>(iter))) <span class="op">+</span></a>
-<a class="sourceLine" id="cb901-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept=</span><span class="kw">coef</span>(nn.lm)[<span class="dv">1</span>]) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb901-4" data-line-number="4"><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="dv">1200</span>, <span class="dt">y=</span><span class="fl">0.43</span>, <span class="dt">label=</span><span class="st">&quot;Linear Model Intercept Coefficient&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb901-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>iter, <span class="dt">y=</span>w1s, <span class="dt">color=</span><span class="st">&#39;w_1 Estimate&#39;</span>, <span class="dt">group=</span><span class="kw">seq_along</span>(iter))) <span class="op">+</span></a>
-<a class="sourceLine" id="cb901-6" data-line-number="6"><span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept=</span><span class="kw">coef</span>(nn.lm)[<span class="dv">2</span>]) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb901-7" data-line-number="7"><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="dv">1300</span>, <span class="dt">y=</span><span class="fl">0.785</span>, <span class="dt">label=</span><span class="st">&quot;Linear Model Slope Coefficient&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb901-8" data-line-number="8"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">name=</span><span class="st">&quot;Legend&quot;</span>, <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>, <span class="st">&#39;red&#39;</span>)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb901-9" data-line-number="9"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Iteration&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Parameter Value&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb901-10" data-line-number="10"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb901-11" data-line-number="11"><span class="st">  </span><span class="kw">transition_reveal</span>(iter)</a></code></pre></div>
-<pre><code>## Warning: No renderer available. Please install the gifski, av, or magick package
-## to create animated output</code></pre>
+<div class="sourceCode" id="cb917"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb917-1" data-line-number="1"><span class="kw">ggplot</span>(wHistory) <span class="op">+</span></a>
+<a class="sourceLine" id="cb917-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>iter, <span class="dt">y=</span>w0s, <span class="dt">color=</span><span class="st">&#39;w_0 Estimate&#39;</span>, <span class="dt">group=</span><span class="kw">seq_along</span>(iter))) <span class="op">+</span></a>
+<a class="sourceLine" id="cb917-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept=</span><span class="kw">coef</span>(nn.lm)[<span class="dv">1</span>]) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb917-4" data-line-number="4"><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="dv">1200</span>, <span class="dt">y=</span><span class="fl">0.43</span>, <span class="dt">label=</span><span class="st">&quot;Linear Model Intercept Coefficient&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb917-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>iter, <span class="dt">y=</span>w1s, <span class="dt">color=</span><span class="st">&#39;w_1 Estimate&#39;</span>, <span class="dt">group=</span><span class="kw">seq_along</span>(iter))) <span class="op">+</span></a>
+<a class="sourceLine" id="cb917-6" data-line-number="6"><span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept=</span><span class="kw">coef</span>(nn.lm)[<span class="dv">2</span>]) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb917-7" data-line-number="7"><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="dv">1300</span>, <span class="dt">y=</span><span class="fl">0.785</span>, <span class="dt">label=</span><span class="st">&quot;Linear Model Slope Coefficient&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb917-8" data-line-number="8"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">name=</span><span class="st">&quot;Legend&quot;</span>, <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>, <span class="st">&#39;red&#39;</span>)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb917-9" data-line-number="9"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Iteration&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Parameter Value&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb917-10" data-line-number="10"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb917-11" data-line-number="11"><span class="st">  </span><span class="kw">transition_reveal</span>(iter)</a></code></pre></div>
+<pre><code>## Warning: No renderer available. Please install the gifski, av, or magick
+## package to create animated output</code></pre>
 <pre><code>## NULL</code></pre>
 <p>To visualize the gradient descent methodology, calculate the loss for a range of <span class="math inline">\(\omega_0\)</span> and <span class="math inline">\(\omega_1\)</span> values and plot the loss function as a surface.</p>
-<div class="sourceCode" id="cb904"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb904-1" data-line-number="1">loss_fn =<span class="st"> </span><span class="kw">expand_grid</span>(<span class="dt">bs=</span><span class="kw">seq</span>(<span class="fl">0.3</span>,<span class="fl">0.9</span>,<span class="dt">length.out=</span><span class="dv">20</span>), <span class="dt">ws=</span><span class="kw">seq</span>(<span class="fl">0.5</span>,<span class="dv">1</span>,<span class="dt">length.out=</span><span class="dv">20</span>))</a>
-<a class="sourceLine" id="cb904-2" data-line-number="2">  </a>
-<a class="sourceLine" id="cb904-3" data-line-number="3">loss_fn<span class="op">$</span>Loss =<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(loss_fn) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb904-4" data-line-number="4"><span class="st">  </span><span class="kw">map</span>(<span class="cf">function</span>(x) <span class="kw">get_estimate</span>(loss_fn[x,<span class="st">&#39;bs&#39;</span>] <span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>bs, loss_fn[x,<span class="st">&#39;ws&#39;</span>]<span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>ws)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb904-5" data-line-number="5"><span class="st">  </span><span class="kw">map_dbl</span>(<span class="cf">function</span>(x) <span class="kw">mse</span>(x))</a>
-<a class="sourceLine" id="cb904-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb904-7" data-line-number="7"><span class="kw">ggplot</span>(wHistory) <span class="op">+</span></a>
-<a class="sourceLine" id="cb904-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_raster</span>(<span class="dt">data=</span>loss_fn, <span class="kw">aes</span>(<span class="dt">x=</span>bs, <span class="dt">y=</span>ws, <span class="dt">fill=</span>Loss)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb904-9" data-line-number="9"><span class="st">  </span><span class="kw">geom_contour</span>(<span class="dt">data=</span>loss_fn, <span class="kw">aes</span>(<span class="dt">x=</span>bs, <span class="dt">y=</span>ws, <span class="dt">z=</span>Loss), <span class="dt">color=</span><span class="st">&#39;white&#39;</span>, <span class="dt">bins=</span><span class="dv">28</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb904-10" data-line-number="10"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>b, <span class="dt">y=</span>w, <span class="dt">group=</span><span class="kw">seq_along</span>(iter)), <span class="dt">color=</span><span class="st">&#39;yellow&#39;</span>, <span class="dt">size=</span><span class="dv">5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb904-11" data-line-number="11"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Intercept&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Slope&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb904-12" data-line-number="12"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb904-13" data-line-number="13"><span class="st">  </span><span class="kw">transition_time</span>(iter) <span class="op">+</span></a>
-<a class="sourceLine" id="cb904-14" data-line-number="14"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="kw">paste</span>(<span class="st">&quot;Gradient Descent Iteration:&quot;</span>, <span class="st">&quot;{round(frame_time, 0)}&quot;</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb904-15" data-line-number="15"><span class="st">  </span><span class="kw">shadow_wake</span>(<span class="dt">wake_length =</span> <span class="fl">0.2</span>)</a></code></pre></div>
-<pre><code>## Warning: No renderer available. Please install the gifski, av, or magick package
-## to create animated output</code></pre>
+<div class="sourceCode" id="cb920"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb920-1" data-line-number="1">loss_fn =<span class="st"> </span><span class="kw">expand_grid</span>(<span class="dt">bs=</span><span class="kw">seq</span>(<span class="fl">0.3</span>,<span class="fl">0.9</span>,<span class="dt">length.out=</span><span class="dv">20</span>), <span class="dt">ws=</span><span class="kw">seq</span>(<span class="fl">0.5</span>,<span class="dv">1</span>,<span class="dt">length.out=</span><span class="dv">20</span>))</a>
+<a class="sourceLine" id="cb920-2" data-line-number="2">  </a>
+<a class="sourceLine" id="cb920-3" data-line-number="3">loss_fn<span class="op">$</span>Loss =<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(loss_fn) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb920-4" data-line-number="4"><span class="st">  </span><span class="kw">map</span>(<span class="cf">function</span>(x) <span class="kw">get_estimate</span>(loss_fn[x,<span class="st">&#39;bs&#39;</span>] <span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>bs, loss_fn[x,<span class="st">&#39;ws&#39;</span>]<span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>ws)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb920-5" data-line-number="5"><span class="st">  </span><span class="kw">map_dbl</span>(<span class="cf">function</span>(x) <span class="kw">mse</span>(x))</a>
+<a class="sourceLine" id="cb920-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb920-7" data-line-number="7"><span class="kw">ggplot</span>(wHistory) <span class="op">+</span></a>
+<a class="sourceLine" id="cb920-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_raster</span>(<span class="dt">data=</span>loss_fn, <span class="kw">aes</span>(<span class="dt">x=</span>bs, <span class="dt">y=</span>ws, <span class="dt">fill=</span>Loss)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb920-9" data-line-number="9"><span class="st">  </span><span class="kw">geom_contour</span>(<span class="dt">data=</span>loss_fn, <span class="kw">aes</span>(<span class="dt">x=</span>bs, <span class="dt">y=</span>ws, <span class="dt">z=</span>Loss), <span class="dt">color=</span><span class="st">&#39;white&#39;</span>, <span class="dt">bins=</span><span class="dv">28</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb920-10" data-line-number="10"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>b, <span class="dt">y=</span>w, <span class="dt">group=</span><span class="kw">seq_along</span>(iter)), <span class="dt">color=</span><span class="st">&#39;yellow&#39;</span>, <span class="dt">size=</span><span class="dv">5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb920-11" data-line-number="11"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Intercept&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Slope&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb920-12" data-line-number="12"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb920-13" data-line-number="13"><span class="st">  </span><span class="kw">transition_time</span>(iter) <span class="op">+</span></a>
+<a class="sourceLine" id="cb920-14" data-line-number="14"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="kw">paste</span>(<span class="st">&quot;Gradient Descent Iteration:&quot;</span>, <span class="st">&quot;{round(frame_time, 0)}&quot;</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb920-15" data-line-number="15"><span class="st">  </span><span class="kw">shadow_wake</span>(<span class="dt">wake_length =</span> <span class="fl">0.2</span>)</a></code></pre></div>
+<pre><code>## Warning: No renderer available. Please install the gifski, av, or magick
+## package to create animated output</code></pre>
 <pre><code>## NULL</code></pre>
 <p>We can also see the regression line update as training progresses.</p>
-<div class="sourceCode" id="cb907"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb907-1" data-line-number="1"><span class="kw">ggplot</span>(wHistory) <span class="op">+</span></a>
-<a class="sourceLine" id="cb907-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">data=</span>nn_reg, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y), <span class="dt">formula=</span><span class="st">&#39;y~x&#39;</span>, <span class="dt">method=</span><span class="st">&#39;lm&#39;</span>, <span class="dt">se=</span><span class="ot">FALSE</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb907-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_abline</span>(<span class="kw">aes</span>(<span class="dt">intercept=</span>b, <span class="dt">slope=</span>w), <span class="dt">color=</span><span class="st">&#39;red&#39;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb907-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data=</span>nn_reg, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb907-5" data-line-number="5"><span class="st">  </span><span class="kw">coord_fixed</span>(<span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">5</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">5</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb907-6" data-line-number="6"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb907-7" data-line-number="7"><span class="st">  </span><span class="kw">transition_time</span>(iter) <span class="op">+</span></a>
-<a class="sourceLine" id="cb907-8" data-line-number="8"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="kw">paste</span>(<span class="st">&quot;Gradient Descent Iteration:&quot;</span>, <span class="st">&quot;{round(frame_time, 0)}&quot;</span>)) </a></code></pre></div>
-<pre><code>## Warning: No renderer available. Please install the gifski, av, or magick package
-## to create animated output</code></pre>
+<div class="sourceCode" id="cb923"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb923-1" data-line-number="1"><span class="kw">ggplot</span>(wHistory) <span class="op">+</span></a>
+<a class="sourceLine" id="cb923-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">data=</span>nn_reg, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y), <span class="dt">formula=</span><span class="st">&#39;y~x&#39;</span>, <span class="dt">method=</span><span class="st">&#39;lm&#39;</span>, <span class="dt">se=</span><span class="ot">FALSE</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb923-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_abline</span>(<span class="kw">aes</span>(<span class="dt">intercept=</span>b, <span class="dt">slope=</span>w), <span class="dt">color=</span><span class="st">&#39;red&#39;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb923-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data=</span>nn_reg, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb923-5" data-line-number="5"><span class="st">  </span><span class="kw">coord_fixed</span>(<span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">5</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">5</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb923-6" data-line-number="6"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb923-7" data-line-number="7"><span class="st">  </span><span class="kw">transition_time</span>(iter) <span class="op">+</span></a>
+<a class="sourceLine" id="cb923-8" data-line-number="8"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="kw">paste</span>(<span class="st">&quot;Gradient Descent Iteration:&quot;</span>, <span class="st">&quot;{round(frame_time, 0)}&quot;</span>)) </a></code></pre></div>
+<pre><code>## Warning: No renderer available. Please install the gifski, av, or magick
+## package to create animated output</code></pre>
 <pre><code>## NULL</code></pre>
 <p>Let’s compare the final parameter estimates from the neural network model to the linear model coefficients.</p>
-<div class="sourceCode" id="cb910"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb910-1" data-line-number="1"><span class="kw">tibble</span>(</a>
-<a class="sourceLine" id="cb910-2" data-line-number="2">  <span class="dt">Model =</span> <span class="kw">c</span>(<span class="st">&quot;Linear&quot;</span>, <span class="st">&quot;Neural Network&quot;</span>),</a>
-<a class="sourceLine" id="cb910-3" data-line-number="3">  <span class="dt">w_0 =</span> <span class="kw">c</span>(<span class="kw">coef</span>(nn.lm)[<span class="dv">1</span>], <span class="kw">tail</span>(w0s, <span class="dv">1</span>)),</a>
-<a class="sourceLine" id="cb910-4" data-line-number="4">  <span class="dt">w_1 =</span> <span class="kw">c</span>(<span class="kw">coef</span>(nn.lm)[<span class="dv">2</span>], <span class="kw">tail</span>(w1s, <span class="dv">1</span>))</a>
-<a class="sourceLine" id="cb910-5" data-line-number="5">)</a></code></pre></div>
+<div class="sourceCode" id="cb926"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb926-1" data-line-number="1"><span class="kw">tibble</span>(</a>
+<a class="sourceLine" id="cb926-2" data-line-number="2">  <span class="dt">Model =</span> <span class="kw">c</span>(<span class="st">&quot;Linear&quot;</span>, <span class="st">&quot;Neural Network&quot;</span>),</a>
+<a class="sourceLine" id="cb926-3" data-line-number="3">  <span class="dt">w_0 =</span> <span class="kw">c</span>(<span class="kw">coef</span>(nn.lm)[<span class="dv">1</span>], <span class="kw">tail</span>(w0s, <span class="dv">1</span>)),</a>
+<a class="sourceLine" id="cb926-4" data-line-number="4">  <span class="dt">w_1 =</span> <span class="kw">c</span>(<span class="kw">coef</span>(nn.lm)[<span class="dv">2</span>], <span class="kw">tail</span>(w1s, <span class="dv">1</span>))</a>
+<a class="sourceLine" id="cb926-5" data-line-number="5">)</a></code></pre></div>
 <pre><code>## # A tibble: 2 x 3
 ##   Model            w_0   w_1
 ##   &lt;chr&gt;          &lt;dbl&gt; &lt;dbl&gt;
 ## 1 Linear         0.413 0.764
 ## 2 Neural Network 0.414 0.764</code></pre>
 <p>There are a variety of <em>R</em> packages to simplify the process of fitting a neural network model. Since we’re doing regression and not something for complicated like image classification, natural language processing, or reinforcement learning, a package like <code>nnet</code> provides everything we need.</p>
-<div class="sourceCode" id="cb912"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb912-1" data-line-number="1">nnModel =<span class="st"> </span>nnet<span class="op">::</span><span class="kw">nnet</span>(y <span class="op">~</span><span class="st"> </span>x, <span class="dt">data =</span> nn_reg,   <span class="co"># formula notation is the same as lm()</span></a>
-<a class="sourceLine" id="cb912-2" data-line-number="2">                     <span class="dt">linout =</span> <span class="ot">TRUE</span>,          <span class="co"># specifies linear output (instead of logistic)</span></a>
-<a class="sourceLine" id="cb912-3" data-line-number="3">                     <span class="dt">decay =</span> <span class="fl">0.001</span>,          <span class="co"># weight decay</span></a>
-<a class="sourceLine" id="cb912-4" data-line-number="4">                     <span class="dt">maxit =</span> <span class="dv">100</span>,            <span class="co"># stop training after 100 iterations</span></a>
-<a class="sourceLine" id="cb912-5" data-line-number="5">                     <span class="dt">size =</span> <span class="dv">0</span>, <span class="dt">skip =</span> <span class="ot">TRUE</span>)  <span class="co"># no hidden layer (covered later)</span></a></code></pre></div>
+<div class="sourceCode" id="cb928"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb928-1" data-line-number="1">nnModel =<span class="st"> </span>nnet<span class="op">::</span><span class="kw">nnet</span>(y <span class="op">~</span><span class="st"> </span>x, <span class="dt">data =</span> nn_reg,   <span class="co"># formula notation is the same as lm()</span></a>
+<a class="sourceLine" id="cb928-2" data-line-number="2">                     <span class="dt">linout =</span> <span class="ot">TRUE</span>,          <span class="co"># specifies linear output (instead of logistic)</span></a>
+<a class="sourceLine" id="cb928-3" data-line-number="3">                     <span class="dt">decay =</span> <span class="fl">0.001</span>,          <span class="co"># weight decay</span></a>
+<a class="sourceLine" id="cb928-4" data-line-number="4">                     <span class="dt">maxit =</span> <span class="dv">100</span>,            <span class="co"># stop training after 100 iterations</span></a>
+<a class="sourceLine" id="cb928-5" data-line-number="5">                     <span class="dt">size =</span> <span class="dv">0</span>, <span class="dt">skip =</span> <span class="ot">TRUE</span>)  <span class="co"># no hidden layer (covered later)</span></a></code></pre></div>
 <pre><code>## # weights:  2
 ## initial  value 31.444863 
 ## final  value 2.134476 
 ## converged</code></pre>
-<div class="sourceCode" id="cb914"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb914-1" data-line-number="1"><span class="kw">summary</span>(nnModel)</a></code></pre></div>
+<div class="sourceCode" id="cb930"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb930-1" data-line-number="1"><span class="kw">summary</span>(nnModel)</a></code></pre></div>
 <pre><code>## a 1-0-1 network with 2 weights
 ## options were - skip-layer connections  linear output units  decay=0.001
 ##  b-&gt;o i1-&gt;o 
 ##  0.41  0.76</code></pre>
 <p>From the model summary, we see that has two weights: one for <span class="math inline">\(\omega_0\)</span> and one for <span class="math inline">\(\omega_1\)</span>. The initial and final values are model error terms. Converged means that training stopped before it reached <code>maxit</code>. The model takes the form 1-0-1, which means it has one input node (the bias, or intercept, node is automatically included) in the input layer, 0 nodes in the hidden layer (we’ll cover hidden layers later), and one node in the output layer. The <code>b-&gt;o</code> term is our <span class="math inline">\(\omega_0\)</span> (intercept) parameter value, and <code>i1-&gt;o</code> is our <span class="math inline">\(\omega_1\)</span> (slope) parameter value. We can extract the coefficients the usual way.</p>
-<div class="sourceCode" id="cb916"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb916-1" data-line-number="1"><span class="kw">coef</span>(nnModel)</a></code></pre></div>
+<div class="sourceCode" id="cb932"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb932-1" data-line-number="1"><span class="kw">coef</span>(nnModel)</a></code></pre></div>
 <pre><code>##      b-&gt;o     i1-&gt;o 
 ## 0.4125070 0.7641276</code></pre>
 </div>
-<div id="multiple-linear-regression-1" class="section level3">
-<h3><span class="header-section-number">12.4.3</span> Multiple Linear Regression</h3>
+<div id="multiple-linear-regression-1" class="section level3 hasAnchor">
+<h3><span class="header-section-number">12.4.3</span> Multiple Linear Regression<a href="optional-advanced-doe-topics.html#multiple-linear-regression-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The neural network model can be easily expanded to accommodate additional predictors by adding a node to the input layer for each additional predictor and connecting it to the output node. Below is a comparison of coefficients obtained from a linear model and a neural network model for a data set with three predictors.</p>
-<div class="sourceCode" id="cb918"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb918-1" data-line-number="1"><span class="co"># make up data</span></a>
-<a class="sourceLine" id="cb918-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">42</span>)</a>
-<a class="sourceLine" id="cb918-3" data-line-number="3">mlr =<span class="st"> </span><span class="kw">tibble</span>(</a>
-<a class="sourceLine" id="cb918-4" data-line-number="4">  <span class="dt">x1 =</span> <span class="kw">runif</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">5</span>),</a>
-<a class="sourceLine" id="cb918-5" data-line-number="5">  <span class="dt">x2 =</span> <span class="kw">runif</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">5</span>),</a>
-<a class="sourceLine" id="cb918-6" data-line-number="6">  <span class="dt">x3 =</span> <span class="kw">runif</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">5</span>),</a>
-<a class="sourceLine" id="cb918-7" data-line-number="7">  <span class="dt">y =</span> <span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="fl">0.5</span><span class="op">*</span>x1 <span class="op">-</span><span class="st"> </span><span class="fl">0.5</span><span class="op">*</span>x2 <span class="op">+</span><span class="st"> </span>x3 <span class="op">+</span><span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dt">sd=</span><span class="fl">0.5</span>)</a>
-<a class="sourceLine" id="cb918-8" data-line-number="8">)</a>
-<a class="sourceLine" id="cb918-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb918-10" data-line-number="10"><span class="co"># linear model coefficients</span></a>
-<a class="sourceLine" id="cb918-11" data-line-number="11"><span class="kw">coef</span>(<span class="kw">lm</span>(y <span class="op">~</span><span class="st"> </span>., <span class="dt">data=</span>mlr))</a></code></pre></div>
+<div class="sourceCode" id="cb934"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb934-1" data-line-number="1"><span class="co"># make up data</span></a>
+<a class="sourceLine" id="cb934-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">42</span>)</a>
+<a class="sourceLine" id="cb934-3" data-line-number="3">mlr =<span class="st"> </span><span class="kw">tibble</span>(</a>
+<a class="sourceLine" id="cb934-4" data-line-number="4">  <span class="dt">x1 =</span> <span class="kw">runif</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">5</span>),</a>
+<a class="sourceLine" id="cb934-5" data-line-number="5">  <span class="dt">x2 =</span> <span class="kw">runif</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">5</span>),</a>
+<a class="sourceLine" id="cb934-6" data-line-number="6">  <span class="dt">x3 =</span> <span class="kw">runif</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">5</span>),</a>
+<a class="sourceLine" id="cb934-7" data-line-number="7">  <span class="dt">y =</span> <span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="fl">0.5</span><span class="op">*</span>x1 <span class="op">-</span><span class="st"> </span><span class="fl">0.5</span><span class="op">*</span>x2 <span class="op">+</span><span class="st"> </span>x3 <span class="op">+</span><span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dt">sd=</span><span class="fl">0.5</span>)</a>
+<a class="sourceLine" id="cb934-8" data-line-number="8">)</a>
+<a class="sourceLine" id="cb934-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb934-10" data-line-number="10"><span class="co"># linear model coefficients</span></a>
+<a class="sourceLine" id="cb934-11" data-line-number="11"><span class="kw">coef</span>(<span class="kw">lm</span>(y <span class="op">~</span><span class="st"> </span>., <span class="dt">data=</span>mlr))</a></code></pre></div>
 <pre><code>## (Intercept)          x1          x2          x3 
 ##   2.0447549   0.5355719  -0.7312496   0.8035532</code></pre>
-<div class="sourceCode" id="cb920"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb920-1" data-line-number="1"><span class="co"># neural network coefficients</span></a>
-<a class="sourceLine" id="cb920-2" data-line-number="2"><span class="kw">coef</span>(nnet<span class="op">::</span><span class="kw">nnet</span>(y <span class="op">~</span><span class="st"> </span>., <span class="dt">data =</span> mlr, <span class="dt">linout =</span> <span class="ot">TRUE</span>, <span class="dt">decay =</span> <span class="fl">0.001</span>, <span class="dt">maxit =</span> <span class="dv">100</span>,</a>
-<a class="sourceLine" id="cb920-3" data-line-number="3">                     <span class="dt">size =</span> <span class="dv">0</span>, <span class="dt">skip =</span> <span class="ot">TRUE</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb936"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb936-1" data-line-number="1"><span class="co"># neural network coefficients</span></a>
+<a class="sourceLine" id="cb936-2" data-line-number="2"><span class="kw">coef</span>(nnet<span class="op">::</span><span class="kw">nnet</span>(y <span class="op">~</span><span class="st"> </span>., <span class="dt">data =</span> mlr, <span class="dt">linout =</span> <span class="ot">TRUE</span>, <span class="dt">decay =</span> <span class="fl">0.001</span>, <span class="dt">maxit =</span> <span class="dv">100</span>,</a>
+<a class="sourceLine" id="cb936-3" data-line-number="3">                     <span class="dt">size =</span> <span class="dv">0</span>, <span class="dt">skip =</span> <span class="ot">TRUE</span>))</a></code></pre></div>
 <pre><code>## # weights:  4
 ## initial  value 195.927838 
 ## final  value 4.149504 
@@ -705,8 +712,8 @@ We’ll create a data set with 10 observations and fit a linear model for compar
 </ul>
 <p>In cases like these, neural networks models can be very beneficial. To make that leap, however, we need to give our neural network model more power by giving it the ability to model these complexities. We do that by adding one or more <strong>hidden layers</strong> to the model.</p>
 </div>
-<div id="hidden-layer" class="section level3">
-<h3><span class="header-section-number">12.4.4</span> Hidden Layer</h3>
+<div id="hidden-layer" class="section level3 hasAnchor">
+<h3><span class="header-section-number">12.4.4</span> Hidden Layer<a href="optional-advanced-doe-topics.html#hidden-layer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Neural network models become <strong>universal function approximators</strong> with the addition of one or more hidden layers. Hidden layers fall between the input layer and the output layer. Adding more predictor variables and one hidden layer, we get the following network.</p>
 <p><img src="_Admin/hidden_nn.png" width="800" /></p>
 <p>We’ve introduced a new variable <span class="math inline">\(\nu\)</span>, and a new function <span class="math inline">\(u\)</span>. The <span class="math inline">\(\nu\)</span> variables are trainable weights just like the <span class="math inline">\(w\)</span> variables. The <span class="math inline">\(u\)</span> functions are activation functions as described earlier. Typically, all nodes in a hidden layer share a common type of activation function. A variety of activation functions have been developed, a few of which are shown below. For many applications, a rectified linear, activation function is a good choice for hidden layers.</p>
@@ -747,16 +754,16 @@ We’ll create a data set with 10 observations and fit a linear model for compar
 </tbody>
 </table>
 <p>As stated, adding a hidden layer turns the neural network model into a universal function approximator. For the case of regression, we can think of this as giving the neural network the ability to model non-linear functions without knowing what the nature of the nonlinear relationship is. Compare that to linear regression. If we had the relationship <span class="math inline">\(y = x^2\)</span>, we would need to transform either the response or predictor variable in a linear regression model, and this requires knowing the order of the polynomial to get a good fit. With neural network regression, we don’t need this knowledge. Instead, we allow the hidden layer to learn the nature of the relationship through the model training process. To demonstrate, we’ll use the <code>exa</code> data set from the <code>faraway</code> package, which looks like this.</p>
-<div class="sourceCode" id="cb923"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb923-1" data-line-number="1">exa =<span class="st"> </span>faraway<span class="op">::</span>exa</a>
-<a class="sourceLine" id="cb923-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb923-3" data-line-number="3"><span class="kw">ggplot</span>(exa) <span class="op">+</span></a>
-<a class="sourceLine" id="cb923-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>m), <span class="dt">color=</span><span class="st">&#39;red&#39;</span>, <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb923-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb923-6" data-line-number="6"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Simulated Data (Black) and True Function (Red)&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb923-7" data-line-number="7"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb939"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb939-1" data-line-number="1">exa =<span class="st"> </span>faraway<span class="op">::</span>exa</a>
+<a class="sourceLine" id="cb939-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb939-3" data-line-number="3"><span class="kw">ggplot</span>(exa) <span class="op">+</span></a>
+<a class="sourceLine" id="cb939-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>m), <span class="dt">color=</span><span class="st">&#39;red&#39;</span>, <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb939-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb939-6" data-line-number="6"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Simulated Data (Black) and True Function (Red)&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb939-7" data-line-number="7"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
 <p><img src="10-Optional_Advanced_Topics_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>To fit a linear model with a 10-node hidden layer, we specify <code>size = 10</code>, and since 100 iterations might not be enough to converge, we’ll increase <code>maxit</code> to 500. Otherwise, everything else is the same. With 2 nodes in the input layer (1 for the bias, 1 for x) and 11 nodes in the hidden layer (1 for the bias, and 10 for those we specified), the model will have 31 weights to train.</p>
-<div class="sourceCode" id="cb924"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb924-1" data-line-number="1">nnModel2 =<span class="st"> </span>nnet<span class="op">::</span><span class="kw">nnet</span>(y <span class="op">~</span><span class="st"> </span>x, <span class="dt">data =</span> exa, <span class="dt">linout =</span> <span class="ot">TRUE</span>, <span class="dt">decay =</span> <span class="dv">10</span><span class="op">^</span>(<span class="op">-</span><span class="dv">4</span>), <span class="dt">maxit =</span> <span class="dv">500</span>, <span class="dt">size =</span> <span class="dv">10</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb940"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb940-1" data-line-number="1">nnModel2 =<span class="st"> </span>nnet<span class="op">::</span><span class="kw">nnet</span>(y <span class="op">~</span><span class="st"> </span>x, <span class="dt">data =</span> exa, <span class="dt">linout =</span> <span class="ot">TRUE</span>, <span class="dt">decay =</span> <span class="dv">10</span><span class="op">^</span>(<span class="op">-</span><span class="dv">4</span>), <span class="dt">maxit =</span> <span class="dv">500</span>, <span class="dt">size =</span> <span class="dv">10</span>)</a></code></pre></div>
 <pre><code>## # weights:  31
 ## initial  value 499.220789 
 ## iter  10 value 78.378021
@@ -801,18 +808,18 @@ We’ll create a data set with 10 observations and fit a linear model for compar
 ## iter 390 value 23.069353
 ## final  value 23.069351 
 ## converged</code></pre>
-<div class="sourceCode" id="cb926"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb926-1" data-line-number="1">preds =<span class="st"> </span><span class="kw">predict</span>(nnModel2, <span class="dt">newdata=</span><span class="kw">data.frame</span>(<span class="dt">x=</span>exa<span class="op">$</span>x))</a>
-<a class="sourceLine" id="cb926-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb926-3" data-line-number="3"><span class="kw">ggplot</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb926-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>m, <span class="dt">color=</span><span class="st">&#39;True Function&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb926-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>exa<span class="op">$</span>x, <span class="dt">y=</span>preds, <span class="dt">color=</span><span class="st">&#39;Model Fit&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb926-6" data-line-number="6"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb926-7" data-line-number="7"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">name=</span><span class="st">&quot;Legend&quot;</span>, <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>, <span class="st">&#39;red&#39;</span>)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb926-8" data-line-number="8"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb942"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb942-1" data-line-number="1">preds =<span class="st"> </span><span class="kw">predict</span>(nnModel2, <span class="dt">newdata=</span><span class="kw">data.frame</span>(<span class="dt">x=</span>exa<span class="op">$</span>x))</a>
+<a class="sourceLine" id="cb942-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb942-3" data-line-number="3"><span class="kw">ggplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb942-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>m, <span class="dt">color=</span><span class="st">&#39;True Function&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb942-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>exa<span class="op">$</span>x, <span class="dt">y=</span>preds, <span class="dt">color=</span><span class="st">&#39;Model Fit&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb942-6" data-line-number="6"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb942-7" data-line-number="7"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">name=</span><span class="st">&quot;Legend&quot;</span>, <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>, <span class="st">&#39;red&#39;</span>)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb942-8" data-line-number="8"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
 <p><img src="10-Optional_Advanced_Topics_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <p>The plot above indicates the model over fit the data somewhat, although we only know this because we have the benefit of knowing the true function. We could reduce the amount of over fitting by choosing different hyperparameter values (decay, or the number of hidden layer nodes) or by changing the default training stopping criteria.</p>
 <p>The trained model’s weights are saved with the model, and all 31 are shown below. This highlights a significant drawback of neural network regression. Earlier when we used a neural network model to estimate the slope and intercept, the model weights had meaning: we could directly interpret the weights as slope and intercept. How do we interpret the weights below? I have no idea! The point is that neural network models can be trained to make highly accurate predictions…but at the cost of interpretability.</p>
-<div class="sourceCode" id="cb927"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb927-1" data-line-number="1">nnModel2<span class="op">$</span>wts</a></code></pre></div>
+<div class="sourceCode" id="cb943"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb943-1" data-line-number="1">nnModel2<span class="op">$</span>wts</a></code></pre></div>
 <pre><code>##  [1] -16.9725673  20.8097910 -29.5370775  34.5222783 -20.7276175  28.4041875
 ##  [7] -28.7287379  40.1850426   0.4509965   0.9949686  -6.7984091   9.0542803
 ## [13]   2.7378634 -14.7593037   0.5132994  -0.9159351   3.7162426 -21.0383138
@@ -821,23 +828,23 @@ We’ll create a data set with 10 observations and fit a linear model for compar
 ## [31]  -3.1923620</code></pre>
 </div>
 </div>
-<div id="neural-network-classification" class="section level2">
-<h2><span class="header-section-number">12.5</span> Neural Network Classification</h2>
+<div id="neural-network-classification" class="section level2 hasAnchor">
+<h2><span class="header-section-number">12.5</span> Neural Network Classification<a href="optional-advanced-doe-topics.html#neural-network-classification" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Neural network models have been extremely successful when applied to classification tasks such as image classification and natural language processing. These models are highly complex and are built using sophisticated packages such as TensorFlow (developed by Google) and PyTorch (developed by Facebook). Building complex models for those kinds of classification tasks are beyond the scope of this tutorial. Instead, this section provides a high-level overview of classification using the <code>nnet</code> package and the <code>iris</code> data set.</p>
 <p>The neural network training algorithm for classification is the same as for regression, but for classification, we need to change some of the attributes of the model itself. Instead of a linear activation function in the output layer, we need to use the softmax function. Doing so will cause the output layer to produce probabilities for each of the three flower species (this is accomplished by simply removing <code>linout = TRUE</code> from the <code>nnet()</code> function. Additionally, we use a categorical cross entropy loss function instead of mean squared error. Below, I also set <code>rang = 0.1</code> to scale the predictors to be in the range recommended in the function help. We’ll also create the same training/test split as in the non-parametric regression chapter so we can directly compare results.</p>
-<div class="sourceCode" id="cb929"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb929-1" data-line-number="1"><span class="co"># create a training and a test set</span></a>
-<a class="sourceLine" id="cb929-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">0</span>)</a>
-<a class="sourceLine" id="cb929-3" data-line-number="3">train =<span class="st"> </span>caTools<span class="op">::</span><span class="kw">sample.split</span>(iris, <span class="dt">SplitRatio =</span> <span class="fl">0.8</span>)</a>
-<a class="sourceLine" id="cb929-4" data-line-number="4">iris_train =<span class="st"> </span><span class="kw">subset</span>(iris, train <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb929-5" data-line-number="5">iris_test =<span class="st"> </span><span class="kw">subset</span>(iris, train <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb929-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb929-7" data-line-number="7"><span class="co"># train the model</span></a>
-<a class="sourceLine" id="cb929-8" data-line-number="8">irisModel =<span class="st"> </span>nnet<span class="op">::</span><span class="kw">nnet</span>(Species <span class="op">~</span><span class="st"> </span>., <span class="dt">data =</span> iris_train, </a>
-<a class="sourceLine" id="cb929-9" data-line-number="9">                       <span class="dt">size=</span><span class="dv">2</span>,       <span class="co"># only two nodes in the hidden layer</span></a>
-<a class="sourceLine" id="cb929-10" data-line-number="10">                       <span class="dt">maxit=</span><span class="dv">200</span>,    <span class="co"># stopping criteria</span></a>
-<a class="sourceLine" id="cb929-11" data-line-number="11">                       <span class="dt">entropy=</span><span class="ot">TRUE</span>, <span class="co"># switch for entropy</span></a>
-<a class="sourceLine" id="cb929-12" data-line-number="12">                       <span class="dt">decay=</span><span class="fl">5e-4</span>,   <span class="co"># weight decay hyperparameter</span></a>
-<a class="sourceLine" id="cb929-13" data-line-number="13">                       <span class="dt">rang=</span><span class="fl">0.1</span>)     <span class="co"># scale input values</span></a></code></pre></div>
+<div class="sourceCode" id="cb945"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb945-1" data-line-number="1"><span class="co"># create a training and a test set</span></a>
+<a class="sourceLine" id="cb945-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">0</span>)</a>
+<a class="sourceLine" id="cb945-3" data-line-number="3">train =<span class="st"> </span>caTools<span class="op">::</span><span class="kw">sample.split</span>(iris, <span class="dt">SplitRatio =</span> <span class="fl">0.8</span>)</a>
+<a class="sourceLine" id="cb945-4" data-line-number="4">iris_train =<span class="st"> </span><span class="kw">subset</span>(iris, train <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb945-5" data-line-number="5">iris_test =<span class="st"> </span><span class="kw">subset</span>(iris, train <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb945-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb945-7" data-line-number="7"><span class="co"># train the model</span></a>
+<a class="sourceLine" id="cb945-8" data-line-number="8">irisModel =<span class="st"> </span>nnet<span class="op">::</span><span class="kw">nnet</span>(Species <span class="op">~</span><span class="st"> </span>., <span class="dt">data =</span> iris_train, </a>
+<a class="sourceLine" id="cb945-9" data-line-number="9">                       <span class="dt">size=</span><span class="dv">2</span>,       <span class="co"># only two nodes in the hidden layer</span></a>
+<a class="sourceLine" id="cb945-10" data-line-number="10">                       <span class="dt">maxit=</span><span class="dv">200</span>,    <span class="co"># stopping criteria</span></a>
+<a class="sourceLine" id="cb945-11" data-line-number="11">                       <span class="dt">entropy=</span><span class="ot">TRUE</span>, <span class="co"># switch for entropy</span></a>
+<a class="sourceLine" id="cb945-12" data-line-number="12">                       <span class="dt">decay=</span><span class="fl">5e-4</span>,   <span class="co"># weight decay hyperparameter</span></a>
+<a class="sourceLine" id="cb945-13" data-line-number="13">                       <span class="dt">rang=</span><span class="fl">0.1</span>)     <span class="co"># scale input values</span></a></code></pre></div>
 <pre><code>## # weights:  19
 ## initial  value 131.916499 
 ## iter  10 value 75.933787
@@ -862,9 +869,9 @@ We’ll create a data set with 10 observations and fit a linear model for compar
 ## iter 200 value 4.793242
 ## final  value 4.793242 
 ## stopped after 200 iterations</code></pre>
-<div class="sourceCode" id="cb931"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb931-1" data-line-number="1"><span class="co"># make predictions on test data</span></a>
-<a class="sourceLine" id="cb931-2" data-line-number="2">iris_preds =<span class="st"> </span><span class="kw">predict</span>(irisModel, <span class="dt">newdata=</span>iris_test)</a>
-<a class="sourceLine" id="cb931-3" data-line-number="3"><span class="kw">head</span>(iris_preds)</a></code></pre></div>
+<div class="sourceCode" id="cb947"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb947-1" data-line-number="1"><span class="co"># make predictions on test data</span></a>
+<a class="sourceLine" id="cb947-2" data-line-number="2">iris_preds =<span class="st"> </span><span class="kw">predict</span>(irisModel, <span class="dt">newdata=</span>iris_test)</a>
+<a class="sourceLine" id="cb947-3" data-line-number="3"><span class="kw">head</span>(iris_preds)</a></code></pre></div>
 <pre><code>##       setosa  versicolor    virginica
 ## 5  0.9956736 0.004326355 6.389963e-16
 ## 10 0.9911208 0.008879241 2.890320e-15
@@ -873,33 +880,33 @@ We’ll create a data set with 10 observations and fit a linear model for compar
 ## 25 0.9739590 0.026040969 2.797958e-14
 ## 30 0.9901588 0.009841242 3.588147e-15</code></pre>
 <p>This first six predictions for the test set are shown above, and notice that the values are in fact probabilities. The model is highly confident that each one of these first six predictions are setosa. Recall from the SVM and CART sections of the non-parametric regression chapter that both of those models misclassified test set observations #24 and #27 as versicolor that are actually virginica. Below we see that the neural network model correctly predicts both observations but is less confident about observation #24.</p>
-<div class="sourceCode" id="cb933"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb933-1" data-line-number="1">iris_preds[<span class="kw">c</span>(<span class="dv">24</span>,<span class="dv">27</span>), ]</a></code></pre></div>
+<div class="sourceCode" id="cb949"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb949-1" data-line-number="1">iris_preds[<span class="kw">c</span>(<span class="dv">24</span>,<span class="dv">27</span>), ]</a></code></pre></div>
 <pre><code>##           setosa versicolor virginica
 ## 120 7.348409e-11 0.18917739 0.8108226
 ## 135 5.486873e-13 0.03107722 0.9689228</code></pre>
 <p>The confusion matrix for the entire test set reveals that the model has an accuracy of 100%.</p>
-<div class="sourceCode" id="cb935"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb935-1" data-line-number="1">iris_cm =<span class="st"> </span>cvms<span class="op">::</span><span class="kw">confusion_matrix</span>(</a>
-<a class="sourceLine" id="cb935-2" data-line-number="2">  <span class="dt">targets =</span> iris_test[, <span class="dv">5</span>], </a>
-<a class="sourceLine" id="cb935-3" data-line-number="3">  <span class="dt">predictions =</span> <span class="kw">colnames</span>(iris_preds)[<span class="kw">max.col</span>(iris_preds)])</a>
-<a class="sourceLine" id="cb935-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb935-5" data-line-number="5">cvms<span class="op">::</span><span class="kw">plot_confusion_matrix</span>(iris_cm<span class="op">$</span><span class="st">`</span><span class="dt">Confusion Matrix</span><span class="st">`</span>[[<span class="dv">1</span>]], <span class="dt">add_zero_shading =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb935-6" data-line-number="6"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Neural Network Confusion Matrix&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb951"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb951-1" data-line-number="1">iris_cm =<span class="st"> </span>cvms<span class="op">::</span><span class="kw">confusion_matrix</span>(</a>
+<a class="sourceLine" id="cb951-2" data-line-number="2">  <span class="dt">targets =</span> iris_test[, <span class="dv">5</span>], </a>
+<a class="sourceLine" id="cb951-3" data-line-number="3">  <span class="dt">predictions =</span> <span class="kw">colnames</span>(iris_preds)[<span class="kw">max.col</span>(iris_preds)])</a>
+<a class="sourceLine" id="cb951-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb951-5" data-line-number="5">cvms<span class="op">::</span><span class="kw">plot_confusion_matrix</span>(iris_cm<span class="op">$</span><span class="st">`</span><span class="dt">Confusion Matrix</span><span class="st">`</span>[[<span class="dv">1</span>]], <span class="dt">add_zero_shading =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb951-6" data-line-number="6"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Neural Network Confusion Matrix&quot;</span>)</a></code></pre></div>
 <pre><code>## Warning in cvms::plot_confusion_matrix(iris_cm$`Confusion Matrix`[[1]], :
 ## &#39;ggimage&#39; is missing. Will not plot arrows and zero-shading.</code></pre>
-<pre><code>## Warning in cvms::plot_confusion_matrix(iris_cm$`Confusion Matrix`[[1]], : &#39;rsvg&#39;
-## is missing. Will not plot arrows and zero-shading.</code></pre>
+<pre><code>## Warning in cvms::plot_confusion_matrix(iris_cm$`Confusion Matrix`[[1]], :
+## &#39;rsvg&#39; is missing. Will not plot arrows and zero-shading.</code></pre>
 <p><img src="10-Optional_Advanced_Topics_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 </div>
-<div id="multivariate-adaptive-regression-splines" class="section level2">
-<h2><span class="header-section-number">12.6</span> Multivariate Adaptive Regression Splines</h2>
-<div class="sourceCode" id="cb938"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb938-1" data-line-number="1">marsFit =<span class="st"> </span>earth<span class="op">::</span><span class="kw">earth</span>(exa<span class="op">$</span>x, exa<span class="op">$</span>y)</a>
-<a class="sourceLine" id="cb938-2" data-line-number="2">marsFit</a></code></pre></div>
+<div id="multivariate-adaptive-regression-splines" class="section level2 hasAnchor">
+<h2><span class="header-section-number">12.6</span> Multivariate Adaptive Regression Splines<a href="optional-advanced-doe-topics.html#multivariate-adaptive-regression-splines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb954"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb954-1" data-line-number="1">marsFit =<span class="st"> </span>earth<span class="op">::</span><span class="kw">earth</span>(exa<span class="op">$</span>x, exa<span class="op">$</span>y)</a>
+<a class="sourceLine" id="cb954-2" data-line-number="2">marsFit</a></code></pre></div>
 <pre><code>## Selected 7 of 12 terms, and 1 of 1 predictors
 ## Termination condition: Reached nk 21
 ## Importance: exa$x
 ## Number of terms at each degree of interaction: 1 6 (additive model)
 ## GCV 0.09986259    RSS 23.03432    GRSq 0.6894275    RSq 0.71797</code></pre>
-<div class="sourceCode" id="cb940"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb940-1" data-line-number="1"><span class="kw">summary</span>(marsFit)</a></code></pre></div>
+<div class="sourceCode" id="cb956"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb956-1" data-line-number="1"><span class="kw">summary</span>(marsFit)</a></code></pre></div>
 <pre><code>## Call: earth(x=exa$x, y=exa$y)
 ## 
 ##                 coefficients
@@ -916,30 +923,30 @@ We’ll create a data set with 10 observations and fit a linear model for compar
 ## Importance: exa$x
 ## Number of terms at each degree of interaction: 1 6 (additive model)
 ## GCV 0.09986259    RSS 23.03432    GRSq 0.6894275    RSq 0.71797</code></pre>
-<div class="sourceCode" id="cb942"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb942-1" data-line-number="1">mars_preds =<span class="st"> </span><span class="kw">predict</span>(marsFit, exa<span class="op">$</span>x)</a>
-<a class="sourceLine" id="cb942-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb942-3" data-line-number="3"><span class="kw">ggplot</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb942-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>m, <span class="dt">color=</span><span class="st">&#39;True Function&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb942-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>exa<span class="op">$</span>x, <span class="dt">y=</span>mars_preds, <span class="dt">color=</span><span class="st">&#39;MARS Fit&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb942-6" data-line-number="6"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb942-7" data-line-number="7"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">name=</span><span class="st">&quot;Legend&quot;</span>, <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>, <span class="st">&#39;red&#39;</span>)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb942-8" data-line-number="8"><span class="st">  </span><span class="kw">theme_bw</span>() </a></code></pre></div>
+<div class="sourceCode" id="cb958"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb958-1" data-line-number="1">mars_preds =<span class="st"> </span><span class="kw">predict</span>(marsFit, exa<span class="op">$</span>x)</a>
+<a class="sourceLine" id="cb958-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb958-3" data-line-number="3"><span class="kw">ggplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb958-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>m, <span class="dt">color=</span><span class="st">&#39;True Function&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb958-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>exa<span class="op">$</span>x, <span class="dt">y=</span>mars_preds, <span class="dt">color=</span><span class="st">&#39;MARS Fit&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb958-6" data-line-number="6"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb958-7" data-line-number="7"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">name=</span><span class="st">&quot;Legend&quot;</span>, <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>, <span class="st">&#39;red&#39;</span>)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb958-8" data-line-number="8"><span class="st">  </span><span class="kw">theme_bw</span>() </a></code></pre></div>
 <p><img src="10-Optional_Advanced_Topics_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 <p>With bootstrap aggregation.</p>
-<div class="sourceCode" id="cb943"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb943-1" data-line-number="1">marsFit2 =<span class="st"> </span>caret<span class="op">::</span><span class="kw">bagEarth</span>(exa<span class="op">$</span>x, exa<span class="op">$</span>y)</a>
-<a class="sourceLine" id="cb943-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb943-3" data-line-number="3">mars_preds2 =<span class="st"> </span><span class="kw">predict</span>(marsFit2, exa<span class="op">$</span>x)</a>
-<a class="sourceLine" id="cb943-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb943-5" data-line-number="5"><span class="kw">ggplot</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb943-6" data-line-number="6"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>m, <span class="dt">color=</span><span class="st">&#39;True Function&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb943-7" data-line-number="7"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>exa<span class="op">$</span>x, <span class="dt">y=</span>mars_preds2, <span class="dt">color=</span><span class="st">&#39;Bagged MARS Fit&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb943-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb943-9" data-line-number="9"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">name=</span><span class="st">&quot;Legend&quot;</span>, <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>, <span class="st">&#39;red&#39;</span>)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb943-10" data-line-number="10"><span class="st">  </span><span class="kw">theme_bw</span>() </a></code></pre></div>
+<div class="sourceCode" id="cb959"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb959-1" data-line-number="1">marsFit2 =<span class="st"> </span>caret<span class="op">::</span><span class="kw">bagEarth</span>(exa<span class="op">$</span>x, exa<span class="op">$</span>y)</a>
+<a class="sourceLine" id="cb959-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb959-3" data-line-number="3">mars_preds2 =<span class="st"> </span><span class="kw">predict</span>(marsFit2, exa<span class="op">$</span>x)</a>
+<a class="sourceLine" id="cb959-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb959-5" data-line-number="5"><span class="kw">ggplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb959-6" data-line-number="6"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>m, <span class="dt">color=</span><span class="st">&#39;True Function&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb959-7" data-line-number="7"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>exa<span class="op">$</span>x, <span class="dt">y=</span>mars_preds2, <span class="dt">color=</span><span class="st">&#39;Bagged MARS Fit&#39;</span>), <span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb959-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data=</span>exa, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb959-9" data-line-number="9"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">name=</span><span class="st">&quot;Legend&quot;</span>, <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>, <span class="st">&#39;red&#39;</span>)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb959-10" data-line-number="10"><span class="st">  </span><span class="kw">theme_bw</span>() </a></code></pre></div>
 <p><img src="10-Optional_Advanced_Topics_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
 </div>
-<div id="non-parametric-statistics" class="section level2">
-<h2><span class="header-section-number">12.7</span> Non-Parametric Statistics</h2>
+<div id="non-parametric-statistics" class="section level2 hasAnchor">
+<h2><span class="header-section-number">12.7</span> Non-Parametric Statistics<a href="optional-advanced-doe-topics.html#non-parametric-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 <div id="refs" class="references">
 <div>
@@ -1043,7 +1050,6 @@ We’ll create a data set with 10 observations and fit a linear model for compar
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1062,6 +1068,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -1082,6 +1089,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "chapter"
 }
@@ -1095,7 +1106,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -196,6 +196,39 @@ mode(y)
 ```r
 # Create a data frame with the values of y, then group by the individual values and count them.  I'll use dplyr to manipulate the dataframe
 library(dplyr)
+```
+
+```
+## Warning: replacing previous import 'ellipsis::check_dots_unnamed' by
+## 'rlang::check_dots_unnamed' when loading 'tibble'
+```
+
+```
+## Warning: replacing previous import 'ellipsis::check_dots_used' by
+## 'rlang::check_dots_used' when loading 'tibble'
+```
+
+```
+## Warning: replacing previous import 'ellipsis::check_dots_empty' by
+## 'rlang::check_dots_empty' when loading 'tibble'
+```
+
+```
+## Warning: replacing previous import 'ellipsis::check_dots_unnamed' by
+## 'rlang::check_dots_unnamed' when loading 'pillar'
+```
+
+```
+## Warning: replacing previous import 'ellipsis::check_dots_used' by
+## 'rlang::check_dots_used' when loading 'pillar'
+```
+
+```
+## Warning: replacing previous import 'ellipsis::check_dots_empty' by
+## 'rlang::check_dots_empty' when loading 'pillar'
+```
+
+```r
 myDF <- data.frame(Num = y)
 myDF <- myDF %>% group_by(Num) %>% dplyr::summarise(Count = n(), .groups='drop') # We create a data frame that gives us the count of y 
 myDF
@@ -255,11 +288,11 @@ x
 ```
 
 ```
-##  [1]  9.481679 10.106188  8.030881 10.153189  6.405635 10.999582  5.192514
-##  [8]  9.559060  8.409480 11.205995 13.337560  6.865334  9.307742 11.170984
-## [15]  9.622531 10.493340  8.204369  9.531700 12.531379  8.212803 10.215235
-## [22] 11.246772  7.921006  7.926419  8.722660  9.858107 15.180443  9.387789
-## [29] 14.657690 10.749475
+##  [1]  5.783658 10.838549  8.584377 12.197788  7.690883 10.641142  8.053621
+##  [8]  8.594116  9.429992  9.912435  6.445378 10.274084 12.609541 10.130528
+## [15] 10.765891  7.572724  9.241358  9.731877  9.300356 11.089564  9.085369
+## [22] 11.072649  8.043187 10.811833 11.074686  9.395725 13.791975 10.166624
+## [29]  7.713657 13.616284
 ```
 
 ```r
@@ -267,7 +300,7 @@ mean(x)
 ```
 
 ```
-## [1] 9.822918
+## [1] 9.788662
 ```
 
 ```r
@@ -275,7 +308,7 @@ sd(x)
 ```
 
 ```
-## [1] 2.213116
+## [1] 1.901563
 ```
 
 ```r
@@ -283,7 +316,7 @@ var(x)
 ```
 
 ```
-## [1] 4.897881
+## [1] 3.615941
 ```
 
 Note that the provided (i.e., true) mean is 10 and the provided (i.e, true) standard deviation is 2, but our estimates are just that, statistical estimates.
@@ -400,7 +433,7 @@ IQR(x)
 ```
 
 ```
-## [1] 1.329045
+## [1] 1.219757
 ```
 
 ```r
@@ -409,8 +442,8 @@ quantile(x)
 ```
 
 ```
-##           0%          25%          50%          75%         100% 
-## -1.661199569 -0.720687045  0.002908299  0.608357605  2.933176036
+##         0%        25%        50%        75%       100% 
+## -2.3204885 -0.5845449 -0.0732630  0.6352119  2.5331092
 ```
 
 ```r
@@ -443,7 +476,7 @@ myQuantile[4]
 
 ```
 ##       75% 
-## 0.6083576
+## 0.6352119
 ```
 
 ```r
@@ -451,8 +484,8 @@ myQuantile[2]
 ```
 
 ```
-##       25% 
-## -0.720687
+##        25% 
+## -0.5845449
 ```
 
 ```r
@@ -462,7 +495,7 @@ myQuantile[4] - myQuantile[2] # note this preserves the names of the first resul
 
 ```
 ##      75% 
-## 1.329045
+## 1.219757
 ```
 
 ```r
@@ -645,7 +678,7 @@ rnorm(1, 0, 1)
 ```
 
 ```
-## [1] 2.803058
+## [1] 0.995384
 ```
 
 ```r
@@ -654,7 +687,7 @@ rnorm(1, 0, 1)
 ```
 
 ```
-## [1] 0.1174497
+## [1] -0.2418505
 ```
 
 ```r
@@ -664,8 +697,8 @@ rnorm(10, 0, 1)
 ```
 
 ```
-##  [1]  0.05649155  0.26344133  0.43058039 -0.20057846 -1.03925039 -1.20096107
-##  [7] -0.47360459  0.79003676 -0.15714316 -0.77605794
+##  [1] -0.03743349 -0.75221428 -0.61921066  2.18390879 -0.82359367  0.75313677
+##  [7] -1.08140242 -1.47547074  1.39661092 -0.75668194
 ```
 
 As a side note, the `set.seed()` command is useful if you want to set the random number generator seed for *R* if you're concerned about replicability. As a side note, *R*, like nearly every (or perhaps all) other programming languages actually generates pseudorandom  numbers.  See the documentation <a href = "https://www.rdocumentation.org/packages/gsl/versions/2.1-6/topics/Rng" > here </a> if you're really concerned about it.  Back to `set.seed()`:
@@ -678,7 +711,7 @@ rnorm(1) # recall that we can rely on the defaults for mean and standard deviati
 ```
 
 ```
-## [1] 0.9734257
+## [1] -0.3979892
 ```
 
 ```r
@@ -687,7 +720,7 @@ rnorm(1)
 ```
 
 ```
-## [1] -0.4674196
+## [1] -0.1722664
 ```
 
 ```r
@@ -1132,10 +1165,10 @@ Finally, ensure you understand the distribution you are using.  Many (perhaps mo
 
 ### Descriptive Statistics - Problem Set
 
-+ You can view the problem set here <a href = "/_Chapter3_ProblemSets/2-1_Descriptive_Statistics.html"> Descriptive Statistics Problem Set </a>.
-+ For your convenience, <a href = "/_Chapter3_ProblemSets/2-1_Descriptive_Statistics.Rmd">here is the problem set as an R Markdown.</a>
-+ You can download the Ames Iowa data set here <a href = "/_Chapter3_ProblemSets/ames.csv"> Ames, Iowa Data Set </a>.
-+ You can view the problem set solution <a href = "/_Chapter3_ProblemSets/2-1_Descriptive_Statistics_Answers.html"> here </a>.
++ You can view the problem set here <a href = "2-1_Descriptive_Statistics.html"> Descriptive Statistics Problem Set </a>.
++ For your convenience, <a href = "2-1_Descriptive_Statistics.Rmd">here is the problem set as an R Markdown.</a>
++ You can download the Ames Iowa data set here <a href = "ames.csv"> Ames, Iowa Data Set </a>.
++ You can view the problem set solution <a href = "2-1_Descriptive_Statistics_Answers.html"> here </a>.
 
 
 
@@ -1668,9 +1701,9 @@ Statistical inference is an expansive field^[One may say it is a minefield!].  T
 
 ### Statistical Inference - Problem Set
 
-+ You can view the problem set here <a href = "/_Chapter3_ProblemSets/Chapter_2-3_Problem_Set_Questions.html"> Statistical Inference Problem Set </a>.
-+ The problem set as an R Markdown is here for your convenience: <a href = "/_Chapter3_ProblemSets/Chapter_2-3_Problem_Set_Questions.Rmd"> Statistical Inference Problem Set </a>.
-+ You can download the Ames Iowa data set here <a href = "/_Chapter3_ProblemSets/ames.csv"> Ames, Iowa Data Set </a>.
-+ You can download the the sample simulation data <a href = '/_Chapter3_ProblemSets/Chap2_DataSet.csv'> here (Chap2_DataSet.csv)</a>.
-+ You can view the problem set solution here <a href = "/_Chapter3_ProblemSets/Chapter_2-3_Problem_Set_Answers.html"> Here </a>.
++ You can view the problem set here <a href = "Chapter_2-3_Problem_Set_Questions.html"> Statistical Inference Problem Set </a>.
++ The problem set as an R Markdown is here for your convenience: <a href = "Chapter_2-3_Problem_Set_Questions.Rmd"> Statistical Inference Problem Set </a>.
++ You can download the Ames Iowa data set here <a href = "ames.csv"> Ames, Iowa Data Set </a>.
++ You can download the the sample simulation data <a href = 'Chap2_DataSet.csv'> here (Chap2_DataSet.csv)</a>.
++ You can view the problem set solution here <a href = "Chapter_2-3_Problem_Set_Answers.html"> Here </a>.
 

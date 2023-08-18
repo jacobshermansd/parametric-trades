@@ -278,8 +278,8 @@ ggplot(wHistory) +
 ```
 
 ```
-## Warning: No renderer available. Please install the gifski, av, or magick package
-## to create animated output
+## Warning: No renderer available. Please install the gifski, av, or magick
+## package to create animated output
 ```
 
 ```
@@ -308,8 +308,8 @@ ggplot(wHistory) +
 ```
 
 ```
-## Warning: No renderer available. Please install the gifski, av, or magick package
-## to create animated output
+## Warning: No renderer available. Please install the gifski, av, or magick
+## package to create animated output
 ```
 
 ```
@@ -331,8 +331,8 @@ ggplot(wHistory) +
 ```
 
 ```
-## Warning: No renderer available. Please install the gifski, av, or magick package
-## to create animated output
+## Warning: No renderer available. Please install the gifski, av, or magick
+## package to create animated output
 ```
 
 ```
@@ -664,8 +664,8 @@ cvms::plot_confusion_matrix(iris_cm$`Confusion Matrix`[[1]], add_zero_shading = 
 ```
 
 ```
-## Warning in cvms::plot_confusion_matrix(iris_cm$`Confusion Matrix`[[1]], : 'rsvg'
-## is missing. Will not plot arrows and zero-shading.
+## Warning in cvms::plot_confusion_matrix(iris_cm$`Confusion Matrix`[[1]], :
+## 'rsvg' is missing. Will not plot arrows and zero-shading.
 ```
 
 <img src="10-Optional_Advanced_Topics_files/figure-html/unnamed-chunk-23-1.png" width="672" />
