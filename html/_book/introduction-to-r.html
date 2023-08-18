@@ -442,7 +442,7 @@ Published with bookdown</a></li>
 <p>R Studio may be launched via Windows start menu, but there are also cloud-based options such as Amazon Web Services and MatrixDS. If you are launching R Studio for the first time, when it starts, you should see three panels. On the left is the console, and on the right are two panels with several tabs each that display charts, allow for file browsing, etc. To start a new R script, go to File &gt;&gt; New File &gt;&gt; R Script. This will open a fourth panel on the left that is essentially just a text editor where you write R code. For an R Studio IDE cheat sheet, click <a href = "https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf"> here </a>. To interact with R in R Studio, simply type a command in the text editor panel, place the cursor anywhere on the command line, and press CTRL+ENTER (no need to select the text as in SQL).</p>
 <div id="introduction-to-r---part-i" class="section level2 hasAnchor">
 <h2><span class="header-section-number">2.1</span> Introduction to R - Part I<a href="introduction-to-r.html#introduction-to-r---part-i" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For this course, we will use the online tutorial <a href = "https://r4ds.had.co.nz"> R for Data Science </a> to develop your R skills. The tutorial assumes that users have no knowledge of R or any other programming language. When completing these exercises, write your code in an R Markdown file. Generally, one code block per question will be appropriate. You can either start your own R markdown file from R Studio, or you can download <a href = "/docsArchive/_Chapter2_ProblemSets/Chapter2_Questions.Rmd">Introduction to R Problem Set</a> to get started.</p>
+<p>For this course, we will use the online tutorial <a href = "https://r4ds.had.co.nz"> R for Data Science </a> to develop your R skills. The tutorial assumes that users have no knowledge of R or any other programming language. When completing these exercises, write your code in an R Markdown file. Generally, one code block per question will be appropriate. You can either start your own R markdown file from R Studio, or you can download <a href = "/_Chapter2_ProblemSets/Chapter2_Questions.Rmd">Introduction to R Problem Set</a> to get started.</p>
 <div id="objectives-1" class="section level3 hasAnchor">
 <h3><span class="header-section-number">2.1.1</span> Objectives<a href="introduction-to-r.html#objectives-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>By the end of the Introduction to R - Part I, you will have:</p>
@@ -832,8 +832,8 @@ Published with bookdown</a></li>
 <div id="relational-and-logical-operators" class="section level3 hasAnchor">
 <h3><span class="header-section-number">2.1.6</span> Relational and Logical Operators<a href="introduction-to-r.html#relational-and-logical-operators" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>R uses relational and logical operators in addition to the arithmethic operators presented earlier (+, -, *, /, etc.). The following summarizes the primary relational and logical operators. When relational and logical operations are performed on vectors, the result is a logical vector of TRUE or FALSE. R treats a TRUE as a 1 and FALSE as a 0, which is useful for counting the number of matches.</p>
-<div id="htmlwidget-e6d495b7a9371ea3bae9" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e6d495b7a9371ea3bae9">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&lt;","&lt;=","&gt;","&gt;=","==","!="],["Less than","Less than or equal to","Greater than","Greater than or equal to","Equal to","Not equal to"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4e30d610e2d4233759ad" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4e30d610e2d4233759ad">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&lt;","&lt;=","&gt;","&gt;=","==","!="],["Less than","Less than or equal to","Greater than","Greater than or equal to","Equal to","Not equal to"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p>Examples of relational operations.</p>
 <div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb199-1" data-line-number="1">x =<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span></a>
 <a class="sourceLine" id="cb199-2" data-line-number="2">x <span class="op">&lt;</span><span class="st"> </span><span class="dv">5</span></a></code></pre></div>
@@ -847,8 +847,8 @@ Published with bookdown</a></li>
 <div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb207-1" data-line-number="1"><span class="kw">sum</span>(x <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)</a></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>Logical operations with examples.</p>
-<div id="htmlwidget-468bbcc6ec4d50d81d6d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-468bbcc6ec4d50d81d6d">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&amp;","|","!","&amp;&amp;","||","%in%"],["Element-wise AND","Element-wise OR","Element-wise NOT","Operand-wise AND","Operand-wise OR","Is an element in a vector"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a950f79ee217d22365e7" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a950f79ee217d22365e7">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&amp;","|","!","&amp;&amp;","||","%in%"],["Element-wise AND","Element-wise OR","Element-wise NOT","Operand-wise AND","Operand-wise OR","Is an element in a vector"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p>Logical operations are often useful when comparing two vectors.</p>
 <div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb209-1" data-line-number="1">x =<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span></a>
 <a class="sourceLine" id="cb209-2" data-line-number="2">y =<span class="st"> </span><span class="kw">rep</span>(<span class="dv">5</span>, <span class="dv">10</span>)</a>
@@ -880,9 +880,9 @@ Published with bookdown</a></li>
 </div>
 <div id="problem-set" class="section level3 hasAnchor">
 <h3><span class="header-section-number">2.2.2</span> Problem Set<a href="introduction-to-r.html#problem-set" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The problem set for this section is located <a href = '/docsArchive/_Chapter2_ProblemSets/Chapter2_Questions.html'>here</a>.</p>
-<p>For your convenience, the R markdown version is <a href = '/docsArchive/_Chapter2_ProblemSets/Chapter2_Questions.Rmd'>here</a>.</p>
-<p>The solutions are located <a href = '/docsArchive/_Chapter2_ProblemSets/Chapter2_Solutions.html'>here</a>.</p>
+<p>UPDATED: The problem set for this section is located <a href = '/_Chapter2_ProblemSets/Chapter2_Questions.html'>here</a>.</p>
+<p>For your convenience, the R markdown version is <a href = '/_Chapter2_ProblemSets/Chapter2_Questions.Rmd'>here</a>.</p>
+<p>The solutions are located <a href = '/_Chapter2_ProblemSets/Chapter2_Solutions.html'>here</a>.</p>
 
 </div>
 </div>
