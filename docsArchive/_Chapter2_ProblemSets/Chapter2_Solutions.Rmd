@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-This problem set corresponds to the Introduction to *R* chapter in the course https://doe.dscoe.org. The solutions to the problem set use the packages shown below.
+This problem set corresponds to the Introduction to *R* chapter in the course https://jacobshermansd.github.io/parametric-trades. The solutions to the problem set use the packages shown below.
 
 ```{r}
 library(tidyverse)

@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-This problem set corresponds to the chapter on classification and regression trees and random forests in the course https://doe.dscoe.org. In this problem set, you'll first perform regression using a regression tree and a random forest on the <a href = "https://archive.ics.uci.edu/ml/datasets/Student+Performance">Student Performance</a> data set. Then you will perform classification using a random forest on the Glass data set (the same data set used in the support vector machine problem set). Both data sets are available from the University of California - Irvine's Machine Learning Repository.
+This problem set corresponds to the chapter on classification and regression trees and random forests in the course https://jacobshermansd.github.io/parametric-trades. In this problem set, you'll first perform regression using a regression tree and a random forest on the <a href = "https://archive.ics.uci.edu/ml/datasets/Student+Performance">Student Performance</a> data set. Then you will perform classification using a random forest on the Glass data set (the same data set used in the support vector machine problem set). Both data sets are available from the University of California - Irvine's Machine Learning Repository.
 
 The solutions for this problem set use the following packages; however, you may use whatever packages you prefer.
 

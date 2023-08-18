@@ -6,7 +6,7 @@ output:
             toc:
                 collapse: chapter
                 before: |
-                    <li><a href="https://doe.dscoe.org/">DoE for M&S</a></li>
+                    <li><a href="https://jacobshermansd.github.io/parametric-trades/">DoE for M&S</a></li>
                 after: |
                     <li><a href="https://github.com/rstudio/bookdown">
                     Published with bookdown</a></li>

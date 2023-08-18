@@ -149,7 +149,7 @@ At the end, viewers should be able to make an informed decision on committing ti
     - <font color = 'blue'>Fundamental mathematics & statistics.</font>
     - <font color = 'blue'>Desire to learn.</font>
 - Resources:
-    - Computer with internet connection.  The course is hosted at: <a href = 'https://doe.dscoe.org'>https://doe.dscoe.org</a>.
+    - Computer with internet connection.  The course is hosted at: <a href = 'https://jacobshermansd.github.io/parametric-trades'>https://jacobshermansd.github.io/parametric-trades</a>.
     - R programming environment. We are using www.matrixds.com (free) as it largely eliminates challenges associated with government computer restrictions.
 
 

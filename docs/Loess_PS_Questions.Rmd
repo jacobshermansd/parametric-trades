@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-This problem set corresponds to the chapter on splines and loess smoothers in the course https://doe.dscoe.org. For this problem set, you will need the `exa` data set from the `faraway` package and the `swiss` data set that comes with base *R*. The solutions for this problem set use the following additional packages. While developing this problem set, I came across the `mgcv` (mixed GAM computation vehicle) package, which has some really nice features that we'll explore. One downside to the package is that it doesn't support loess smoothing.
+This problem set corresponds to the chapter on splines and loess smoothers in the course https://jacobshermansd.github.io/parametric-trades. For this problem set, you will need the `exa` data set from the `faraway` package and the `swiss` data set that comes with base *R*. The solutions for this problem set use the following additional packages. While developing this problem set, I came across the `mgcv` (mixed GAM computation vehicle) package, which has some really nice features that we'll explore. One downside to the package is that it doesn't support loess smoothing.
 
 ```{r, warning = F, message = F}
 library(tidyverse)

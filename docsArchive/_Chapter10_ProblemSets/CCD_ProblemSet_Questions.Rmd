@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-This problem set corresponds to the central composite design (CCD) section of the advanced designs chapter in the course https://doe.dscoe.org. For this problem set, we will develop requirements for a hypothetical future ground combat vehicle. The solutions to the problem set use the packages shown below; however, you may use whatever packages you prefer.
+This problem set corresponds to the central composite design (CCD) section of the advanced designs chapter in the course https://jacobshermansd.github.io/parametric-trades. For this problem set, we will develop requirements for a hypothetical future ground combat vehicle. The solutions to the problem set use the packages shown below; however, you may use whatever packages you prefer.
 
 ```{r, warning = F, message = F}
 library(tidyverse)

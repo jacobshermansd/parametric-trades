@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-This problem set corresponds to the section on multi factor ANOVA in the course https://doe.dscoe.org.  
+This problem set corresponds to the section on multi factor ANOVA in the course https://jacobshermansd.github.io/parametric-trades.  
 
 For this problem set, we will use the following packages:
 

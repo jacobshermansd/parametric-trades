@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE, message = F, warning = F)
 
 # Introduction
 
-This problem set is associated with the https://doe.dscoe.org section on Single Factor ANOVA.
+This problem set is associated with the https://jacobshermansd.github.io/parametric-trades section on Single Factor ANOVA.
 
 For this problem set we will use the following package:
 

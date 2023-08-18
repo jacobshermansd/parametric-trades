@@ -112,7 +112,7 @@ threejs::scatterplot3js(speed, stealth, surv, color=c(rep('blue', 7), rep('red',
     - <font color = 'blue'>Fundamental mathematics & statistics.</font>
     - <font color = 'blue'>Desire to learn.</font>
 - Resources:
-    - Computer with internet connection.  The course is hosted at: <a href = 'https://doe.dscoe.org'>https://doe.dscoe.org</a>.
+    - Computer with internet connection.  The course is hosted at: <a href = 'https://jacobshermansd.github.io/parametric-trades'>https://jacobshermansd.github.io/parametric-trades</a>.
     - R programming environment. We are using www.matrixds.com (free) as it largely eliminates challenges associated with government computer restrictions.
 - Time: 
     - Approximately 10 hours per week.

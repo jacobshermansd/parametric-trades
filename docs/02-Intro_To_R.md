@@ -1038,8 +1038,8 @@ R uses relational and logical operators in addition to the arithmethic operators
 
 
 ```{=html}
-<div id="htmlwidget-2257be4d569c65ed0740" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2257be4d569c65ed0740">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&lt;","&lt;=","&gt;","&gt;=","==","!="],["Less than","Less than or equal to","Greater than","Greater than or equal to","Equal to","Not equal to"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-bfe050ebcab48e61ff45" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-bfe050ebcab48e61ff45">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&lt;","&lt;=","&gt;","&gt;=","==","!="],["Less than","Less than or equal to","Greater than","Greater than or equal to","Equal to","Not equal to"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ```
 
 Examples of relational operations.
@@ -1090,8 +1090,8 @@ Logical operations with examples.
 
 
 ```{=html}
-<div id="htmlwidget-f6a0ed9cf88a85851ea2" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f6a0ed9cf88a85851ea2">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&amp;","|","!","&amp;&amp;","||","%in%"],["Element-wise AND","Element-wise OR","Element-wise NOT","Operand-wise AND","Operand-wise OR","Is an element in a vector"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-16ae304cdc36a0f5422d" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-16ae304cdc36a0f5422d">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&amp;","|","!","&amp;&amp;","||","%in%"],["Element-wise AND","Element-wise OR","Element-wise NOT","Operand-wise AND","Operand-wise OR","Is an element in a vector"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ```
 
 Logical operations are often useful when comparing two vectors.

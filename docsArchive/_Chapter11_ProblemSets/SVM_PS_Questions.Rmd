@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-This problem set corresponds to the chapter on support vector machines in the course https://doe.dscoe.org. In this problem set, you'll train a support vector regression model on the `airquality` data set from base *R* and a support vector classification model in the `glass` data set from the University of California - Irvine's <a href="https://archive.ics.uci.edu/ml/datasets/glass+identification">Machine Learning Repository</a>. The solutions for this problem set use the following packages; however, you may use whatever packages you prefer.
+This problem set corresponds to the chapter on support vector machines in the course https://jacobshermansd.github.io/parametric-trades. In this problem set, you'll train a support vector regression model on the `airquality` data set from base *R* and a support vector classification model in the `glass` data set from the University of California - Irvine's <a href="https://archive.ics.uci.edu/ml/datasets/glass+identification">Machine Learning Repository</a>. The solutions for this problem set use the following packages; however, you may use whatever packages you prefer.
 
 * `tidyverse`
 

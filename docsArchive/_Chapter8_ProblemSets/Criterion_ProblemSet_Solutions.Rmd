@@ -10,7 +10,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This problem set corresponds to the chapter on model selection in the course https://doe.dscoe.org. For this problem set, we will use the following packages:
+This problem set corresponds to the chapter on model selection in the course https://jacobshermansd.github.io/parametric-trades. For this problem set, we will use the following packages:
 
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)

@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-This problem set is associated with the section "Single Factor, Random Effects ANOVA" on doe.dscoe.org.  It also refers to the problem set from "Single Factor, Fixed Effects ANOVA" on the same site.  
+This problem set is associated with the section "Single Factor, Random Effects ANOVA" on jacobshermansd.github.io/parametric-trades.  It also refers to the problem set from "Single Factor, Fixed Effects ANOVA" on the same site.  
 
 This problem set requires the following packages:
 
