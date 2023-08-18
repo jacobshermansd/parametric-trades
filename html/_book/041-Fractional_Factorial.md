@@ -8,7 +8,7 @@
 
 ### Admin
 
-For any errors associated with this section, please contact Steve Gillespie at stephen.e.gillespie.mil@mail.mil or Emma Schlagenhauff at emma.schlagenhauff.civ@mail.mil.
+For any errors associated with this section, please contact Steve Gillespie at stephen.e.gillespie.mil@army.mil or Jacob Sherman at jacob.s.sherman2.civ@army.mil.
 
 
 

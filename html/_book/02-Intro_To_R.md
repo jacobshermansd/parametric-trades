@@ -2,7 +2,7 @@
 
 
 
-For any noted issues in this chapter (especially errors), please contact: <a href="mailto:john.f.king1.mil@mail.mil">John King</a> or <a href="jacob.s.sherman2.civ@mail.mil">Jacob Sherman</a>.
+For any noted issues in this chapter (especially errors), please contact: <a href="mailto:john.f.king1.mil@army.mil">John King</a> or <a href="jacob.s.sherman2.civ@army.mil">Jacob Sherman</a>.
 
 R is a programming language and free software environment widely used for statistical computing and graphics. R may be launched from Windows by selecting the Start menu, opening the R folder, and choosing R x64 3.6.0. This starts an R session and opens an R Console where you may interact with R via one-line commands. Many R users prefer a more full-featured environment to interact with R, and for this course of instruction we will use the popular R Studio Interactive Development Environment (IDE).
 

@@ -4,7 +4,7 @@
 
 ## Admin
 
-For any errors associated with this section, please contact <a href="mailto:john.f.king1.mil@mail.mil">John King</a> or <a href="mailto:stephen.e.gillespie.mil@mail.mil">Steve Gillespie</a>.
+For any errors associated with this section, please contact <a href="mailto:john.f.king1.mil@army.mil">John King</a> or <a href="mailto:stephen.e.gillespie.mil@army.mil">Steve Gillespie</a>.
 
 
 

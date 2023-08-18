@@ -9,7 +9,7 @@ So far, we have considered designs with just two levels per factor, which is fin
 
 ## Admin
 
-For any errors associated with this section, please contact <a href="mailto:john.f.king1.mil@mail.mil">John King</a>.
+For any errors associated with this section, please contact <a href="mailto:john.f.king1.mil@army.mil">John King</a>.
 
 ```{r echo = F}
 mySession <- sessionInfo()

@@ -34,7 +34,7 @@ library(plotly)
 
 ### `r format(Sys.time(), '%d %B %Y')`
 
-### POC: <a href="mailto:john.f.king1.mil@mail.mil">MAJ John King</a>
+### POC: <a href="mailto:john.f.king1.mil@army.mil">MAJ John King</a>
 
 ---
 ## Outline

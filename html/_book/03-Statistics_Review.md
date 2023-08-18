@@ -37,7 +37,7 @@ The remainder of this chapter is organized as follows:
     
 ### POC
 
-For any  noted issues (especially errors), please contact: Steve Gillespie at stephen.e.gillespie.mil@mail.mil or Emma Schlagenhauff at emma.schlagenhauff.civ@mail.mil.
+For any  noted issues (especially errors), please contact: Steve Gillespie at stephen.e.gillespie.mil@army.mil or Jacob Sherman at jacob.s.sherman2.civ@army.mil.
 
 
 

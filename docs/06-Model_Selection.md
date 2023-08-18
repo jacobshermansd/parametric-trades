@@ -6,7 +6,7 @@ This chapter presents methods for finding a balance between under fitting and ov
 
 ## Admin
 
-For any errors associated with this section, please contact <a href="mailto:john.f.king1.mil@mail.mil">John King</a>.
+For any errors associated with this section, please contact <a href="mailto:john.f.king1.mil@army.mil">John King</a>.
 
 
 

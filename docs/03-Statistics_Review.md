@@ -37,7 +37,7 @@ The remainder of this chapter is organized as follows:
     
 ### POC
 
-For any  noted issues (especially errors), please contact: Steve Gillespie at stephen.e.gillespie.mil@mail.mil or Emma Schlagenhauff at emma.schlagenhauff.civ@mail.mil.
+For any  noted issues (especially errors), please contact: Steve Gillespie at stephen.e.gillespie.mil@army.mil or Jacob Sherman at jacob.s.sherman2.civ@army.mil.
 
 
 
@@ -288,11 +288,11 @@ x
 ```
 
 ```
-##  [1]  9.069242  5.026759  4.038799  8.628891 11.715939 11.241066  9.587427
-##  [8]  9.644299 10.050412  8.537225 10.124834  9.440798  7.007545 14.499469
-## [15]  7.886275 11.445520  8.705360  9.467120 10.034634  9.292519  5.372327
-## [22]  9.333696  7.626262  9.496807  9.007805  7.620795  9.121498  9.331803
-## [29] 10.599937 10.650303
+##  [1]  9.082694 10.979930 10.947262 10.861118 11.712847 11.739057 12.045557
+##  [8]  9.822307  8.849775  8.068327 12.011570  7.651126 12.050221 10.364953
+## [15]  9.380558 12.169375 10.132055  9.548144 11.129051 12.951383  9.560956
+## [22] 10.006870 11.575168  6.719262  7.738837 10.241035  7.869179  8.185377
+## [29] 11.102954 13.841346
 ```
 
 ```r
@@ -300,7 +300,7 @@ mean(x)
 ```
 
 ```
-## [1] 9.120179
+## [1] 10.27794
 ```
 
 ```r
@@ -308,7 +308,7 @@ sd(x)
 ```
 
 ```
-## [1] 2.048188
+## [1] 1.741604
 ```
 
 ```r
@@ -316,7 +316,7 @@ var(x)
 ```
 
 ```
-## [1] 4.195074
+## [1] 3.033186
 ```
 
 Note that the provided (i.e., true) mean is 10 and the provided (i.e, true) standard deviation is 2, but our estimates are just that, statistical estimates.
@@ -433,7 +433,7 @@ IQR(x)
 ```
 
 ```
-## [1] 1.34925
+## [1] 1.238595
 ```
 
 ```r
@@ -442,8 +442,8 @@ quantile(x)
 ```
 
 ```
-##          0%         25%         50%         75%        100% 
-## -2.93137894 -0.79164064 -0.06603172  0.55760933  3.22038331
+##         0%        25%        50%        75%       100% 
+## -2.8082980 -0.8463567 -0.1319348  0.3922383  1.8034746
 ```
 
 ```r
@@ -476,7 +476,7 @@ myQuantile[4]
 
 ```
 ##       75% 
-## 0.5576093
+## 0.3922383
 ```
 
 ```r
@@ -485,7 +485,7 @@ myQuantile[2]
 
 ```
 ##        25% 
-## -0.7916406
+## -0.8463567
 ```
 
 ```r
@@ -494,8 +494,8 @@ myQuantile[4] - myQuantile[2] # note this preserves the names of the first resul
 ```
 
 ```
-##     75% 
-## 1.34925
+##      75% 
+## 1.238595
 ```
 
 ```r
@@ -678,7 +678,7 @@ rnorm(1, 0, 1)
 ```
 
 ```
-## [1] -0.6021244
+## [1] -0.000414231
 ```
 
 ```r
@@ -687,7 +687,7 @@ rnorm(1, 0, 1)
 ```
 
 ```
-## [1] -1.029831
+## [1] 0.2743298
 ```
 
 ```r
@@ -697,8 +697,8 @@ rnorm(10, 0, 1)
 ```
 
 ```
-##  [1] -0.5588674  0.6170675  0.4485696 -0.2515006 -0.2303489 -0.8095737
-##  [7]  0.8825452 -0.9371714 -1.0085782 -1.1799945
+##  [1]  0.2228332 -0.4423707  0.4301209 -0.2138487  0.3652485  0.2512104
+##  [7] -0.4654479 -0.1835516  0.4968008  0.2651217
 ```
 
 As a side note, the `set.seed()` command is useful if you want to set the random number generator seed for *R* if you're concerned about replicability. As a side note, *R*, like nearly every (or perhaps all) other programming languages actually generates pseudorandom  numbers.  See the documentation <a href = "https://www.rdocumentation.org/packages/gsl/versions/2.1-6/topics/Rng" > here </a> if you're really concerned about it.  Back to `set.seed()`:
@@ -711,7 +711,7 @@ rnorm(1) # recall that we can rely on the defaults for mean and standard deviati
 ```
 
 ```
-## [1] 2.564508
+## [1] 1.119983
 ```
 
 ```r
@@ -720,7 +720,7 @@ rnorm(1)
 ```
 
 ```
-## [1] 0.1074313
+## [1] -0.2816609
 ```
 
 ```r

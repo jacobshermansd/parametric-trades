@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 </br>
 <center><h2>02 September 2020</h2></center>
 </br>
-<center><h3>POC: <a href="mailto:john.f.king1.mil@mail.mil">MAJ John King</a></h3></center>
+<center><h3>POC: <a href="mailto:john.f.king1.mil@army.mil">MAJ John King</a></h3></center>
 
 _____
 # Outline

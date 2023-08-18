@@ -155,7 +155,7 @@ As this project develops, we will advance the capacity to share DOE and simulati
 
 ### Contact
 
-If you need to contact us, please email us at stephen.e.gillespie.mil@mail.mil or john.f.king1.mil@mail.mil.
+If you need to contact us, please email us at stephen.e.gillespie.mil@army.mil or john.f.king1.mil@army.mil.
 
 ### Errors
 

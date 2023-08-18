@@ -17,7 +17,7 @@ This chapter introduces the fundamentals of Design of Experiments (DOE).  An exp
 
 ### Admin
 
-- **POC:** For any comments or identified errors, please contact Steve Gillespie at stephen.e.gillespie.mil@mail.mil or Emma Schlagenhauff at emma.schlagenhauff.civ@mail.mil.
+- **POC:** For any comments or identified errors, please contact Steve Gillespie at stephen.e.gillespie.mil@army.mil or Jacob Sherman at jacob.s.sherman2.civ@army.mil.
 - This section was rendered using R version 3.6.0 (2019-04-26) on 18 Aug 2023.
 - The chapter is organized into sections that each include a description, a tutorial, and a problem set.
 

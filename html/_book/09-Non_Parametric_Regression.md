@@ -6,7 +6,7 @@ As we've seen in the last few chapters, linear models can be successfully applie
 
 ## Admin
 
-For any errors associated with this section, please contact <a href="mailto:john.f.king1.mil@mail.mil">John King</a>.
+For any errors associated with this section, please contact <a href="mailto:john.f.king1.mil@army.mil">John King</a>.
 
 
 
