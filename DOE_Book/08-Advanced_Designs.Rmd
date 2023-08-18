@@ -298,11 +298,11 @@ get_contours(ccd_results) %>% layout(title = "CCD Response Surface")
 
 ### CCD Problem Set
 
-The problem set for this section is located <a href = "/_Chapter10_ProblemSets/CCD_ProblemSet_Questions.html">here</a>.
+The problem set for this section is located <a href = "CCD_ProblemSet_Questions.html">here</a>.
 
-For your convenience, the problem set as an R markdown is located <a href = "/_Chapter10_ProblemSets/CCD_ProblemSet_Questions.Rmd">here</a>.
+For your convenience, the problem set as an R markdown is located <a href = "CCD_ProblemSet_Questions.Rmd">here</a>.
 
-The solutions for this problem set is located <a href = "/_Chapter10_ProblemSets/CCD_ProblemSet_Solutions.html">here</a>.
+The solutions for this problem set is located <a href = "CCD_ProblemSet_Solutions.html">here</a>.
 
 ## Nearly Orthogonal Latin Hypercube Designs
 
@@ -477,8 +477,8 @@ ggpairs(stacked_dm, mapping = ggplot2::aes(color = design),
 
 ### NOLH Problem Set
 
-The problem set for this section is located <a href = "/_Chapter10_ProblemSets/NOLH_ProblemSet_Questions.html">here</a>. 
+The problem set for this section is located <a href = "NOLH_ProblemSet_Questions.html">here</a>. 
 
-For your convenience, the problem set as an R markdown is located <a href = "/_Chapter10_ProblemSets/NOLH_ProblemSet_Questions.Rmd">here</a>.
+For your convenience, the problem set as an R markdown is located <a href = "NOLH_ProblemSet_Questions.Rmd">here</a>.
 
-The solutions for this problem set is located <a href = "/_Chapter10_ProblemSets/NOLH_ProblemSet_Solutions.html">here</a>.
+The solutions for this problem set is located <a href = "NOLH_ProblemSet_Solutions.html">here</a>.

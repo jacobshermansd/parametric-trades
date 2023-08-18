@@ -427,11 +427,11 @@ The last question in a general factorial experiment is, "How many replicates sho
 
 ### Problem Set
 
-The problem set for this section is located <a href = '/_Chapter4_ProblemSets/Factorial_Design_PS_Questions.html'> here </a>.  
+The problem set for this section is located <a href = 'Factorial_Design_PS_Questions.html'> here </a>.  
 
-For your convenience, the problem set as an R markdown is located <a href = '/_Chapter4_ProblemSets/Factorial_Design_PS_Questions.Rmd'> here </a>
+For your convenience, the problem set as an R markdown is located <a href = 'Factorial_Design_PS_Questions.Rmd'> here </a>
 
-The answers for this problem set are <a href = '/_Chapter4_ProblemSets/Factorial_Design_PS_Answer.html'> here </a>.
+The answers for this problem set are <a href = 'Factorial_Design_PS_Answer.html'> here </a>.
 
 
 ## $2^K$ Factorial Design
@@ -759,9 +759,9 @@ One can also do a half-normal probability plot in a similar manner.  One can rea
 
 ### Problem Set
 
-The problem set for this section is located <a href = '/_Chapter4_ProblemSets/2K_Factorial_Design_PS_Question.html'> here </a>.  
+The problem set for this section is located <a href = '2K_Factorial_Design_PS_Question.html'> here </a>.  
 
-For your convenience, the problem set as an R markdown is located <a href = '/_Chapter4_ProblemSets/2K_Factorial_Design_PS_Question.Rmd'> here </a>
+For your convenience, the problem set as an R markdown is located <a href = '2K_Factorial_Design_PS_Question.Rmd'> here </a>
 
-The answers for this problem set are <a href = '/_Chapter4_ProblemSets/2K_Factorial_Design_PS_Answer.html'> here </a>.
+The answers for this problem set are <a href = '2K_Factorial_Design_PS_Answer.html'> here </a>.
 

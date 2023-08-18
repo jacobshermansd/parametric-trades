@@ -815,11 +815,11 @@ It is simply incredible how much information we can gain with such a relatively 
 
 ### General $2^{K-P}$ Designs Problem Set
 
-The problem set for this section is located <a href = '/_Chapter4_ProblemSets/2K_General_Fractional_ProblemSet_Questions.html'> here </a>.  
+The problem set for this section is located <a href = '2K_General_Fractional_ProblemSet_Questions.html'> here </a>.  
 
-For your convenience, the problem set as an R markdown is located <a href = '/_Chapter4_ProblemSets/2K_General_Fractional_ProblemSet_Questions.Rmd'> here </a>
+For your convenience, the problem set as an R markdown is located <a href = '2K_General_Fractional_ProblemSet_Questions.Rmd'> here </a>
 
-The answers for this problem set are <a href = '/_Chapter4_ProblemSets/2K_General_Fractional_ProblemSet_Answers.html'> here </a>.
+The answers for this problem set are <a href = '2K_General_Fractional_ProblemSet_Answers.html'> here </a>.
 
 
 ## Additional Notes on $2^{K-P}$ Designs

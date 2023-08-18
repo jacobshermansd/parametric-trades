@@ -332,11 +332,11 @@ tg.cp$which[which.min(tg.cp$Cp), ]
 
 ### Criterion Problem Set
 
-The problem set for this section is located <a href = "/_Chapter8_ProblemSets/Criterion_ProblemSet_Questions.html">here</a>. 
+The problem set for this section is located <a href = "Criterion_ProblemSet_Questions.html">here</a>. 
 
-For your convenience, the problem set as an R markdown is located <a href = "/_Chapter8_ProblemSets/Criterion_ProblemSet_Questions.Rmd">here</a>.
+For your convenience, the problem set as an R markdown is located <a href = "Criterion_ProblemSet_Questions.Rmd">here</a>.
 
-The solutions for this problem set are located <a href = "/_Chapter8_ProblemSets/Criterion_ProblemSet_Solutions.html">here</a>.
+The solutions for this problem set are located <a href = "Criterion_ProblemSet_Solutions.html">here</a>.
 
 ## Cross Validation
 
@@ -638,8 +638,8 @@ We're just trying to find one that's useful.
 
 ## Lasso Regression Problem Set
 
-The problem set for this section is located <a href = "/_Chapter8_ProblemSets/Lasso_ProblemSet_Questions.html">here</a>. 
+The problem set for this section is located <a href = "Lasso_ProblemSet_Questions.html">here</a>. 
 
-For your convenience, the problem set as an R markdown is located <a href = "/_Chapter8_ProblemSets/Lasso_ProblemSet_Questions.Rmd">here</a>.
+For your convenience, the problem set as an R markdown is located <a href = "Lasso_ProblemSet_Questions.Rmd">here</a>.
 
-The solutions for this problem set are located <a href = "/_Chapter8_ProblemSets/Lasso_ProblemSet_Solutions.html">here</a>.
+The solutions for this problem set are located <a href = "Lasso_ProblemSet_Solutions.html">here</a>.

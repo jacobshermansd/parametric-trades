@@ -521,11 +521,11 @@ We cannot, at this point, say what the effect is, or which round type it was, et
 
 ### Single Factor, Fixed Effects ANOVA Problem Set
 
-The problem set for this section is located <a href = '/_Chapter3_1_ProblemSets/Single_Factor_ANOVA_ProblemSet_Questions.html'> here </a>.  Note that there are two data sets used in the problem set, tank.csv and soldier.csv.  The links to the data set are in the problem set.
+The problem set for this section is located <a href = 'Single_Factor_ANOVA_ProblemSet_Questions.html'> here </a>.  Note that there are two data sets used in the problem set, tank.csv and soldier.csv.  The links to the data set are in the problem set.
 
-For your convenience, the problem set as an R markdown is located <a href = '/_Chapter3_1_ProblemSets/Single_Factor_ANOVA_ProblemSet_Questions.Rmd'> here </a>
+For your convenience, the problem set as an R markdown is located <a href = 'Single_Factor_ANOVA_ProblemSet_Questions.Rmd'> here </a>
 
-The answers for this problem set are <a href = '/_Chapter3_1_ProblemSets/Single_Factor_ANOVA_ProblemSet_Answers.html'> here </a>.
+The answers for this problem set are <a href = 'Single_Factor_ANOVA_ProblemSet_Answers.html'> here </a>.
 
 
 
@@ -605,11 +605,11 @@ You can of course then check your assumptions as previously indicated.
 
 ### Single Factor, Random Effects Problem Set
 
-The problem set for this section is located <a href = '/_Chapter3_1_ProblemSets/Single_Factor_RE_ANOVA_ProblemSet_Questions.html'> here </a>.  Note that there is one data set used in the problem set, commo.csv. The link to the data set is in the problem set.
+The problem set for this section is located <a href = 'Single_Factor_RE_ANOVA_ProblemSet_Questions.html'> here </a>.  Note that there is one data set used in the problem set, commo.csv. The link to the data set is in the problem set.
 
-For your convenience, the problem set as an R markdown is located <a href = '/_Chapter3_1_ProblemSets/Single_Factor_RE_ANOVA_ProblemSet_Questions.Rmd'> here </a>
+For your convenience, the problem set as an R markdown is located <a href = 'Single_Factor_RE_ANOVA_ProblemSet_Questions.Rmd'> here </a>
 
-The answers for this problem set are <a href = '/_Chapter3_1_ProblemSets/Single_Factor_RE_ANOVA_ProblemSet_Answers.html'> here </a>.
+The answers for this problem set are <a href = 'Single_Factor_RE_ANOVA_ProblemSet_Answers.html'> here </a>.
 
 
 
@@ -891,11 +891,11 @@ In both the example with no interaction effects and the example with interaction
 
 ### Two Factor ANOVA Problem Set
 
-The problem set for this section is located <a href = '/_Chapter3_1_ProblemSets/Two_Factor_ANOVA_ProblemSet_Questions.html'> here </a>.  Note that there is one data set used in the problem set, commo.csv. The link to the data set is in the problem set.
+The problem set for this section is located <a href = 'Two_Factor_ANOVA_ProblemSet_Questions.html'> here </a>.  Note that there is one data set used in the problem set, commo.csv. The link to the data set is in the problem set.
 
-For your convenience, the problem set as an R markdown is located <a href = '/_Chapter3_1_ProblemSets/Two_Factor_ANOVA_ProblemSet_Questions.Rmd'> here </a>
+For your convenience, the problem set as an R markdown is located <a href = 'Two_Factor_ANOVA_ProblemSet_Questions.Rmd'> here </a>
 
-The answers for this problem set are <a href = '/_Chapter3_1_ProblemSets/Two_Factor_ANOVA_ProblemSet_Answers.html'> here </a>.
+The answers for this problem set are <a href = 'Two_Factor_ANOVA_ProblemSet_Answers.html'> here </a>.
 
 ## ANOVA For More Than Two Factors
 
@@ -944,11 +944,11 @@ Of course, we need to check our assumptions, though for the sake of space, we wi
 
 ### Multi-Factor ANOVA Problem Set
 
-The problem set for this section is located <a href = '/_Chapter3_1_ProblemSets/Multi_Factor_ANOVA_ProblemSet_Questions.html'> here </a>.  Note that there is one data set used in the problem set, commo.csv. The link to the data set is in the problem set.
+The problem set for this section is located <a href = 'Multi_Factor_ANOVA_ProblemSet_Questions.html'> here </a>.  Note that there is one data set used in the problem set, commo.csv. The link to the data set is in the problem set.
 
-For your convenience, the problem set as an R markdown is located <a href = '/_Chapter3_1_ProblemSets/Multi_Factor_ANOVA_ProblemSet_Questions.Rmd'> here </a>
+For your convenience, the problem set as an R markdown is located <a href = 'Multi_Factor_ANOVA_ProblemSet_Questions.Rmd'> here </a>
 
-The answers for this problem set are <a href = '/_Chapter3_1_ProblemSets/Multi_Factor_ANOVA_ProblemSet_Answers.html'> here </a>.
+The answers for this problem set are <a href = 'Multi_Factor_ANOVA_ProblemSet_Answers.html'> here </a>.
 
 ## Multiple Comparisons
 
@@ -1300,11 +1300,11 @@ TukeyHSD(my.2Factor.Interaction.ANOVA, which = c('Range', 'Round'), conf.level =
 
 ### Multiple Comparisons Problem Set
 
-The problem set for this section is located <a href = '/_Chapter3_1_ProblemSets/Multi_Comparison_ProblemSet_Questions.html'> here </a>.  Note that there is one data set used in the problem set, commo.csv. The link to the data set is in the problem set.
+The problem set for this section is located <a href = 'Multi_Comparison_ProblemSet_Questions.html'> here </a>.  Note that there is one data set used in the problem set, commo.csv. The link to the data set is in the problem set.
 
-For your convenience, the problem set as an R markdown is located <a href = '/_Chapter3_1_ProblemSets/Multi_Comparison_ProblemSet_Questions.Rmd'> here </a>
+For your convenience, the problem set as an R markdown is located <a href = 'Multi_Comparison_ProblemSet_Questions.Rmd'> here </a>
 
-The answers for this problem set are <a href = '/_Chapter3_1_ProblemSets/Multi_Comparison_ProblemSet_Answers.html'> here </a>.
+The answers for this problem set are <a href = 'Multi_Comparison_ProblemSet_Answers.html'> here </a>.
 
 ## ANOVA Summary
 

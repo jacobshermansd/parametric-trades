@@ -240,11 +240,11 @@ ggplot(data = df, aes(x = height, y = weight)) + # Provide your data and aesthet
 
 **For this problem set, you will have to read the next section on assumptions and diagnostics if you are not familiar with the assumptions necessary for simple linear regression.**
 
-The problem set for this section is located <a href = '/_Chapter6_ProblemSets/Simple_Linear_Regression_PS_Questions.html'>here</a>.
+The problem set for this section is located <a href = 'Simple_Linear_Regression_PS_Questions.html'>here</a>.
 
-For your convenience, the R markdown version is <a href = '/_Chapter6_ProblemSets/Simple_Linear_Regression_PS_Questions.Rmd'>here</a>.
+For your convenience, the R markdown version is <a href = 'Simple_Linear_Regression_PS_Questions.Rmd'>here</a>.
 
-The solutions are located <a href = '/_Chapter6_ProblemSets/Simple_Linear_Regression_PS_Answers.html'>here</a>.
+The solutions are located <a href = 'Simple_Linear_Regression_PS_Answers.html'>here</a>.
 
 ## Assumptions and Diagnostics
 
@@ -697,7 +697,7 @@ plot_ly() %>%
 
 ### *R* Example
 
-Below is a short example on doing multiple linear regression in *R*.  This example uses a <a href = '/_Chapter6_ProblemSets/PatientSatData.csv'> data set </a> on patient satisfaction as a function of their age, illness severity, anxiety level, and a surgery variable (this is a binary variable, we will ignore for this exercise).  We will attempt to model patient satisfaction as a function of age, illness severity, and anxiety level.
+Below is a short example on doing multiple linear regression in *R*.  This example uses a <a href = 'PatientSatData.csv'> data set </a> on patient satisfaction as a function of their age, illness severity, anxiety level, and a surgery variable (this is a binary variable, we will ignore for this exercise).  We will attempt to model patient satisfaction as a function of age, illness severity, and anxiety level.
 
 First, read the data and build the linear model.
 
@@ -890,11 +890,11 @@ summary(lm(Satisfaction ~ Age + illSeverity, data = pt[-9,]))
 
 ### Multiple Linear Regression Problem Set 
 
-The problem set for this section is located <a href = '/_Chapter6_ProblemSets/Multi_Linear_Regression_PS_Questions.html'>here</a>.
+The problem set for this section is located <a href = 'Multi_Linear_Regression_PS_Questions.html'>here</a>.
 
-For your convenience, the R markdown version is <a href = '/_Chapter6_ProblemSets/Multi_Linear_Regression_PS_Questions.Rmd'>here</a>.
+For your convenience, the R markdown version is <a href = 'Multi_Linear_Regression_PS_Questions.Rmd'>here</a>.
 
-The solutions are located <a href = '/_Chapter6_ProblemSets/Multi_Linear_Regression_PS_Answers.html'>here</a>.
+The solutions are located <a href = 'Multi_Linear_Regression_PS_Answers.html'>here</a>.
 
 <!-------------------------------------------------------------------------------------------------------------------------->
 
@@ -981,11 +981,11 @@ rm(ames, ames.aov)
 
 ### Categorical Linear Regression Problem Set
 
-The problem set for this section is located <a href = '/_Chapter6_ProblemSets/Categorical_Linear_Regression_PS_Questions.html'>here</a>.
+The problem set for this section is located <a href = 'Categorical_Linear_Regression_PS_Questions.html'>here</a>.
 
-For your convenience, the R markdown version is <a href = '/_Chapter6_ProblemSets/Categorical_Linear_Regression_PS_Questions.Rmd'>here</a>.
+For your convenience, the R markdown version is <a href = 'Categorical_Linear_Regression_PS_Questions.Rmd'>here</a>.
 
-The solutions are located <a href = '/_Chapter6_ProblemSets/Categorical_Linear_Regression_PS_Answers.html'>here</a>.
+The solutions are located <a href = 'Categorical_Linear_Regression_PS_Answers.html'>here</a>.
 
 
 
@@ -1128,11 +1128,11 @@ While the model with a 15th order polynomial perfectly fits these data, the mode
 
 ### Transformed Regression Problem Set
 
-The problem set for this section is located <a href = '/_Chapter6_ProblemSets/Transformed_Regression_PS_Questions.html'>here</a>.
+The problem set for this section is located <a href = 'Transformed_Regression_PS_Questions.html'>here</a>.
 
-For your convenience, the R markdown version is <a href = '/_Chapter6_ProblemSets/Transformed_Regression_PS_Questions.Rmd'>here</a>.
+For your convenience, the R markdown version is <a href = 'Transformed_Regression_PS_Questions.Rmd'>here</a>.
 
-The solutions are located <a href = '/_Chapter6_ProblemSets/Transformed_Regression_PS_Answers.html'>here</a>.
+The solutions are located <a href = 'Transformed_Regression_PS_Answers.html'>here</a>.
 
 
 
@@ -1374,11 +1374,11 @@ hoslem.test(SAheart$chd, p.hat)
 
 ### Logistic Regression Problem Set
 
-The problem set for this section is located <a href = '/_Chapter6_ProblemSets/Logistic_Regression_PS_Questions.html'>here</a>.
+The problem set for this section is located <a href = 'Logistic_Regression_PS_Questions.html'>here</a>.
 
-For your convenience, the R markdown version is <a href = '/_Chapter6_ProblemSets/Logistic_Regression_PS_Questions.Rmd'>here</a>.
+For your convenience, the R markdown version is <a href = 'Logistic_Regression_PS_Questions.Rmd'>here</a>.
 
-The solutions are located <a href = '/_Chapter6_ProblemSets/Logistic_Regression_PS_Answers.html'>here</a>.
+The solutions are located <a href = 'Logistic_Regression_PS_Answers.html'>here</a>.
 
 
 

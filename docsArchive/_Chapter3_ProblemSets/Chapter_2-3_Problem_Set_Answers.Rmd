@@ -41,7 +41,7 @@ Take three random samples of the ames data set of the following size and seeds (
 
 Recall that you set the seed by the command `set.seed(SeedNumber)` right before employing a random number.
 
-<font color = 'red'> Amendment, 7 April 2020: We did not discuss this in class, but we should sample **with** replacement in general to preserve independent, identically distributed distributions.  The results below show my error (sampling without replacement).  We noted this in a class discussion on 6 April, 2020 as discussed in this <a href = '/_Chapter3_ProblemSets/sampling_discussion.html'> document </a>.
+<font color = 'red'> Amendment, 7 April 2020: We did not discuss this in class, but we should sample **with** replacement in general to preserve independent, identically distributed distributions.  The results below show my error (sampling without replacement).  We noted this in a class discussion on 6 April, 2020 as discussed in this <a href = 'sampling_discussion.html'> document </a></font color>.
 
 ```{r}
 # We can sample using the dplyr command sample_n().

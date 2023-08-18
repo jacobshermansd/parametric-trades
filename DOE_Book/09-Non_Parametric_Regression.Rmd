@@ -133,11 +133,11 @@ According to the `dunn.test` documentation, the null hypothesis for the Dunn tes
 
 ### Non-Parametric ANOVA Problem Set 
 
-The problem set for this section is located <a href = '/_Chapter11_ProblemSets/KW_PS_Questions.html'>here</a>.
+The problem set for this section is located <a href = 'KW_PS_Questions.html'>here</a>.
 
-For your convenience, the R markdown version is <a href = '/_Chapter11_ProblemSets/kw_PS_Questions.Rmd'>here</a>.
+For your convenience, the R markdown version is <a href = 'kw_PS_Questions.Rmd'>here</a>.
 
-The solutions are located <a href = '/_Chapter11_ProblemSets/KW_PS_Solutions.html'>here</a>.
+The solutions are located <a href = 'KW_PS_Solutions.html'>here</a>.
 
 ## Generalized Additive Models
 
@@ -286,11 +286,11 @@ ggplot() +
 
 ### GAM Problem Set 
 
-The problem set for this section is located <a href = '/_Chapter11_ProblemSets/Loess_PS_Questions.html'>here</a>.
+The problem set for this section is located <a href = 'Loess_PS_Questions.html'>here</a>.
 
-For your convenience, the R markdown version is <a href = '/_Chapter11_ProblemSets/Loess_PS_Questions.Rmd'>here</a>.
+For your convenience, the R markdown version is <a href = 'Loess_PS_Questions.Rmd'>here</a>.
 
-The solutions are located <a href = '/_Chapter11_ProblemSets/Loess_PS_Solutions.html'>here</a>.
+The solutions are located <a href = 'Loess_PS_Solutions.html'>here</a>.
 
 ## Support Vector Machines
 
@@ -610,11 +610,11 @@ cvms::plot_confusion_matrix(rbf_conf_mat$`Confusion Matrix`[[1]]) + ggtitle("Rad
 
 ### SVM Problem Set 
 
-The problem set for this section is located <a href = '/_Chapter11_ProblemSets/SVM_PS_Questions.html'>here</a>.
+The problem set for this section is located <a href = 'SVM_PS_Questions.html'>here</a>.
 
-For your convenience, the R markdown version is <a href = '/_Chapter11_ProblemSets/SVM_PS_Questions.Rmd'>here</a>.
+For your convenience, the R markdown version is <a href = 'SVM_PS_Questions.Rmd'>here</a>.
 
-The solutions are located <a href = '/_Chapter11_ProblemSets/SVM_PS_Solutions.html'>here</a>.
+The solutions are located <a href = 'SVM_PS_Solutions.html'>here</a>.
 
 ## Classification and Regression Trees
 
@@ -1048,8 +1048,8 @@ which(iris_test[, 5] != predict(iris.rf, newdata = iris_test[-5]))
 
 ### CART Problem Set 
 
-The problem set for this section is located <a href = '/_Chapter11_ProblemSets/RF_PS_Questions.html'>here</a>.
+The problem set for this section is located <a href = 'RF_PS_Questions.html'>here</a>.
 
-For your convenience, the R markdown version is <a href = '/_Chapter11_ProblemSets/RF_PS_Questions.Rmd'>here</a>.
+For your convenience, the R markdown version is <a href = 'RF_PS_Questions.Rmd'>here</a>.
 
-The solutions are located <a href = '/_Chapter11_ProblemSets/RF_PS_Solutions.html'>here</a>.
+The solutions are located <a href = 'RF_PS_Solutions.html'>here</a>.
