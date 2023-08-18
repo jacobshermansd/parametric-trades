@@ -10,7 +10,7 @@ R Studio may be launched via Windows start menu, but there are also cloud-based 
 
 ## Introduction to R - Part I
 
-For this course, we will use the online tutorial <a href = "https://r4ds.had.co.nz"> R for Data Science </a> to develop your R skills. The tutorial assumes that users have no knowledge of R or any other programming language. When completing these exercises, write your code in an R Markdown file. Generally, one code block per question will be appropriate. You can either start your own R markdown file from R Studio, or you can download <a href = "_Chapter2_ProblemSets/Chapter2_Questions.Rmd">Introduction to R Problem Set</a> to get started.
+For this course, we will use the online tutorial <a href = "https://r4ds.had.co.nz"> R for Data Science </a> to develop your R skills. The tutorial assumes that users have no knowledge of R or any other programming language. When completing these exercises, write your code in an R Markdown file. Generally, one code block per question will be appropriate. You can either start your own R markdown file from R Studio, or you can download <a href = "Chapter2_Questions.Rmd">Introduction to R Problem Set</a> to get started.
 
 ### Objectives
 
@@ -1038,8 +1038,8 @@ R uses relational and logical operators in addition to the arithmethic operators
 
 
 ```{=html}
-<div id="htmlwidget-1aa2a503bedf554969cf" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1aa2a503bedf554969cf">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&lt;","&lt;=","&gt;","&gt;=","==","!="],["Less than","Less than or equal to","Greater than","Greater than or equal to","Equal to","Not equal to"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-db27461f2cbfa1d05d2f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-db27461f2cbfa1d05d2f">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&lt;","&lt;=","&gt;","&gt;=","==","!="],["Less than","Less than or equal to","Greater than","Greater than or equal to","Equal to","Not equal to"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ```
 
 Examples of relational operations.
@@ -1090,8 +1090,8 @@ Logical operations with examples.
 
 
 ```{=html}
-<div id="htmlwidget-1bd3859c51924a457977" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1bd3859c51924a457977">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&amp;","|","!","&amp;&amp;","||","%in%"],["Element-wise AND","Element-wise OR","Element-wise NOT","Operand-wise AND","Operand-wise OR","Is an element in a vector"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a4ecc16445807436ccc3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a4ecc16445807436ccc3">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],["&amp;","|","!","&amp;&amp;","||","%in%"],["Element-wise AND","Element-wise OR","Element-wise NOT","Operand-wise AND","Operand-wise OR","Is an element in a vector"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Operator<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ```
 
 Logical operations are often useful when comparing two vectors.
@@ -1167,8 +1167,8 @@ Read *R for Data Science* Chapters 3 and 5. Each section of the reading has asso
 
 ### Problem Set 
 
-UPDATED AGAIN: The problem set for this section is located <a href = '_Chapter2_ProblemSets/Chapter2_Solutions.html'>here</a>.
+UPDATED AGAIN OY: The problem set for this section is located <a href = 'Chapter2_Solutions.html'>here</a>.
 
-For your convenience, the R markdown version is <a href = '_Chapter2_ProblemSets/Chapter2_Questions.Rmd'>here</a>.
+For your convenience, the R markdown version is <a href = 'Chapter2_Questions.Rmd'>here</a>.
 
-The solutions are located <a href = '_Chapter2_ProblemSets/Chapter2_Solutions.html'>here</a>.
+The solutions are located <a href = 'Chapter2_Solutions.html'>here</a>.
