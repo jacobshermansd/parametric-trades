@@ -6,7 +6,7 @@
 This chapter introduces the idea of Analysis of Variance (ANOVA).  ANOVA is a powerful analytic technique in its own right and important to understanding DOE.
 
 - **POC:** For any comments or identified errors, please contact Steve Gillespie at stephen.e.gillespie.mil@mail.mil or Emma Schlagenhauff at emma.schlagenhauff.civ@mail.mil.
-- This section was rendered using R version 3.6.0 (2019-04-26) on 15 Aug 2023.
+- This section was rendered using R version 3.6.0 (2019-04-26) on 18 Aug 2023.
 - The chapter is organized into 8 sections.  Each section includes a description, a tutorial, and a problem set.
 
 ## ANOVA Overview

@@ -1,6 +1,6 @@
 ---
 title: "Design of Experiments for Modeling and Simulation"
-output: 
+output:
     bookdown::gitbook:
         config:
             toc:
