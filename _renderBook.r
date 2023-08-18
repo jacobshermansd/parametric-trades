@@ -1,4 +1,4 @@
-automagic::automagic('DOE_Book/')  # this is a nice package that searches a directory for all R and Rmd files and installs required packages
+automagic::automagic('/home/rstudio/parametric-trades/DOE_Book/')  # this is a nice package that searches a directory for all R and Rmd files and installs required packages
 
 # Get dependent packages.  
 library(here)
@@ -11,7 +11,7 @@ if(sum(!(package.dependencies %in% installed.packages())) > 0){
   setwd('/home/rstudio/parametric-trades/DOE_Book')
   message('All necessary packages installed.  Executing book build')
   bookdown::render_book('index.Rmd', 
-                        output_dir = '~/parametric-trades/html/_book/', 
+                        output_dir = '/home/rstudio/parametric-trades/html/_book/', 
                         new_session=TRUE)
 }
 
