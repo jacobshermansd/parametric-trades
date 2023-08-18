@@ -608,17 +608,17 @@ Published with bookdown</a></li>
 <a class="sourceLine" id="cb256-3" data-line-number="3"><span class="co"># provided standard deviation.</span></a>
 <a class="sourceLine" id="cb256-4" data-line-number="4">x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">30</span>, <span class="dt">mean =</span> <span class="dv">10</span>, <span class="dt">sd =</span> <span class="dv">2</span>)</a>
 <a class="sourceLine" id="cb256-5" data-line-number="5">x</a></code></pre></div>
-<pre><code>##  [1]  9.373730  7.919877  8.810627  8.125938 10.891894  5.999763  7.464295
-##  [8] 10.962447  8.812490 12.239989 11.187938  9.079305  8.575082 11.286308
-## [15] 13.703972  7.883999  9.567978 11.264781  6.719974  8.812856 10.941420
-## [22]  9.716323  9.862061  9.896708 10.744385  8.059274 12.404921  9.703649
-## [29] 11.447006  9.574853</code></pre>
+<pre><code>##  [1]  8.364238 11.546586  7.754823  8.844234  9.381183  8.561427  6.921383
+##  [8]  8.382477  9.003742 11.815323  5.226482 11.278284 13.597489  9.273323
+## [15] 12.130114  9.470877  8.507762 13.969532  9.350210  7.403280  9.586244
+## [22] 11.073364  9.517399 11.144776  8.748806 11.523846 12.093843 10.077514
+## [29]  8.685601  9.657030</code></pre>
 <div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb258-1" data-line-number="1"><span class="kw">mean</span>(x)</a></code></pre></div>
-<pre><code>## [1] 9.701128</code></pre>
+<pre><code>## [1] 9.76304</code></pre>
 <div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb260-1" data-line-number="1"><span class="kw">sd</span>(x)</a></code></pre></div>
-<pre><code>## [1] 1.752882</code></pre>
+<pre><code>## [1] 1.942635</code></pre>
 <div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb262-1" data-line-number="1"><span class="kw">var</span>(x)</a></code></pre></div>
-<pre><code>## [1] 3.072595</code></pre>
+<pre><code>## [1] 3.773832</code></pre>
 <p>Note that the provided (i.e., true) mean is 10 and the provided (i.e, true) standard deviation is 2, but our estimates are just that, statistical estimates.</p>
 </div>
 <div id="median-absolute-deviation" class="section level5 hasAnchor">
@@ -670,11 +670,11 @@ Published with bookdown</a></li>
 <a class="sourceLine" id="cb280-4" data-line-number="4"></a>
 <a class="sourceLine" id="cb280-5" data-line-number="5"><span class="co"># If you simply want the interquartile range, this function provides it:</span></a>
 <a class="sourceLine" id="cb280-6" data-line-number="6"><span class="kw">IQR</span>(x)</a></code></pre></div>
-<pre><code>## [1] 1.233115</code></pre>
+<pre><code>## [1] 1.202357</code></pre>
 <div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb282-1" data-line-number="1"><span class="co"># If you want to see the quartiles explicitly, you can use quantile:</span></a>
 <a class="sourceLine" id="cb282-2" data-line-number="2"><span class="kw">quantile</span>(x)</a></code></pre></div>
-<pre><code>##           0%          25%          50%          75%         100% 
-## -1.748474801 -0.663987485 -0.008858865  0.569127544  2.696039159</code></pre>
+<pre><code>##         0%        25%        50%        75%       100% 
+## -2.2686256 -0.6224339  0.0231432  0.5799236  2.7674511</code></pre>
 <div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb284-1" data-line-number="1"><span class="co"># You could do this and retype in the numbers explicitly, but that is not robust to </span></a>
 <a class="sourceLine" id="cb284-2" data-line-number="2"><span class="co"># varying data sets. Understanding the output of quantile() is helpful.  We can see this </span></a>
 <a class="sourceLine" id="cb284-3" data-line-number="3"><span class="co"># by saving the output</span></a>
@@ -689,14 +689,14 @@ Published with bookdown</a></li>
 <div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb288-1" data-line-number="1"><span class="co"># But, with this knowledge, you can call the specific indices you want (recall, R indexes vectors starting at 1!!!)</span></a>
 <a class="sourceLine" id="cb288-2" data-line-number="2">myQuantile[<span class="dv">4</span>]</a></code></pre></div>
 <pre><code>##       75% 
-## 0.5691275</code></pre>
+## 0.5799236</code></pre>
 <div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb290-1" data-line-number="1">myQuantile[<span class="dv">2</span>]</a></code></pre></div>
 <pre><code>##        25% 
-## -0.6639875</code></pre>
+## -0.6224339</code></pre>
 <div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb292-1" data-line-number="1"><span class="co"># You could then subtract the two</span></a>
 <a class="sourceLine" id="cb292-2" data-line-number="2">myQuantile[<span class="dv">4</span>] <span class="op">-</span><span class="st"> </span>myQuantile[<span class="dv">2</span>] <span class="co"># note this preserves the names of the first result (annoying and inaccurate in this case)</span></a></code></pre></div>
 <pre><code>##      75% 
-## 1.233115</code></pre>
+## 1.202357</code></pre>
 <div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb294-1" data-line-number="1"><span class="co"># We can see that the two methods produce the same result:</span></a>
 <a class="sourceLine" id="cb294-2" data-line-number="2"><span class="kw">IQR</span>(x) <span class="op">==</span><span class="st"> </span>myQuantile[<span class="dv">4</span>] <span class="op">-</span><span class="st"> </span>myQuantile[<span class="dv">2</span>]</a></code></pre></div>
 <pre><code>##  75% 
@@ -804,23 +804,23 @@ Published with bookdown</a></li>
 <div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb309-1" data-line-number="1"><span class="co">#rnorm(n, mean, sd) where n is the number of random numbers desired, mean is the mean </span></a>
 <a class="sourceLine" id="cb309-2" data-line-number="2"><span class="co"># for your distribution, and sd is the standard deviation</span></a>
 <a class="sourceLine" id="cb309-3" data-line-number="3"><span class="kw">rnorm</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>)</a></code></pre></div>
-<pre><code>## [1] -0.9504016</code></pre>
+<pre><code>## [1] 1.529857</code></pre>
 <div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb311-1" data-line-number="1"><span class="co"># note that it is random</span></a>
 <a class="sourceLine" id="cb311-2" data-line-number="2"><span class="kw">rnorm</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>)</a></code></pre></div>
-<pre><code>## [1] 0.8849245</code></pre>
+<pre><code>## [1] -0.007639508</code></pre>
 <div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb313-1" data-line-number="1"><span class="co"># Note that if you ask for a vector, it will return N independent, identically </span></a>
 <a class="sourceLine" id="cb313-2" data-line-number="2"><span class="co"># distributed values</span></a>
 <a class="sourceLine" id="cb313-3" data-line-number="3"><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>)</a></code></pre></div>
-<pre><code>##  [1]  0.9787319 -1.1723570  1.6525757  0.4557713 -0.3058856 -0.1880351
-##  [7]  1.0614455 -0.0945419 -0.3245004  0.9446332</code></pre>
+<pre><code>##  [1]  1.0193118  1.7544497  0.6190577  0.5577349  1.1212979 -1.6455241
+##  [7] -1.1873295  0.5732397 -1.2659433  1.2190369</code></pre>
 <p>As a side note, the <code>set.seed()</code> command is useful if you want to set the random number generator seed for <em>R</em> if you’re concerned about replicability. As a side note, <em>R</em>, like nearly every (or perhaps all) other programming languages actually generates pseudorandom numbers. See the documentation <a href = "https://www.rdocumentation.org/packages/gsl/versions/2.1-6/topics/Rng" > here </a> if you’re really concerned about it. Back to <code>set.seed()</code>:</p>
 <div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb315-1" data-line-number="1"><span class="co"># recall that rnorm() returns a random number, and invoking it twice will almost </span></a>
 <a class="sourceLine" id="cb315-2" data-line-number="2"><span class="co"># assuredly return two different numbers.</span></a>
 <a class="sourceLine" id="cb315-3" data-line-number="3"><span class="kw">rnorm</span>(<span class="dv">1</span>) <span class="co"># recall that we can rely on the defaults for mean and standard deviation </span></a></code></pre></div>
-<pre><code>## [1] -0.6213467</code></pre>
+<pre><code>## [1] -0.3448079</code></pre>
 <div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb317-1" data-line-number="1"><span class="co"># as 0 and 1 are OK for this</span></a>
 <a class="sourceLine" id="cb317-2" data-line-number="2"><span class="kw">rnorm</span>(<span class="dv">1</span>)</a></code></pre></div>
-<pre><code>## [1] 0.2653553</code></pre>
+<pre><code>## [1] -1.227799</code></pre>
 <div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb319-1" data-line-number="1"><span class="co"># But, if we want to reproduce the same number every time **randomly** we can set the seed</span></a>
 <a class="sourceLine" id="cb319-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">173</span>)</a>
 <a class="sourceLine" id="cb319-3" data-line-number="3"><span class="kw">rnorm</span>(<span class="dv">1</span>)</a></code></pre></div>
