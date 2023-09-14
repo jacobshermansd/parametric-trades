@@ -50,7 +50,7 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
 <script src="libs/datatables-binding-0.28/datatables.js"></script>
 <link href="libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -608,17 +608,17 @@ Published with bookdown</a></li>
 <a class="sourceLine" id="cb256-3" data-line-number="3"><span class="co"># provided standard deviation.</span></a>
 <a class="sourceLine" id="cb256-4" data-line-number="4">x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">30</span>, <span class="dt">mean =</span> <span class="dv">10</span>, <span class="dt">sd =</span> <span class="dv">2</span>)</a>
 <a class="sourceLine" id="cb256-5" data-line-number="5">x</a></code></pre></div>
-<pre><code>##  [1]  8.151032  8.939484 10.276495  7.123741 13.367555 11.364458 10.160738
-##  [8] 14.224297 11.855277  9.186052  9.760340 11.991827 14.502387 11.326226
-## [15] 11.304587  9.523936  7.976952  9.446314 11.734435  8.763875  9.146204
-## [22]  8.764760  6.380234  8.082055 12.887524  8.620331 10.000669 12.366532
-## [29]  8.505417  9.607604</code></pre>
+<pre><code>##  [1] 10.186327  9.162203 10.826006  9.421796 12.784487 12.517655  7.099107
+##  [8]  9.560513 11.758094 12.949144  8.875715 11.540069  9.836750 13.504187
+## [15]  8.045005  8.948417  7.379940 12.475615  9.738800 10.713327  5.141620
+## [22] 11.942322  4.788632  8.043485 10.392647  8.061985  9.517157  9.176273
+## [29] 11.325613 11.031729</code></pre>
 <div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb258-1" data-line-number="1"><span class="kw">mean</span>(x)</a></code></pre></div>
-<pre><code>## [1] 10.17804</code></pre>
+<pre><code>## [1] 9.891487</code></pre>
 <div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb260-1" data-line-number="1"><span class="kw">sd</span>(x)</a></code></pre></div>
-<pre><code>## [1] 2.045211</code></pre>
+<pre><code>## [1] 2.168226</code></pre>
 <div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb262-1" data-line-number="1"><span class="kw">var</span>(x)</a></code></pre></div>
-<pre><code>## [1] 4.182889</code></pre>
+<pre><code>## [1] 4.701204</code></pre>
 <p>Note that the provided (i.e., true) mean is 10 and the provided (i.e, true) standard deviation is 2, but our estimates are just that, statistical estimates.</p>
 </div>
 <div id="median-absolute-deviation" class="section level5 hasAnchor">
@@ -670,11 +670,11 @@ Published with bookdown</a></li>
 <a class="sourceLine" id="cb280-4" data-line-number="4"></a>
 <a class="sourceLine" id="cb280-5" data-line-number="5"><span class="co"># If you simply want the interquartile range, this function provides it:</span></a>
 <a class="sourceLine" id="cb280-6" data-line-number="6"><span class="kw">IQR</span>(x)</a></code></pre></div>
-<pre><code>## [1] 1.303882</code></pre>
+<pre><code>## [1] 1.347553</code></pre>
 <div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb282-1" data-line-number="1"><span class="co"># If you want to see the quartiles explicitly, you can use quantile:</span></a>
 <a class="sourceLine" id="cb282-2" data-line-number="2"><span class="kw">quantile</span>(x)</a></code></pre></div>
 <pre><code>##         0%        25%        50%        75%       100% 
-## -2.0605323 -0.6770203 -0.0329202  0.6268614  2.5233282</code></pre>
+## -2.4035948 -0.8083032 -0.1779293  0.5392495  1.7286308</code></pre>
 <div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb284-1" data-line-number="1"><span class="co"># You could do this and retype in the numbers explicitly, but that is not robust to </span></a>
 <a class="sourceLine" id="cb284-2" data-line-number="2"><span class="co"># varying data sets. Understanding the output of quantile() is helpful.  We can see this </span></a>
 <a class="sourceLine" id="cb284-3" data-line-number="3"><span class="co"># by saving the output</span></a>
@@ -689,14 +689,14 @@ Published with bookdown</a></li>
 <div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb288-1" data-line-number="1"><span class="co"># But, with this knowledge, you can call the specific indices you want (recall, R indexes vectors starting at 1!!!)</span></a>
 <a class="sourceLine" id="cb288-2" data-line-number="2">myQuantile[<span class="dv">4</span>]</a></code></pre></div>
 <pre><code>##       75% 
-## 0.6268614</code></pre>
+## 0.5392495</code></pre>
 <div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb290-1" data-line-number="1">myQuantile[<span class="dv">2</span>]</a></code></pre></div>
 <pre><code>##        25% 
-## -0.6770203</code></pre>
+## -0.8083032</code></pre>
 <div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb292-1" data-line-number="1"><span class="co"># You could then subtract the two</span></a>
 <a class="sourceLine" id="cb292-2" data-line-number="2">myQuantile[<span class="dv">4</span>] <span class="op">-</span><span class="st"> </span>myQuantile[<span class="dv">2</span>] <span class="co"># note this preserves the names of the first result (annoying and inaccurate in this case)</span></a></code></pre></div>
 <pre><code>##      75% 
-## 1.303882</code></pre>
+## 1.347553</code></pre>
 <div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb294-1" data-line-number="1"><span class="co"># We can see that the two methods produce the same result:</span></a>
 <a class="sourceLine" id="cb294-2" data-line-number="2"><span class="kw">IQR</span>(x) <span class="op">==</span><span class="st"> </span>myQuantile[<span class="dv">4</span>] <span class="op">-</span><span class="st"> </span>myQuantile[<span class="dv">2</span>]</a></code></pre></div>
 <pre><code>##  75% 
@@ -804,23 +804,23 @@ Published with bookdown</a></li>
 <div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb309-1" data-line-number="1"><span class="co">#rnorm(n, mean, sd) where n is the number of random numbers desired, mean is the mean </span></a>
 <a class="sourceLine" id="cb309-2" data-line-number="2"><span class="co"># for your distribution, and sd is the standard deviation</span></a>
 <a class="sourceLine" id="cb309-3" data-line-number="3"><span class="kw">rnorm</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>)</a></code></pre></div>
-<pre><code>## [1] 0.2752231</code></pre>
+<pre><code>## [1] -1.143457</code></pre>
 <div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb311-1" data-line-number="1"><span class="co"># note that it is random</span></a>
 <a class="sourceLine" id="cb311-2" data-line-number="2"><span class="kw">rnorm</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>)</a></code></pre></div>
-<pre><code>## [1] -0.1138203</code></pre>
+<pre><code>## [1] -0.05287286</code></pre>
 <div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb313-1" data-line-number="1"><span class="co"># Note that if you ask for a vector, it will return N independent, identically </span></a>
 <a class="sourceLine" id="cb313-2" data-line-number="2"><span class="co"># distributed values</span></a>
 <a class="sourceLine" id="cb313-3" data-line-number="3"><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>)</a></code></pre></div>
-<pre><code>##  [1] -0.2316511 -1.0256029  1.2154517 -1.1635488 -0.3670544 -0.4253137
-##  [7]  1.2121207  0.1619082  1.6872356  0.7896749</code></pre>
+<pre><code>##  [1] -1.41938818 -0.25922424 -1.31913863 -0.95828036  0.12641114 -0.37537025
+##  [7]  1.25895066 -1.10373603  0.05094582  0.67131790</code></pre>
 <p>As a side note, the <code>set.seed()</code> command is useful if you want to set the random number generator seed for <em>R</em> if you’re concerned about replicability. As a side note, <em>R</em>, like nearly every (or perhaps all) other programming languages actually generates pseudorandom numbers. See the documentation <a href = "https://www.rdocumentation.org/packages/gsl/versions/2.1-6/topics/Rng" > here </a> if you’re really concerned about it. Back to <code>set.seed()</code>:</p>
 <div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb315-1" data-line-number="1"><span class="co"># recall that rnorm() returns a random number, and invoking it twice will almost </span></a>
 <a class="sourceLine" id="cb315-2" data-line-number="2"><span class="co"># assuredly return two different numbers.</span></a>
 <a class="sourceLine" id="cb315-3" data-line-number="3"><span class="kw">rnorm</span>(<span class="dv">1</span>) <span class="co"># recall that we can rely on the defaults for mean and standard deviation </span></a></code></pre></div>
-<pre><code>## [1] -0.1542325</code></pre>
+<pre><code>## [1] -1.157839</code></pre>
 <div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb317-1" data-line-number="1"><span class="co"># as 0 and 1 are OK for this</span></a>
 <a class="sourceLine" id="cb317-2" data-line-number="2"><span class="kw">rnorm</span>(<span class="dv">1</span>)</a></code></pre></div>
-<pre><code>## [1] 1.731983</code></pre>
+<pre><code>## [1] 0.220202</code></pre>
 <div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb319-1" data-line-number="1"><span class="co"># But, if we want to reproduce the same number every time **randomly** we can set the seed</span></a>
 <a class="sourceLine" id="cb319-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">173</span>)</a>
 <a class="sourceLine" id="cb319-3" data-line-number="3"><span class="kw">rnorm</span>(<span class="dv">1</span>)</a></code></pre></div>
@@ -1346,11 +1346,11 @@ Fortunately for us, recall the *Central Limit Theorem* that tells us for a suffi
 <p><img src="03-Statistics_Review_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
 <p><strong>SOP Step 6:</strong> Calculate the test statistic.
 We can solve for this using the following <em>R</em> code:</p>
-<div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb394-1" data-line-number="1">T.value &lt;-<span class="st"> </span>(<span class="kw">mean</span>(sample<span class="fl">.1</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(sample<span class="fl">.2</span>))<span class="op">/</span>(((<span class="kw">sd</span>(sample<span class="fl">.1</span>)<span class="op">^</span><span class="dv">2</span>)<span class="op">/</span><span class="dv">20</span>)<span class="op">+</span>((<span class="kw">sd</span>(sample<span class="fl">.2</span>)<span class="op">^</span><span class="dv">2</span>)<span class="op">/</span><span class="dv">20</span>))<span class="op">^</span>.<span class="dv">5</span></a>
+<div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb394-1" data-line-number="1">T.value &lt;-<span class="st"> </span>(<span class="kw">mean</span>(sample<span class="fl">.1</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(sample<span class="fl">.2</span>))<span class="op">/</span>(((<span class="kw">sd</span>(sample<span class="fl">.1</span>)<span class="op">^</span><span class="dv">2</span>)<span class="op">/</span><span class="dv">30</span>)<span class="op">+</span>((<span class="kw">sd</span>(sample<span class="fl">.2</span>)<span class="op">^</span><span class="dv">2</span>)<span class="op">/</span><span class="dv">30</span>))<span class="op">^</span>.<span class="dv">5</span></a>
 <a class="sourceLine" id="cb394-2" data-line-number="2">T.value</a></code></pre></div>
-<pre><code>## [1] 0.835691</code></pre>
+<pre><code>## [1] 1.023508</code></pre>
 <p><strong>SOP Step 7:</strong></p>
-<p>As we calculated our test statistic to be 0.836, we see it falls squarely in the “plausible region.” We can see that here:</p>
+<p>As we calculated our test statistic to be 1.024, we see it falls squarely in the “plausible region.” We can see that here:</p>
 <div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb396-1" data-line-number="1">myPlot <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb396-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> lower.crit.value, <span class="dt">lty =</span> <span class="dv">2</span>, <span class="dt">color =</span> <span class="st">&#39;red&#39;</span>) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb396-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> upper.crit.value, <span class="dt">lty =</span> <span class="dv">2</span>, <span class="dt">color =</span> <span class="st">&#39;red&#39;</span>) <span class="op">+</span><span class="st"> </span></a>
@@ -1391,7 +1391,7 @@ We can solve for this using the following <em>R</em> code:</p>
 <a class="sourceLine" id="cb401-2" data-line-number="2">myT.Test &lt;-<span class="st"> </span><span class="kw">t.test</span>(sepal.length <span class="op">~</span><span class="st"> </span>sample.number, <span class="dt">data =</span> myDF)</a></code></pre></div>
 <p>This gives us a nice summary of the test. You’ll note a few things:</p>
 <ol style="list-style-type: decimal">
-<li>We get the same test statistic result. Our hand result was: t = 0.835691 and the t.test() was t = 1.0235083.</li>
+<li>We get the same test statistic result. Our hand result was: t = 1.0235083 and the t.test() was t = 1.0235083.</li>
 <li>The <code>t.test()</code> function had a slightly more accurate assessment of degrees of freedom of 57.983 vs. my estimate of 58. We could have calculated the degrees of freedom more exactly manually (see the calculation in the NIST handbook link above), but the rough estimate was sufficiently good.</li>
 <li>The <code>t.test()</code> gives us the alternative hypothesis, the confidence interval, the p-value, etc… all rather conveniently.</li>
 </ol>

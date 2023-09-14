@@ -1028,7 +1028,7 @@ myPlot +
 We can solve for this using the following *R* code:
 
 ```{r}
-T.value <- (mean(sample.1) - mean(sample.2))/(((sd(sample.1)^2)/20)+((sd(sample.2)^2)/20))^.5
+T.value <- (mean(sample.1) - mean(sample.2))/(((sd(sample.1)^2)/30)+((sd(sample.2)^2)/30))^.5
 T.value
 ```
 

@@ -288,11 +288,11 @@ x
 ```
 
 ```
-##  [1]  8.151032  8.939484 10.276495  7.123741 13.367555 11.364458 10.160738
-##  [8] 14.224297 11.855277  9.186052  9.760340 11.991827 14.502387 11.326226
-## [15] 11.304587  9.523936  7.976952  9.446314 11.734435  8.763875  9.146204
-## [22]  8.764760  6.380234  8.082055 12.887524  8.620331 10.000669 12.366532
-## [29]  8.505417  9.607604
+##  [1] 10.186327  9.162203 10.826006  9.421796 12.784487 12.517655  7.099107
+##  [8]  9.560513 11.758094 12.949144  8.875715 11.540069  9.836750 13.504187
+## [15]  8.045005  8.948417  7.379940 12.475615  9.738800 10.713327  5.141620
+## [22] 11.942322  4.788632  8.043485 10.392647  8.061985  9.517157  9.176273
+## [29] 11.325613 11.031729
 ```
 
 ```r
@@ -300,7 +300,7 @@ mean(x)
 ```
 
 ```
-## [1] 10.17804
+## [1] 9.891487
 ```
 
 ```r
@@ -308,7 +308,7 @@ sd(x)
 ```
 
 ```
-## [1] 2.045211
+## [1] 2.168226
 ```
 
 ```r
@@ -316,7 +316,7 @@ var(x)
 ```
 
 ```
-## [1] 4.182889
+## [1] 4.701204
 ```
 
 Note that the provided (i.e., true) mean is 10 and the provided (i.e, true) standard deviation is 2, but our estimates are just that, statistical estimates.
@@ -433,7 +433,7 @@ IQR(x)
 ```
 
 ```
-## [1] 1.303882
+## [1] 1.347553
 ```
 
 ```r
@@ -443,7 +443,7 @@ quantile(x)
 
 ```
 ##         0%        25%        50%        75%       100% 
-## -2.0605323 -0.6770203 -0.0329202  0.6268614  2.5233282
+## -2.4035948 -0.8083032 -0.1779293  0.5392495  1.7286308
 ```
 
 ```r
@@ -476,7 +476,7 @@ myQuantile[4]
 
 ```
 ##       75% 
-## 0.6268614
+## 0.5392495
 ```
 
 ```r
@@ -485,7 +485,7 @@ myQuantile[2]
 
 ```
 ##        25% 
-## -0.6770203
+## -0.8083032
 ```
 
 ```r
@@ -495,7 +495,7 @@ myQuantile[4] - myQuantile[2] # note this preserves the names of the first resul
 
 ```
 ##      75% 
-## 1.303882
+## 1.347553
 ```
 
 ```r
@@ -678,7 +678,7 @@ rnorm(1, 0, 1)
 ```
 
 ```
-## [1] 0.2752231
+## [1] -1.143457
 ```
 
 ```r
@@ -687,7 +687,7 @@ rnorm(1, 0, 1)
 ```
 
 ```
-## [1] -0.1138203
+## [1] -0.05287286
 ```
 
 ```r
@@ -697,8 +697,8 @@ rnorm(10, 0, 1)
 ```
 
 ```
-##  [1] -0.2316511 -1.0256029  1.2154517 -1.1635488 -0.3670544 -0.4253137
-##  [7]  1.2121207  0.1619082  1.6872356  0.7896749
+##  [1] -1.41938818 -0.25922424 -1.31913863 -0.95828036  0.12641114 -0.37537025
+##  [7]  1.25895066 -1.10373603  0.05094582  0.67131790
 ```
 
 As a side note, the `set.seed()` command is useful if you want to set the random number generator seed for *R* if you're concerned about replicability. As a side note, *R*, like nearly every (or perhaps all) other programming languages actually generates pseudorandom  numbers.  See the documentation <a href = "https://www.rdocumentation.org/packages/gsl/versions/2.1-6/topics/Rng" > here </a> if you're really concerned about it.  Back to `set.seed()`:
@@ -711,7 +711,7 @@ rnorm(1) # recall that we can rely on the defaults for mean and standard deviati
 ```
 
 ```
-## [1] -0.1542325
+## [1] -1.157839
 ```
 
 ```r
@@ -720,7 +720,7 @@ rnorm(1)
 ```
 
 ```
-## [1] 1.731983
+## [1] 0.220202
 ```
 
 ```r
@@ -1553,17 +1553,17 @@ We can solve for this using the following *R* code:
 
 
 ```r
-T.value <- (mean(sample.1) - mean(sample.2))/(((sd(sample.1)^2)/20)+((sd(sample.2)^2)/20))^.5
+T.value <- (mean(sample.1) - mean(sample.2))/(((sd(sample.1)^2)/30)+((sd(sample.2)^2)/30))^.5
 T.value
 ```
 
 ```
-## [1] 0.835691
+## [1] 1.023508
 ```
 
 **SOP Step 7:**
 
-As we calculated our test statistic to be 0.836, we see it falls squarely in the "plausible region."  We can see that here:
+As we calculated our test statistic to be 1.024, we see it falls squarely in the "plausible region."  We can see that here:
 
 
 ```r
@@ -1627,7 +1627,7 @@ myT.Test <- t.test(sepal.length ~ sample.number, data = myDF)
 
 This gives us a nice summary of the test.  You'll note a few things:
 
-1. We get the same test statistic result. Our hand result was: t = 0.835691 and the t.test() was t = 1.0235083.
+1. We get the same test statistic result. Our hand result was: t = 1.0235083 and the t.test() was t = 1.0235083.
 2. The `t.test()` function had a slightly more accurate assessment of degrees of freedom of 57.983 vs. my estimate of 58.  We could have calculated the degrees of freedom more exactly manually (see the calculation in the NIST handbook link above), but the rough estimate was sufficiently good.
 3. The `t.test()` gives us the alternative hypothesis, the confidence interval, the p-value, etc... all rather conveniently.
 
